@@ -1,0 +1,347 @@
+// Checkout
+
+.checkout_page {
+    padding-top: $nav-height-3;
+    .alpha1 {
+        .bravo1 {
+            background-color: $white;
+            .charlie1 {
+                background-color: $color2;
+                padding: 10px 20px;
+                .delta1 {
+                    h1 {
+                        color: $color1;
+                        font-size: 48px;
+                        margin-bottom: 0;
+                        @include mobile {
+                            font-size: 26px;
+                            margin-bottom: 15px;
+                        }
+                    }
+                    hr {
+                        border: solid 2px $red;
+                        height: 0;
+                        margin-top: 0;
+                        width: 29px;
+                    }
+                }
+            }
+            .charlie2 {
+                padding-bottom: 15px;
+                padding-top: 15px;
+
+            }
+        }
+        .bravo2 {
+        	@include tablet {
+        		margin-top: 30px;
+        		margin-bottom: 30px;
+        	}
+        	@include mobile {
+        		margin-top: 30px;
+        		margin-bottom: 30px;
+        	}
+        	.charlie1 {
+        		margin-bottom: 10px;
+        	}
+        }
+    }
+}
+
+.checkout-page {
+	#error_1_id_shipping_address {
+		margin-top: 20px !important;
+	}
+	.address_add_page  {
+		.row {
+			margin: 50px 0 50px;
+		}
+	}
+	.address_button {
+		a {
+			background-color: $color3;
+			color: $color2;
+			display: block;
+			font-size: 14px;
+			margin: 30px 15px 0;
+			padding: 8px 0;
+			text-align: center;
+			text-transform: uppercase;
+			width: 117px;
+		}
+		button {
+			background: $color1;
+			border: 0;
+			color: $white;
+			font-size: 14px;
+			margin: 30px 15px 0;
+			padding: 5px 30px;
+			text-align: center;
+			text-transform: uppercase;
+			width: 117px;
+		}
+	}
+	.address_details {
+		p {
+			color: $color2;
+			font-size: 12px;
+			text-align: left;
+		}
+	}
+	.checkout-page-btn {
+		width: 80% !important;
+	}
+	.login_div {
+		background: $white;
+		padding: 30px 50px 50px;
+		width: 100%;
+		form {
+			label {
+				color: $color2;
+				font-size: 13px;
+				font-weight: 300;
+				text-align: left;
+			}
+		}
+		hr {
+			border-top: solid 1px $red;
+			width: 100%;
+		}
+		.emailinput {
+			background-color: $color3;
+			border:0;
+			border-radius: 0;
+		}
+		.login_des {
+			color: $color2;
+			font-size: 13px;
+			font-weight: 300;
+			text-align: center;
+		}
+		.reset_pass {
+			color: $color1;
+			float: left;
+			font-size: 13px;
+			font-style: italic;
+			font-weight: 100;
+			text-align: left;
+		}
+		.submit_btn {
+			background-color: $color2;
+			border: 0;
+			border-radius: 0;
+			color: $color1;
+			float: right;
+			padding: 5px 20px;
+			text-align: right;
+		}
+		.textinput {
+			background-color: $color3;
+			border:0;
+			border-radius: 0;
+		}
+		.user_title {
+			color: $color1;
+			font-size: 24px;
+			margin-top: 10px;
+			text-align: center;
+		}
+		@include mobile {
+			padding: 30px 0 50px;
+		}
+		@include tablet {
+			padding: 30px 0 50px;
+		}
+	}
+	.modifier_div {
+		background: $white;
+		.header {
+			background-color: $color2;
+			padding: 22px 35px 12px;
+			a {
+				background-color: $color3;
+				color: $color2;
+				display: block;
+				font-family: $font1 !important;
+				font-size: 18px;
+				text-align: center;
+				text-transform: uppercase;
+				width: 117px;
+				@include tablet {
+					font-size: 16px;
+				}
+			}
+			p {
+				color: $color1;
+				font-family: $font1 !important;
+				font-size: 20px;
+				margin-bottom: 0;
+				margin-top: 7px;
+				text-align: left;
+				text-transform: uppercase;
+				@include tablet {
+					font-size: 16px;
+					margin-top: 0;
+				}
+			}
+			@include tablet {
+				padding: 22px 12px 12px;
+			}
+		}
+		.pannier_item_list {
+			border-bottom: solid 2px $color3;
+			padding: 40px 0 0;
+			.single_item {
+				margin-bottom: 20px;
+				.des {
+					color: $color2;
+					font-size: 12px;
+					text-transform: uppercase;
+				}
+				.price {
+					color: $color2;
+					font-size: 14px;
+					text-align: right;
+				}
+				.qnty {
+					color: $color2;
+					font-size: 12px;
+					text-transform: uppercase;
+				}
+				.title {
+					color: $color1;
+					font-size: 14px;
+					margin-bottom: 0;
+					text-transform: uppercase;
+				}
+			}
+		}
+		.pannier_total_list {
+			padding-bottom: 15px;
+			padding-top: 30px;
+			p {
+				color: $color2;
+				font-size: 12px;
+				text-align: left;
+			}
+			.price {
+				color: $color2;
+				font-size: 14px;
+				text-align: right;
+			}
+		}
+	}
+	.order_summary_page {
+		.address_div {
+			@include mobile {
+				margin-bottom: 20px;
+				padding: 0;
+			}
+		}
+		.brown-black-btn {
+			@include mobile {
+				margin-top: 0;
+			}
+			@include tablet {
+				font-size: 12px;
+				margin-top: 25px;
+				padding: 8px 5px;
+			}
+		}
+		.row {
+			margin-bottom: 100px;
+		}
+		@include mobile {
+			margin-top: -80px;
+		}
+		@include tablet {
+			margin-top: -80px;
+		}
+	}
+	.panier_btn {
+		a {
+			background-color: $color1;
+			color: $color2;
+			display: block;
+			font-size: 14px;
+			font-weight: bold;
+			margin-top: 28px;
+			padding: 8px 0;
+			text-align: center;
+			text-transform: uppercase;
+			width: 100%;
+		}
+	}
+	.panier_text {
+		h1 {
+			color: $color1;
+			font-size: 48px;
+			margin-top: 0;
+			@include mobile {
+				font-size: 28px;
+			}
+			@include tablet {
+				font-size: 28px;
+			}
+		}
+		hr {
+			border: solid 2px $red;
+			height: 0;
+			margin-bottom: 0;
+			width: 29px;
+		}
+	}
+	.part1 {
+		background-color: $color2;
+		border-radius: 8px;
+		padding: 12px 15px;
+		@include mobile {
+			padding: 12px 15px 30px;
+		}
+		@include tablet {
+			padding: 12px 15px 30px;
+		}
+	}
+	.part2 {
+		background: $white;
+		padding: 38px 15px;
+	}
+	.step_row {
+		background: $white;
+		border-radius: 8px;
+		margin: 60px 15px;
+		h1 {
+			color: $color1;
+			font-size: 32px;
+			margin-bottom: 0;
+			margin-top: 10px;
+			text-align: left;
+			@include mobile {
+				font-size: 16px;
+			}
+		}
+		p {
+			color: $color2;
+			font-size: 16px;
+			text-align: left;
+			@include mobile {
+				font-size: 10px;
+			}
+		}
+		.col-md-3 img {
+			position: absolute;
+			right: 15px;
+			top: 0;
+			@include mobile {
+				right: -1px;
+				width: 30px;
+			}
+		}
+		@include mobile {
+			margin: 60px 0;
+		}
+	}
+	.user_login_row {
+		margin-bottom: 60px;
+	}
+}

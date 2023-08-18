@@ -1,0 +1,87 @@
+{% load static %}
+
+{% block head_title %} | {% endblock %}
+{% block seo_description %}{% endblock %}
+
+{% block head_css %}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'mycaps/css/mycaps.css' %}">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static 'mycaps/css/cropper.min.css' %}">
+<script src="{% static 'mycaps/js/cropper.min.js' %}"></script>
+
+<style>
+    .container {
+      margin: 20px auto;
+      max-width: 640px;
+    }
+    img {
+        max-width: 100%;
+    }
+    .cropper-view-box, .cropper-face {
+        border-radius: 50%;
+    }
+</style>
+
+<div class="container">
+    <h1>Crop a round image</h1>
+    <h3>Image</h3>
+    <div>
+      <img id="image" src="{% static 'mycaps/img/caps-red.png' %}" alt="Picture">
+  </div>
+  <h3>Result</h3>
+  <button type="button" id="button">Crop</button>
+  <div id="result"></div>
+</div>
+
+<script>
+    function getRoundedCanvas(sourceCanvas) {
+      var canvas = document.createElement('canvas');
+      var context = canvas.getContext('2d');
+      var width = sourceCanvas.width;
+      var height = sourceCanvas.height;
+      canvas.width = width;
+      canvas.height = height;
+      context.beginPath();
+      context.arc(width / 2, height / 2, Math.min(width, height) / 2, 0, 2 * Math.PI);
+      context.strokeStyle = 'rgba(0,0,0,0)';
+      context.stroke();
+      context.clip();
+      context.drawImage(sourceCanvas, 0, 0, width, height);
+      return canvas;
+  }
+  $(function () {
+      var $image = $('#image');
+      var $button = $('#button');
+      var $result = $('#result');
+      var croppable = false;
+      $image.cropper({
+        aspectRatio: 1,
+        viewMode: 1,
+        ready: function () {
+          croppable = true;
+      }
+  });
+      $button.on('click', function () {
+        var croppedCanvas;
+        var roundedCanvas;
+        if (!croppable) {
+          return;
+      }
+        // Crop
+        croppedCanvas = $image.cropper('getCroppedCanvas');
+        // Round
+        roundedCanvas = getRoundedCanvas(croppedCanvas);
+        // Show
+        $result.html('<img src="' + roundedCanvas.toDataURL() + '">');
+    });
+  });
+</script>
+
+{% endblock %}

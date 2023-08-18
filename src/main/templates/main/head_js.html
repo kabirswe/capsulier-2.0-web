@@ -1,0 +1,91 @@
+{% load static %}
+
+{% if not live_test %}
+<script src="http://localhost:35729/livereload.js"></script>
+
+<!-- Vendor js file -->
+<script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'bower_components/infinite-scroll/dist/infinite-scroll.pkgd.min.js' %}"></script>
+<script src="{% static 'bower_components/bootbox.js/bootbox.js' %}"></script>
+<script src="{% static 'bower_components/slick-carousel/slick/slick.js' %}"></script>
+
+<!-- Mahdil js file -->
+<script src="{% static 'contact/js/contact_form.js' %}{{ v }}"></script>
+<script src="{% static 'contact/js/newsletter_form.js' %}{{ v }}"></script>
+<script src="{% static 'main/js/main.js' %}{{ v }}"></script>
+
+{% else %}
+
+<!-- Vendor js file -->
+<script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'vendor/infinite-scroll/dist/infinite-scroll.pkgd.min.js' %}"></script>
+<script src="{% static 'vendor/bootbox.js/bootbox.js' %}"></script>
+<script src="{% static 'vendor/slick-carousel/slick/slick.min.js' %}"></script>
+
+<!-- Mahdil js file -->
+<script src="{% static 'contact/dist/contact_form.min.js' %}{{ v }}"></script>
+<script src="{% static 'contact/dist/newsletter_form.min.js' %}{{ v }}"></script>
+<script src="{% static 'main/dist/main.min.js' %}{{ v }}"></script>
+
+{% endif %}
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{% static 'assets/js/vendor/ie10-viewport-bug-workaround.js' %}"></script>
+
+<script>
+
+	function updateCartItemCount(){
+		var badge = $("#cart-count-badge");
+
+		$.ajax({
+			type: "GET",
+			url: "{% url 'eshop:item_count' %}",
+			success: function(data){
+				badge.text(data.count);
+
+			},
+			error: function(response, error) {
+				console.log(response);
+				console.log(error);
+			}
+
+		});
+
+	}
+	$(document).ready(function(){
+
+		updateCartItemCount();
+	});
+
+</script>
+
+<script>
+
+	function updateCartItemCount(){
+		var badge2 = $("#cart-count-badge");
+
+		$.ajax({
+			type: "GET",
+			url: "{% url 'eshop:item_count' %}",
+			success: function(data){
+				badge2.text(data.count);
+				// console.log(data.count);
+			},
+			error: function(response, error) {
+				console.log(response);
+				console.log(error);
+			}
+
+		});
+
+	}
+	$(document).ready(function(){
+
+		updateCartItemCount();
+	});
+
+</script>

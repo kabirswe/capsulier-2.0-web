@@ -1,0 +1,288 @@
+[
+{
+  "model": "blog.author",
+  "pk": 2,
+  "fields": {
+    "first_name": "Le",
+    "last_name": "Capsulier",
+    "slug": "le-capsulier",
+    "created_on": "2017-05-30T09:34:16.488Z",
+    "created_by": 1,
+    "updated_on": "2017-06-10T07:14:26.031Z",
+    "updated_by": 3
+  }
+},
+{
+  "model": "blog.author",
+  "pk": 3,
+  "fields": {
+    "first_name": "alex",
+    "last_name": "Jul",
+    "slug": "alex-jul",
+    "created_on": "2017-06-10T07:14:38.569Z",
+    "created_by": 3,
+    "updated_on": "2017-06-10T07:14:38.569Z",
+    "updated_by": 3
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 1,
+  "fields": {
+    "post": 1,
+    "image": "blog/2017/06/07/ggh.jpg",
+    "image_cropping": "0,0,688,458",
+    "image_cropping_square": "115,0,573,458",
+    "ordering": 0
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 2,
+  "fields": {
+    "post": 1,
+    "image": "blog/2017/06/07/ggh_kLG3jVr.jpg",
+    "image_cropping": "0,0,688,458",
+    "image_cropping_square": "115,0,573,458",
+    "ordering": 1
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 3,
+  "fields": {
+    "post": 1,
+    "image": "blog/2017/06/07/ggh_k1NsIsy.jpg",
+    "image_cropping": "0,0,688,458",
+    "image_cropping_square": "115,0,573,458",
+    "ordering": 2
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 4,
+  "fields": {
+    "post": 2,
+    "image": "blog/2017/06/07/_DSC2979_Copy_2.jpg",
+    "image_cropping": "0,0,274,183",
+    "image_cropping_square": "0,1,274,275",
+    "ordering": 1
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 5,
+  "fields": {
+    "post": 7,
+    "image": "blog/2018/05/15/9091efd3-1f65-4fd2-beb3-22955e996b41.png",
+    "image_cropping": "239,0,815,384",
+    "image_cropping_square": "0,0,273,274",
+    "ordering": 1
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 6,
+  "fields": {
+    "post": 6,
+    "image": "blog/2017/06/07/605380581_copy_2.jpg",
+    "image_cropping": "0,46,274,229",
+    "image_cropping_square": "0,1,274,275",
+    "ordering": 1
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 8,
+  "fields": {
+    "post": 4,
+    "image": "blog/2018/05/15/41f43833-85f1-4fd7-9704-c987dbb03e18.jpg",
+    "image_cropping": "0,1,299,168",
+    "image_cropping_square": "30,0,198,168",
+    "ordering": 1
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 10,
+  "fields": {
+    "post": 4,
+    "image": "blog/2018/05/15/65e7e5be-03dd-43f0-aa00-ad0ed0cd93c1.jpg",
+    "image_cropping": "36,0,189,168",
+    "image_cropping_square": "300,0,300,0",
+    "ordering": 2
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 11,
+  "fields": {
+    "post": 4,
+    "image": "blog/2018/05/15/6d3a3394-c284-484b-bb71-373b53876cc3.jpg",
+    "image_cropping": "2,0,280,180",
+    "image_cropping_square": "14,0,194,180",
+    "ordering": 3
+  }
+},
+{
+  "model": "blog.image",
+  "pk": 12,
+  "fields": {
+    "post": 7,
+    "image": "blog/2018/05/15/d2d1d4ea-9dac-4c40-908a-0fc5d8d2e7d5.png",
+    "image_cropping": "66,0,458,263",
+    "image_cropping_square": "131,0,394,263",
+    "ordering": 2
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "author": 2,
+    "credit_photo": 2,
+    "abstract": "Fr\u00e8res, sign up for our newsletter Discover in exclusivity our latest creations: gift sets, accessories,",
+    "abstract_fr": "Fr\u00e8res, sign up for our newsletter Discover in exclusivity our latest creations: gift sets, accessories,",
+    "abstract_en": null,
+    "abstract_es": null,
+    "active": true,
+    "content": "<p>Ashemore developed as a result of my visits to Barcelona, Spain and to Germany, followed soon after by a visit to Asheville, North Carolina. Blending the styles of art and architecture from these three areas may seem initially to result in an unusual formula, but the distinct and flamboyant style of Art Nouveau and the Arts and Crafts style combined with the more strict rules of a sans serif transfer well into a beautiful and very usable blend of these individually eccentric forms. The resulting font retains the Art Nouveau and Craftsman style flavors, which shine through the typeface despite its geometric base.Ashemore developed as a result of my visits to Barcelona, Spain and to Germany, followed soon after by a visit to Asheville, North Carolina. Blending the styles of art and architecture from these three areas may seem initially to result in an unusual formula, but the distinct and flamboyant style of Art Nouveau and the Arts and Crafts style combined with the more strict rules of a sans serif transfer well into a beautiful and very usable blend of these individually eccentric forms. The resulting font retains the Art Nouveau and Craftsman style flavors, which shine through the typeface despite its geometric base.</p>",
+    "content_fr": "<p>Ashemore developed as a result of my visits to Barcelona, Spain and to Germany, followed soon after by a visit to Asheville, North Carolina. Blending the styles of art and architecture from these three areas may seem initially to result in an unusual formula, but the distinct and flamboyant style of Art Nouveau and the Arts and Crafts style combined with the more strict rules of a sans serif transfer well into a beautiful and very usable blend of these individually eccentric forms. The resulting font retains the Art Nouveau and Craftsman style flavors, which shine through the typeface despite its geometric base.Ashemore developed as a result of my visits to Barcelona, Spain and to Germany, followed soon after by a visit to Asheville, North Carolina. Blending the styles of art and architecture from these three areas may seem initially to result in an unusual formula, but the distinct and flamboyant style of Art Nouveau and the Arts and Crafts style combined with the more strict rules of a sans serif transfer well into a beautiful and very usable blend of these individually eccentric forms. The resulting font retains the Art Nouveau and Craftsman style flavors, which shine through the typeface despite its geometric base.</p>",
+    "content_en": null,
+    "content_es": null,
+    "published_date": "2017-06-07",
+    "slug": "le-cafe-1",
+    "title": "Le Caf\u00e9",
+    "title_fr": "Le Caf\u00e9",
+    "title_en": null,
+    "title_es": null,
+    "created_on": "2017-05-30T09:34:22.081Z",
+    "created_by": 1,
+    "updated_on": "2017-06-07T18:44:41.609Z",
+    "updated_by": 1,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "author": 2,
+    "credit_photo": 2,
+    "abstract": "Fr\u00e8res, sign up for our newsletter Discover in exclusivity our latest creations: gift sets, accessories,",
+    "abstract_fr": "Fr\u00e8res, sign up for our newsletter Discover in exclusivity our latest creations: gift sets, accessories,",
+    "abstract_en": null,
+    "abstract_es": null,
+    "active": true,
+    "content": null,
+    "content_fr": null,
+    "content_en": null,
+    "content_es": null,
+    "published_date": "2017-06-08",
+    "slug": "to-find-out-more-about-our-tea-to-receive-news-abo",
+    "title": "To find out more about our tea To receive news about Dammann",
+    "title_fr": "To find out more about our tea To receive news about Dammann",
+    "title_en": null,
+    "title_es": null,
+    "created_on": "2017-06-07T18:21:02.787Z",
+    "created_by": 1,
+    "updated_on": "2017-06-07T18:59:01.263Z",
+    "updated_by": 1,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "author": 2,
+    "credit_photo": null,
+    "abstract": "MASCARIMIRI est un groupe de musique italien originaires de la ville de Muro Leccese dans les Pouilles. Depuis plus de 20 ans, il nous font voyager entre tradition et innovation...",
+    "abstract_fr": "MASCARIMIRI est un groupe de musique italien originaires de la ville de Muro Leccese dans les Pouilles. Depuis plus de 20 ans, il nous font voyager entre tradition et innovation...",
+    "abstract_en": null,
+    "abstract_es": null,
+    "active": true,
+    "content": "<p>Originaire des Pouilles au sud de l&#39;Italie,&nbsp;<strong>Mascarimir&igrave;</strong>&nbsp;est un groupe de musique&nbsp;compos&eacute; de 4 membres.</p>\r\n\r\n<p>Claudio &quot;Cavallo&quot; Giagnotti et son fr&egrave;re Cosimo l&#39;ont cr&eacute;&eacute; en 1997. Passion&eacute;s par la musique Salentine, et marqu&eacute;s par l&#39;experience de leur ancien groupe <em>Terra de Menzu</em>, ils sortent leur premier album <strong><em>Mascarimiri.</em></strong></p>\r\n\r\n<p>Ils seront rejoints entre 1999 et 2003&nbsp;par le&nbsp;bassisite&nbsp;Beppe Branca, qui sera remplac&eacute; par Alexios Amato et&nbsp;Vito Giannone, &agrave; la mandoline.&nbsp;Aujourd&#39;hui, le groupe est compos&eacute; de Claudio &quot;Cavallo&quot;&nbsp;(voix et tambours), de Alessio (voix, programmation et synth&eacute;), de Dario Stefanizzi ( voix et bois) de Gabrielle Martino (voix et mandoline).&nbsp;</p>\r\n\r\n<p>Ces 20 dern&egrave;res ann&eacute;es, ils les ont d&eacute;di&eacute;es &agrave; la cr&eacute;ation et aux rencontres:&nbsp;16 albums dont 6 en studios et&nbsp;de nombreuses participations &agrave; des compilations.&nbsp;</p>\r\n\r\n<p>Cot&eacute; sc&egrave;nes, ils&nbsp;se sont produits en Italie mais aussi dans toute&nbsp;l&#39;Europe, en Afrique du nord et m&ecirc;me en Australie !&nbsp;</p>\r\n\r\n<p>En France, ils ont jou&eacute; &agrave; Paris &agrave; l&#39;occasion de la F&ecirc;te de la Musique&nbsp;et le 11 mai 2018 au studio l&#39;Ermitage. Ils ont particip&eacute; &eacute;galement &agrave; de nombreux Festivals, comme&nbsp;celui des Langues et Cultures Minoris&eacute;es et le&nbsp;Latcho Divano &agrave; Marseille, le Total Festum de N&icirc;mes&nbsp;et&nbsp;l&#39;Estivada&nbsp;&agrave; Rodez.</p>\r\n\r\n<p>Ils ont collabor&eacute;&nbsp;avec des artistes et des groupes comme le Buena Vista Social Club, Les N&eacute;gresses Vertes,&nbsp;le Massislia Sound System et bien d&#39;autres encore.</p>\r\n\r\n<p>Mascarimir&igrave; promeut une &laquo;&nbsp;trad-innovazione&raquo;:&nbsp;musiques, instruments et rythmes tradionnels,&nbsp;ceux&nbsp;de la terre salentine et du bassin&nbsp;m&eacute;dit&eacute;rann&eacute;en, m&ecirc;l&eacute;s &agrave;&nbsp;des sons beaucoup plus modernes,&nbsp;o&ugrave; l&#39;electricit&eacute; et l&#39;electronique vous transportent.</p>\r\n\r\n<p>Leur nouveau live <strong><em>Punk d&rsquo;amore</em></strong>&nbsp;m&ecirc;le diff&eacute;rentes sonorit&eacute;s typiques du Dance Hall et rappelle les festivit&eacute;s traditionnelles du Salento.</p>\r\n\r\n<p>Le Capsulier&reg; vous fait d&eacute;couvrir&nbsp;leur morceau&nbsp;<strong>Suenecielle&nbsp;</strong>(Brano con Zampogna dal Pollino Calabria) de leur album <strong><em>Pizzica dance Hall Party,</em></strong> qui nous a inspir&eacute; pour la cr&eacute;ation de <u>notre assemblage italien ZAMPOGNA</u> &eacute;ponyme de cette cornemuse traditionnelle italienne.</p>\r\n\r\n<p>Allez, comme dirait Lou Pape du Massilia Sound System: A&iuml;oli les amis !</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>http://www.mascarimiri.com</p>",
+    "content_fr": "<p>Originaire des Pouilles au sud de l&#39;Italie,&nbsp;<strong>Mascarimir&igrave;</strong>&nbsp;est un groupe de musique&nbsp;compos&eacute; de 4 membres.</p>\r\n\r\n<p>Claudio &quot;Cavallo&quot; Giagnotti et son fr&egrave;re Cosimo l&#39;ont cr&eacute;&eacute; en 1997. Passion&eacute;s par la musique Salentine, et marqu&eacute;s par l&#39;experience de leur ancien groupe <em>Terra de Menzu</em>, ils sortent leur premier album <strong><em>Mascarimiri.</em></strong></p>\r\n\r\n<p>Ils seront rejoints entre 1999 et 2003&nbsp;par le&nbsp;bassisite&nbsp;Beppe Branca, qui sera remplac&eacute; par Alexios Amato et&nbsp;Vito Giannone, &agrave; la mandoline.&nbsp;Aujourd&#39;hui, le groupe est compos&eacute; de Claudio &quot;Cavallo&quot;&nbsp;(voix et tambours), de Alessio (voix, programmation et synth&eacute;), de Dario Stefanizzi ( voix et bois) de Gabrielle Martino (voix et mandoline).&nbsp;</p>\r\n\r\n<p>Ces 20 dern&egrave;res ann&eacute;es, ils les ont d&eacute;di&eacute;es &agrave; la cr&eacute;ation et aux rencontres:&nbsp;16 albums dont 6 en studios et&nbsp;de nombreuses participations &agrave; des compilations.&nbsp;</p>\r\n\r\n<p>Cot&eacute; sc&egrave;nes, ils&nbsp;se sont produits en Italie mais aussi dans toute&nbsp;l&#39;Europe, en Afrique du nord et m&ecirc;me en Australie !&nbsp;</p>\r\n\r\n<p>En France, ils ont jou&eacute; &agrave; Paris &agrave; l&#39;occasion de la F&ecirc;te de la Musique&nbsp;et le 11 mai 2018 au studio l&#39;Ermitage. Ils ont particip&eacute; &eacute;galement &agrave; de nombreux Festivals, comme&nbsp;celui des Langues et Cultures Minoris&eacute;es et le&nbsp;Latcho Divano &agrave; Marseille, le Total Festum de N&icirc;mes&nbsp;et&nbsp;l&#39;Estivada&nbsp;&agrave; Rodez.</p>\r\n\r\n<p>Ils ont collabor&eacute;&nbsp;avec des artistes et des groupes comme le Buena Vista Social Club, Les N&eacute;gresses Vertes,&nbsp;le Massislia Sound System et bien d&#39;autres encore.</p>\r\n\r\n<p>Mascarimir&igrave; promeut une &laquo;&nbsp;trad-innovazione&raquo;:&nbsp;musiques, instruments et rythmes tradionnels,&nbsp;ceux&nbsp;de la terre salentine et du bassin&nbsp;m&eacute;dit&eacute;rann&eacute;en, m&ecirc;l&eacute;s &agrave;&nbsp;des sons beaucoup plus modernes,&nbsp;o&ugrave; l&#39;electricit&eacute; et l&#39;electronique vous transportent.</p>\r\n\r\n<p>Leur nouveau live <strong><em>Punk d&rsquo;amore</em></strong>&nbsp;m&ecirc;le diff&eacute;rentes sonorit&eacute;s typiques du Dance Hall et rappelle les festivit&eacute;s traditionnelles du Salento.</p>\r\n\r\n<p>Le Capsulier&reg; vous fait d&eacute;couvrir&nbsp;leur morceau&nbsp;<strong>Suenecielle&nbsp;</strong>(Brano con Zampogna dal Pollino Calabria) de leur album <strong><em>Pizzica dance Hall Party,</em></strong> qui nous a inspir&eacute; pour la cr&eacute;ation de <u>notre assemblage italien ZAMPOGNA</u> &eacute;ponyme de cette cornemuse traditionnelle italienne.</p>\r\n\r\n<p>Allez, comme dirait Lou Pape du Massilia Sound System: A&iuml;oli les amis !</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>http://www.mascarimiri.com</p>",
+    "content_en": null,
+    "content_es": null,
+    "published_date": "2018-05-15",
+    "slug": "mascarimiri-entre-tradition-et-innovation",
+    "title": "MASCARIMIRI, entre tradition et innovation",
+    "title_fr": "MASCARIMIRI, entre tradition et innovation",
+    "title_en": null,
+    "title_es": null,
+    "created_on": "2017-06-07T18:25:04.966Z",
+    "created_by": 1,
+    "updated_on": "2018-05-28T19:30:43.773Z",
+    "updated_by": 3,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "author": 2,
+    "credit_photo": null,
+    "abstract": "Fr\u00e8res, sign up for our newsletter Discover in exclusivity our latest creations: gift sets, accessories,",
+    "abstract_fr": "Fr\u00e8res, sign up for our newsletter Discover in exclusivity our latest creations: gift sets, accessories,",
+    "abstract_en": null,
+    "abstract_es": null,
+    "active": true,
+    "content": null,
+    "content_fr": null,
+    "content_en": null,
+    "content_es": null,
+    "published_date": "2017-06-05",
+    "slug": "capsulier-6",
+    "title": "capsulier",
+    "title_fr": "capsulier",
+    "title_en": null,
+    "title_es": null,
+    "created_on": "2017-06-07T18:25:19.637Z",
+    "created_by": 1,
+    "updated_on": "2017-06-08T07:13:27.905Z",
+    "updated_by": 1,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "author": 2,
+    "credit_photo": null,
+    "abstract": "Les Caf\u00e9s produits et export\u00e9s depuis cette r\u00e9gion d'Ethiopie sont issus de la vari\u00e9t\u00e9 Coffea Arabica qui est \u00e0 la base de toutes les vari\u00e9t\u00e9s d'arabica utilis\u00e9es dans le monde !",
+    "abstract_fr": "Les Caf\u00e9s produits et export\u00e9s depuis cette r\u00e9gion d'Ethiopie sont issus de la vari\u00e9t\u00e9 Coffea Arabica qui est \u00e0 la base de toutes les vari\u00e9t\u00e9s d'arabica utilis\u00e9es dans le monde !",
+    "abstract_en": null,
+    "abstract_es": null,
+    "active": true,
+    "content": "<p>Le caf&eacute; produit sous l&#39;appelation <strong>Sidamo Grade 2</strong> est cultiv&eacute; et r&eacute;colt&eacute; au nord de la r&eacute;gion d&#39;Yrgacheffe au sud du pays.&nbsp;</p>\r\n\r\n<p>Il pousse en ombrage&nbsp;naturelle dans des plantations&nbsp;situ&eacute;es entre 1500 et 1800 m&egrave;tres d&#39;altitude. Ces caf&eacute;s sont r&eacute;colt&eacute; entre le mois de novembre et le mois de janvier. La production tourne autour de 50 000 t/an.</p>\r\n\r\n<p>Une fois ramass&eacute;, le caf&eacute; s&egrave;che de fa&ccedil;on naturel au soleil. Le triage se fait manuellement. Ensuite, la pr&eacute;paration se fait par voie humide.</p>\r\n\r\n<p>Une fois pr&eacute;par&eacute;e, la f&egrave;ves sont r&eacute;guli&egrave;res, de petites tailles et tr&egrave;s denses. Elles ont une couleur l&eacute;g&egrave;rement bleut&eacute;e.</p>\r\n\r\n<p>De sa tasse irr&eacute;prochable r&eacute;sulte des notes l&eacute;g&egrave;rement abricot&eacute;es qui laissent place rapidement &agrave; une explosion d&#39;agrumes. Sa persistence en bouche est &eacute;tonnante pour ce caf&eacute; au corps subtil.</p>\r\n\r\n<p>Les Mokas de la r&eacute;gion de Sidamo sont fins et &eacute;l&eacute;gants.</p>\r\n\r\n<p>&nbsp;</p>",
+    "content_fr": "<p>Le caf&eacute; produit sous l&#39;appelation <strong>Sidamo Grade 2</strong> est cultiv&eacute; et r&eacute;colt&eacute; au nord de la r&eacute;gion d&#39;Yrgacheffe au sud du pays.&nbsp;</p>\r\n\r\n<p>Il pousse en ombrage&nbsp;naturelle dans des plantations&nbsp;situ&eacute;es entre 1500 et 1800 m&egrave;tres d&#39;altitude. Ces caf&eacute;s sont r&eacute;colt&eacute; entre le mois de novembre et le mois de janvier. La production tourne autour de 50 000 t/an.</p>\r\n\r\n<p>Une fois ramass&eacute;, le caf&eacute; s&egrave;che de fa&ccedil;on naturel au soleil. Le triage se fait manuellement. Ensuite, la pr&eacute;paration se fait par voie humide.</p>\r\n\r\n<p>Une fois pr&eacute;par&eacute;e, la f&egrave;ves sont r&eacute;guli&egrave;res, de petites tailles et tr&egrave;s denses. Elles ont une couleur l&eacute;g&egrave;rement bleut&eacute;e.</p>\r\n\r\n<p>De sa tasse irr&eacute;prochable r&eacute;sulte des notes l&eacute;g&egrave;rement abricot&eacute;es qui laissent place rapidement &agrave; une explosion d&#39;agrumes. Sa persistence en bouche est &eacute;tonnante pour ce caf&eacute; au corps subtil.</p>\r\n\r\n<p>Les Mokas de la r&eacute;gion de Sidamo sont fins et &eacute;l&eacute;gants.</p>\r\n\r\n<p>&nbsp;</p>",
+    "content_en": null,
+    "content_es": null,
+    "published_date": "2018-05-15",
+    "slug": "ethiopie-sidamo-un-cafe-dexception",
+    "title": "Ethiopie Sidamo, un Caf\u00e9 d'exception",
+    "title_fr": "Ethiopie Sidamo, un Caf\u00e9 d'exception",
+    "title_en": null,
+    "title_es": null,
+    "created_on": "2017-06-07T18:25:30.993Z",
+    "created_by": 1,
+    "updated_on": "2018-05-15T14:22:23.588Z",
+    "updated_by": 3,
+    "sites": [
+      1
+    ]
+  }
+}
+]

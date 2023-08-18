@@ -1,0 +1,74 @@
+{% load static %}
+
+<div class="footer_block mm-bg t_bg182" style="background: url('');">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="single-footer-widget">
+					<a href="{% url 'page:home' %}"><h1 class="t_text68"></h1></a>
+					<ul>
+						<li><a href="{% url 'page:concept' %}" class="t_text69"></a></li>
+						<li><a href="{% url 'product:product_list' %}" class="t_text71"></a></li>
+						<li><a href="{% url 'blog:blog_list' %}" class="t_text70"></a></li>
+						<!-- <li><a href="" class="t_text72"></a></li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="single-footer-widget">
+					<h1 class="text-uppercase t_text73"></h1>
+					<ul>
+						<li><a href="{% url 'page:shop' %}" class="t_text74"></a></li>
+						<li><a href="{% url 'page:shop' %}" class="t_text75"></a></li>
+						<li><a href="{% url 'page:faq' %}" class="">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="single-footer-widget">
+					<h1 class="text-uppercase t_text76"></h1>
+					<p><a href="{% url 'page:pro' %}" class="t_text77"></a></p>
+					<p class="t_text97"></p>
+					{% if request.user.is_authenticated %}
+					<form method="post" action="{% url 'account_logout' %}">
+						{% csrf_token %}
+						<button class="cap_button cap_button_v3 ml-0 t_text119" type="submit"></button>
+					</form>
+					{% else %}
+
+					<a href="{% url 'account_login' %}" class="cap_button cap_button_v3 ml-0 t_text78"></a>
+					{% endif %}
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="single-footer-widget">
+					<h1 class="text-uppercase t_text79"></h1>
+					<p class="t_text80"></p>
+					<div class="social_links">
+						<a href="" target="_blank" class="t_text34"><img src="" class="t_text179" /></a>
+						<a href="" target="_blank" class="t_text36"><img src="" class="t_text180" /></a>
+						<!-- <a href="" target="_blank" class="t_text35"><img src="" class="t_text181" /></a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright_div">
+			<hr>
+			<div class="row">
+				<div class="col-sm-6 left_text">
+					<ul>
+						<li><a href="http://www.giordani.paris/" target="_blank">Artwork : Giordani</a></li>
+						<li>Développement : <a href="https://mahdil.com/" target="_blank">Maison Mahdil {% now 'Y' %}</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6 right_text">
+					<ul>
+						<li><a href="{% url 'page:legal_notice' %}" class="t_text81"></a></li>
+						<li><a href="{% url 'page:cgv' %}" class="t_text82"></a></li>
+						<!-- <li class="t_text84"></li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

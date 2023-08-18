@@ -1,0 +1,16 @@
+{% load text_extras %}
+
+{% query text_list id='336' as text336 %}
+{% query text_list id='332' as text332 %}
+{% query text_list id='333' as text333 %}
+{% query text_list id='334' as text334 %}
+{% query text_list id='335' as text335 %}
+
+<h2>{{ text336.get_text|safe }}</h2>
+
+<p>
+	{{ text332.t_CharField }} : {{ instance.name }}<br>
+	{{ text333.t_CharField }} : {{ instance.email }}<br>
+	{{ text334.t_CharField }} : {{ instance.message }}<br>
+	{{ text335.t_CharField }} : {{ instance.created_on }}
+</p>

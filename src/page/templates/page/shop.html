@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block content %}
+
+<!-- googlemap -->
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}&callback=initMap">
+</script>
+<script>
+var url_shop = "{% url 'page:shop_api' %}";
+var marker_image= "{% static 'page/img/marker.png' %}";
+var cluster_image= "{% static 'page/img/m' %}";
+</script>
+
+<div class="shop-page">
+	<div class="alpha1">
+		<div class="container-fluid">
+			<div class="row t1_alpha no-gutters bravo1">
+				<div class="col">
+					<hr>
+				</div>
+				<div class="col-6">
+					<h1 class="text-uppercase text-center t_text129"></h1>
+				</div>
+				<div class="col">
+					<hr>
+				</div>
+			</div>
+			<h2 class="t_text130 t2_alpha"></h2>
+		</div>
+		<div class="bravo2">
+			<img src="" class="t_text210" />
+		</div>
+	</div>
+	<div class="alpha2">
+		<div id="map" class="bravo1"></div>
+	</div>
+</div>
+
+<script type="text/javascript" src="{% static 'page/js/shop.js' %}"></script>
+
+{% endblock %}

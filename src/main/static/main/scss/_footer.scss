@@ -1,0 +1,171 @@
+// Footer
+footer {
+	display: block !important;
+}
+.footer_block {
+	bottom: 0;
+	padding: 35px 0;
+	width: 100%;
+	color: $color5;
+	position: relative;
+	.single-footer-widget {
+		@include mobile {
+			margin-bottom: 30px;
+			.cap_button {
+				margin-top: 30px;
+			}
+		}
+		a {
+			font-family: $font2-light;
+		}
+		h1 {
+			font-family: $font1;
+			font-size: 18px;
+			letter-spacing: 1px;
+			margin-bottom: 15px;
+		}
+		li {
+			display: block;
+			a {
+				display: block;
+				font-size: 13px;
+				margin-bottom: 10px;
+				padding: 0;
+				text-transform: uppercase;
+			}
+			@include mobile {
+				text-align: center;
+			}
+		}
+		p {
+			font-family: $font2-light;
+			margin-bottom: 10px;
+			@include mobile {
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+		}
+		.btn {
+			background-color: $color1;
+			border-radius: 0;
+			color: $color3;
+			font-size: 14px;
+			margin-top: 10px;
+			padding: 10px 30px;
+			text-align: center;
+			@include tablet {
+				padding: 7px 20px;
+			}
+		}
+	}
+	ul {
+		padding-left: 0;
+	}
+}
+
+
+.footer_block {
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	@include mobile {
+		position: relative;
+		text-align: center;
+	}
+
+	#content {
+		padding-top: 137px;
+		@include mobile {
+			padding-bottom: 0;
+			padding-top: 43px;
+		}
+	}
+	.copyright_div {
+		hr {
+			border-top: solid 1px $color5;
+			width: 100%;
+		}
+		li {
+			color: $color5;
+			display: inline-block;
+			font-size: 14px;
+			font-weight: 300;
+			margin-right: 30px;
+			@include mobile {
+				margin-right: 20px;
+			}
+		}
+		.left_text {
+			ul {
+				@include mobile {
+					padding-left: 0;
+				}
+			}
+			a {
+				display: inline-block;
+			}
+			li {
+				&:last-child {
+					@include mobile {
+						margin-right: 30px;
+					}
+				}
+				@include mobile {
+					margin-left: 19px;
+					margin-right: 19px;
+				}
+				a {
+					@include mobile {
+						font-size: 14px;
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+		.right_text {
+			text-align: right;
+			ul {
+				@include mobile {
+					padding-left: 0;
+				}
+			}
+			li {
+				a {
+					@include mobile {
+						font-size: 14px;
+						text-transform: capitalize;
+					}
+				}
+			}
+			@include mobile {
+				text-align: center;
+			}
+		}
+	}
+	.right_text {
+		li {
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	.social_links {
+		margin-top: 20px;
+		a {
+			display: inline-block;
+			img {
+				height: 26px;
+				margin-right: 25px;
+				width: 26px;
+			}
+			&:last-child {
+				img {
+					margin-right: 0;
+				}
+			}
+		}
+
+		@include mobile {
+			padding-bottom: 20px;
+		}
+	}
+}

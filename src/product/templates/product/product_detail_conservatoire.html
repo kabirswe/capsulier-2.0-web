@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+{% load l10n %}
+{% load static %}
+{% load text_extras %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block head_js %}
+{% if not live_test %}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}"></script>
+<script type="text/javascript" src="{% static 'product/js/conservatory_map.js' %}{{ v }}"></script>
+{% else %}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}"></script>
+<script type="text/javascript" src="{% static 'product/dist/conservatory_map.min.js' %}{{ v }}"></script>
+{% endif %}
+<script type="text/javascript">
+	$(function(){
+		var lat = {{ instance.productextra.position.latitude|unlocalize }};
+		var lng = {{ instance.productextra.position.longitude|unlocalize }};
+		google.maps.event.addDomListener(window, 'load', initialize(lat, lng));
+	});
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="product_detail_conservatoire_page">
+	<div id="i_alpha1" class="carousel slide alpha1" data-ride="carousel" data-interval="false">
+		<ol class="carousel-indicators bravo1">
+			{% for object in product_list %}
+			<li data-target="#i_alpha1" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+			{% endfor %}
+		</ol>
+		<div class="carousel-inner bravo2">
+			{% for object in product_list %}
+			<div class="carousel-item {% if forloop.first %}active{% endif %} charlie1">
+				<div class="mm_bg_opcacity_top_bottom"></div>
+				<img class="d-block w-100 delta1" src="{{ object.get_background_image_hq }}" alt="{{ object.name }}"/>
+
+				<!-- Caption -->
+				<div class="d-none d-md-block delta2">
+					<h1 style="border-bottom-color: {{ object.productextra.color }}">{{ object.name }}</h1>
+					<h2>{{ object.productlang.description_short |default:"-" }}</h2>
+					<hr align="left" style="border-top-color: {{ object.productextra.color }}">
+					<div class="foxtrot1">
+						{{ object.productlang.description|linebreaks }}
+					</div>
+					<div class="foxtrot2">
+						{% include "product/includes/product_block/product_add2.html" with object=object %}
+					</div>
+
+				</div>
+
+				<!-- music div -->
+				<div class="delta4">
+					<div class="icon_div">
+						{% if object.productextra.song %}
+						<div class="triangle_bg">
+							<div class="player-div" style="border: 2px solid {{ object.productextra.color }};"></div>
+							<audio controls preload="auto">
+								<source src="{{ object.productextra.song.url }}" type="audio/mpeg"/>
+							</audio>
+							<div class="player-description">
+								<div class="title">{{ object.productextra.song_track_name }}</div>
+								<div class="artist">{{ object.productextra.song_artist }}</div>
+								<div class="description">{{ object.productextra.description }}</div>
+							</div>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+
+				<!-- music div -->
+				<div class="delta5">
+					<a href="#scroll-bottom" class="top-to-bottom">
+						<img src="" class="t_text271" alt="">
+					</a>
+				</div>
+
+				<!-- Details -->
+				<div id="scroll-bottom" class="delta3">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								{% if object.productextra.position %}
+								<script type="text/javascript">
+								$(document).ready(function () {
+									var id = {{ object.id }};
+									var latitude = {{ object.productextra.position.latitude|unlocalize }};
+									var longitude = {{ object.productextra.position.longitude|unlocalize }};
+									var icon = '{% static "page/img/marker.png" %}';
+									get_map(id, latitude, longitude, icon);
+								});
+								</script>
+								<div id="map{{ object.id }}" class="echo1"></div>
+								{% endif %}
+							</div>
+							<div class="col-md-4">
+								{% if object.productfeature_set.first %}
+								<div class="row">
+									<div class="col-md-12">
+										<div class="row t1_alpha">
+											<div class="col">
+												<hr>
+											</div>
+											<div class="col-6">
+												<h3 class="text-center">{{ object.name }}</h3>
+											</div>
+											<div class="col">
+												<hr>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9">
+										{% regroup object.productfeature_set.all by feature.product_feature_category.name as feature_list %}
+										{% for zarming in feature_list %}
+										<div>
+											<h4>{{ zarming.grouper }}</h4>
+											<p>{% for feature in zarming.list %}{{ feature.feature.name }}{% if not forloop.last %} / {% endif %}{% endfor %}</p>
+										</div>
+										{% endfor %}
+									</div>
+								</div>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<a class="carousel-control-prev" href="#i_alpha1" role="button" data-slide="prev">
+			<span class="" aria-hidden="true"><img class="t_text272" src="" alt=""></span>
+			<span class="sr-only"></span>
+		</a>
+		<a class="carousel-control-next" href="#i_alpha1" role="button" data-slide="next">
+			<span class="" aria-hidden="true"><img class="t_text273" src="" alt=""></span>
+			<span class="sr-only"></span>
+		</a>
+	</div>
+
+	<div class="alpha3 text-center">
+		<a href="{% url 'product:product_list' %}" class="cap_button t_text276"></a>
+	</div>
+
+	{% if instance.related_products.active.count > 0 %}
+	<div class="alpha2 container">
+		<div class="row t1_alpha bravo1">
+			<div class="col">
+				<hr>
+			</div>
+			<div class="col-6">
+				<h1 class="text-uppercase text-center t_text278"></h1>
+			</div>
+			<div class="col">
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			{% for object in instance.related_products.active %}
+			{% include "product/includes/product_block.html" with product=object col_class_set="col-sm-4 col-6" %}
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="alpha3 text-center">
+		<a href="{% url 'product:product_list' %}" class="cap_button t_text276"></a>
+	</div>
+
+	{% endif %}
+
+	<div class="alpha2 container">
+		<div class="row t1_alpha">
+			<div class="col">
+				<hr>
+			</div>
+			<div class="col-6">
+				<h1 class="text-uppercase text-center t_text275"></h1>
+			</div>
+			<div class="col">
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			{% for object in product_list1 %}
+			{% include "product/includes/product_block.html" with product=object col_class_set="col-sm-4 col-6" %}
+			{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

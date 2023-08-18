@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load cropping %}
+{% load static %}
+
+{% block head_css %}
+{% if not live_test %}
+<link rel="stylesheet" href="{% static 'main/css/error.css' %}">
+{% else %}
+<link rel="stylesheet" href="{% static 'main/dist/error.min.css' %}{{ v }}">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="error-page">
+    <div class="center-div">
+        <div class="center-element">
+            <p class="t_text346 text"></p>
+            <h1 class="error-number">403 CSRF</h1>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

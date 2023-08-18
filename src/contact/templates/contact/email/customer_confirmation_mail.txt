@@ -1,0 +1,10 @@
+{% load text_extras %}
+
+{% query text_list id='423' as text423 %}
+{% query text_list id='424' as text424 %}
+{% query text_list id='425' as text425 %}
+{% query text_list id='335' as text335 %}
+
+{{ text423.get_text }} {{ instance.name }},
+{{ text424.get_text|safe }} {{ text425.get_text|safe }}
+{{ text335.t_CharField }} : {{ instance.created_on }}

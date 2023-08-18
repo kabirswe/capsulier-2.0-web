@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'AshemoreCondMedium';
+    src: url('../fonts/AshemoreCondMedium/AshemoreCondMedium.eot');
+    src:
+    url('../fonts/AshemoreCondMedium/AshemoreCondMedium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AshemoreCondMedium/AshemoreCondMedium.woff2') format('woff2'),
+    url('../fonts/AshemoreCondMedium/AshemoreCondMedium.woff') format('woff'),
+    url('../fonts/AshemoreCondMedium/AshemoreCondMedium.ttf')  format('truetype'),
+    url('../fonts/AshemoreCondMedium/AshemoreCondMedium.svg#svgFontName') format('svg');
+}
+@font-face {
+    font-family: 'AshemoreCondLight';
+    src: url('../fonts/AshemoreCondLight/AshemoreCondLight.eot');
+    src:
+    url('../fonts/AshemoreCondLight/AshemoreCondLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AshemoreCondLight/AshemoreCondLight.woff2') format('woff2'),
+    url('../fonts/AshemoreCondLight/AshemoreCondLight.woff') format('woff'),
+    url('../fonts/AshemoreCondLight/AshemoreCondLight.ttf')  format('truetype'),
+    url('../fonts/AshemoreCondLight/AshemoreCondLight.svg#svgFontName') format('svg');
+}
+@font-face {
+  font-family: 'BEBAS';
+  src: url('../fonts/Bebas/BEBAS.eot'); /* IE9 Compat Modes */
+  src:
+  url('../fonts/Bebas/BEBAS.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Bebas/BEBAS.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/Bebas/BEBAS.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/Bebas/BEBAS.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/Bebas/BEBAS.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'ChaletComprimeHongKongEighty';
+    src: url('../fonts/ChaletComprime-HongKongEighty/ChaletComprimeHongKongEighty.eot'); /* IE9 Compat Modes */
+    src:
+    url('../fonts/ChaletComprime-HongKongEighty/ChaletComprimeHongKongEighty.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/ChaletComprime-HongKongEighty/ChaletComprimeHongKongEighty.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/ChaletComprime-HongKongEighty/ChaletComprimeHongKongEighty.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/ChaletComprime-HongKongEighty/ChaletComprimeHongKongEighty.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/ChaletComprime-HongKongEighty/ChaletComprimeHongKongEighty.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+.background_div {
+    background-color: #edece8;
+    opacity: 0.95;
+    padding: 35px 0 20px;
+}
+#section{
+    height: 100vh;
+}
+body {
+    background: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row{
+    margin:0 !important;
+}
+.background_div h1{
+    color: #9f5d3b;
+    font-size: 36px;
+    margin-top: 0;
+    font-family: 'ChaletComprimeHongKongEighty';
+}
+.vertical_hr{
+    border-left: solid 1px #ff0000;
+    height: 43px;
+    width: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+img{
+    object-fit: cover;
+}
+p{
+    color: #1a1718;
+    font-size: 16px;
+    font-weight: 500;
+}
+.horizontal_hr{
+    border-top: solid 1px #ff0000;
+    width: 10px;
+}
+.background_div h2{
+    color: #1a1718;
+    font-size: 24px;
+    font-family: 'BEBAS';
+}
+.center-div{
+    display: table;
+    height: 100%;
+    margin:0 !important;
+    width: 100%
+}
+.center-element{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+input{
+    background-color: #fff;
+    border:0;
+    height: 36px;
+    margin: 0 5px;
+    padding: 0 10px;
+    width: 30%;
+}
+::-webkit-input-placeholder {
+    color: #858585;
+    font-size: 16px;
+    font-weight: 500;
+}
+::-moz-placeholder {
+    color: #858585;
+    font-size: 16px;
+    font-weight: 500;
+}
+:-ms-input-placeholder {
+    color: #858585;
+    font-size: 16px;
+    font-weight: 500;
+}
+:-moz-placeholder {
+    color: #858585;
+    font-size: 16px;
+    font-weight: 500;
+}
+.submit_btn{
+    background-color: #231f20;
+    color: #c6985a; 
+    font-size: 14px;
+    width: 194px;
+}
+.ashemoreMedium{
+    font-family: 'AshemoreCondMedium';
+}
+.ashemoreLight{
+    font-family: 'AshemoreCondLight';
+}
+.padding-off{
+    padding: 0 !important;
+}
+form{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/*       ###########    Responsive Design    #############    */
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
+    input{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .submit_btn{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 767px){
+    input{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .submit_btn{
+        width: 100%;
+    }
+    p{
+        font-size: 10px;
+    }
+    .background_div h1{
+        font-size: 20px;
+    }
+    .background_div h2{
+        font-size: 12px;
+    }
+    #section {
+        height: auto;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1300px){
+    input,.submit_btn{
+        width: 30%;
+    }
+    hr{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .background_div h1{
+        font-size: 24px;
+    }
+    .background_div h2{
+        font-size: 16px;
+    }
+    p{
+        font-size: 12px;
+    }
+}

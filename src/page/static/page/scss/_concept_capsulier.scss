@@ -1,0 +1,209 @@
+// Concept Capsulier
+
+.concept-page {
+	.alfa1 {
+		img {
+			height: 540px;
+			@include mobile {
+				border-bottom: 5px solid $color1;
+				height: 223px;
+			}
+		}
+		.bravo1 {
+			border: 0;
+			height: 83px;
+			margin-top: -48px;
+			@include mobile {
+				height: 57px;
+				margin-top: -32px;
+				width: 2px;
+			}
+		}
+	}
+	.alfa2 {
+		margin-top: 10px;
+		padding-bottom: 80px;
+		h1 {
+			color: $color1;
+			font-family: $font1;
+			font-size: 48px;
+			letter-spacing: 3px;
+			text-align: center;
+			text-transform: uppercase;
+			@include mobile {
+				font-size: 36px;
+				letter-spacing: 0;
+			}
+		}
+		h2 {
+			color: $color2;
+			font-family: $font1;
+			font-size: 24px;
+			text-align: center;
+		}
+		hr {
+			border-top: solid 1px $color2;
+			margin-bottom: 30px;
+			width: 44px;
+			@include mobile {
+				margin-bottom: 5px;
+			}
+		}
+	}
+	.alfa3 {
+		.bravo1 {
+			padding: 0 142px;
+			@include large-screen {
+				padding: 0 15%;
+			}
+			@include mobile {
+				height: auto;
+				padding: 15px 24px 15px;
+			}
+			@include tablet {
+				padding: 0 80px;
+			}
+			h1 {
+				color: $color2;
+				font-size: 24px;
+				text-align: left;
+				font-family: $font1;
+				text-transform: uppercase;
+				@include mobile {
+					font-size: 36px;
+				}
+			}
+			h2 {
+				color: $color1;
+				font-size: 20px;
+				text-align: left;
+				font-family: $font1;
+				text-transform: uppercase;
+				@include mobile {
+					margin-top: 0;
+				}
+			}
+			hr {
+				border-top: solid 1px $color2;
+				margin-top: 0;
+				width: 44px;
+			}
+			p {
+				color: $color2;
+				font-weight: 500;
+				text-align: left;
+			}
+		}
+		#map {
+			height: 680px;
+		}
+	}
+	.alfa4 {
+		// margin-top: 50px;
+		padding: 100px 20px;
+		.bravo1 {
+			background: $white;
+			margin: 0 auto;
+			padding: 60px;
+			position: relative;
+			text-align: center;
+			width: 620px;
+			@include mobile {
+				width: auto;
+			}
+			h1 {
+				color: $color1;
+				font-family: $font1;
+				font-size: 18px;
+				@include mobile {
+					font-size: 24px;
+					text-align: center;
+				}
+			}
+			img {
+				@include mobile {
+					height: 40px;
+				}
+			}
+			p {
+				color: $color2;
+				margin: 20px auto 30px;
+				@include mobile {
+					font-size: 15px;
+				}
+			}
+			.cap_button {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.alfa5 {
+		margin-top: 50px;
+		padding-bottom: 20px;
+	}
+	.alfa6 {
+		.bravo1 {
+			height: 13px;
+			width: 13px;
+			margin-bottom: 20px;
+		}
+		.bravo2 {
+			padding: 0 142px;
+			&.mb-20 {
+				margin-bottom: 20px;
+			}
+			@include large-screen {
+				padding: 0 15%;
+			}
+			@include mobile {
+				height: auto;
+				padding: 15px 24px 15px;
+			}
+			@include tablet {
+				padding: 0 80px;
+			}
+			h1 {
+				color: $color2;
+				font-family: $font1;
+				font-size: 24px;
+				text-align: left;
+				text-transform: uppercase;
+				@include mobile {
+					font-size: 36px;
+				}
+			}
+			h2 {
+				color: $color1;
+				font-size: 20px;
+				text-align: left;
+				text-transform: uppercase;
+				@include mobile {
+					margin-top: 0;
+				}
+			}
+			hr {
+				border-top: solid 1px $color2;
+				margin-top: 0;
+				width: 44px;
+			}
+			p {
+				color: $color2;
+				font-weight: 500;
+				text-align: left;
+			}
+			.text-center {
+				@include mobile {
+					text-align: left !important;
+				}
+			}
+		}
+		.bravo3 {
+			margin: 50px 0;
+			text-align: center;
+			.charlie1 {
+				max-width: 60%;
+				width: auto;
+			}
+		}
+	}
+}

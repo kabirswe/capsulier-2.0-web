@@ -1,0 +1,71 @@
+// Product list Capsulier
+.conservatoire_product_list_page {
+	.alpha1 {
+		background-color: $color4;
+		margin-bottom: 0;
+		padding-top: 90px;
+		@include mobile {
+			padding-top: 50px;
+		}
+		.bravo1 {
+			margin-top: 20px;
+			padding-bottom: 30px;
+			h1 {
+				color: $color1;
+				font-family: $font1;
+				font-size: 48px;
+				margin-bottom: 0;
+				@include mobile {
+					font-size: 36px;
+				}
+			}
+			hr {
+				border: solid 1px $red;
+				height: 0;
+				width: 100%;
+			}
+			p {
+				text-align: center;
+			}
+		}
+		.bravo2 {
+			left: 0;
+			position: relative;
+			right: 0;
+			text-align: center;
+			z-index: 9;
+			img {
+				margin-left: -16px;
+				position: absolute;
+				top: 0px;
+				width: 32px;
+			}
+		}
+	}
+	.alpha2 {
+		background-color: $color3;
+		padding-bottom: 50px;
+		.bravo1 {
+			padding-top: 50px;
+			h2 {
+				color: $color1;
+				font-family: $font1;
+				font-size: 72px;
+				margin-bottom: 0;
+			}
+			hr {
+				border: solid 1px $red;
+				height: 0;
+				width: 100%;
+			}
+		}
+		.bravo2 {
+			@include cmq (768px, 3000px) {
+				.col-md-2 {
+					min-width: 20%;
+					flex: 0 0 20%;
+				}
+			}
+		}
+	}
+}

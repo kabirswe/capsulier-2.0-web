@@ -1,0 +1,18 @@
+[
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "preprod.lecapsulier.fr",
+    "name": "Le Capsulier"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 2,
+  "fields": {
+    "domain": "preprod.conservatoireducafe.fr",
+    "name": "Le Conservatoire du Caf\u00e9"
+  }
+}
+]

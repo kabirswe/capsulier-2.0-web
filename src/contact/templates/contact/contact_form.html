@@ -1,0 +1,51 @@
+{% load crispy_forms_tags %}
+{% load static %}
+
+<div class="modal fade contact_modal contact_form_block" id="contactModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="d-flex justify-content-end">
+				<button type="button" id="modal_close_c" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h1 class="t_text90"></h1>
+				<hr>
+				<h2 class="t_text91"></h2>
+				<form method="POST" id="contactForm" action="{% url 'contact:contactform' %}">{% csrf_token %}
+					<div class="row">
+						<div class="col-sm-6 col-xs-12">
+							<div id="div_id_name" class="form-group">
+								<div class="controls">
+									<input class="textinput textInput form-control" id="id_name" maxlength="120" name="name" type="text" required />
+									<p id="id_name_v" class="name_field"></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-xs-12">
+							<div id="div_id_email" class="form-group">
+								<div class="controls">
+									<input class="textinput textInput form-control" id="id_email_c" maxlength="254" name="email" type="text" required />
+									<p id="id_email_v" class="email_field"></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-xs-12">
+							<div id="div_id_message" class="form-group">
+								<div class="controls ">
+									<textarea class="textarea form-control" cols="40" id="id_message" name="message" rows="10"></textarea>
+									<p id="id_message_v" class="message_field"></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-xs-12 contact_submit_div">
+							<button type="submit" value="" id="submit_btn" class="cap_button t_text324"></button>
+						</div>
+					</div>
+					<div class="reply text-center"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

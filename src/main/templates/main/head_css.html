@@ -1,0 +1,31 @@
+{% load static %}
+
+{% if not live_test %}
+
+<!-- Vendor css file -->
+<link rel="stylesheet" href="{% static 'bower_components/font-awesome/web-fonts-with-css/css/fontawesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'bower_components/slick-carousel/slick/slick.css' %}">
+
+<!-- Mahdil css file -->
+{% if current_site.id == 2 %}
+<link rel="stylesheet" href="{% static 'main/css/conservatoire.css' %}{{ v }}">
+{% else %}
+<link rel="stylesheet" href="{% static 'main/css/capsulier.css' %}{{ v }}">
+{% endif %}
+
+{% else %}
+
+<!-- Vendor css file -->
+<link rel="stylesheet" href="{% static 'vendor/font-awesome/web-fonts-with-css/css/fontawesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'vendor/slick-carousel/slick/slick.css' %}">
+
+<!-- Mahdil css file -->
+{% if current_site.id == 2 %}
+<link rel="stylesheet" href="{% static 'main/dist/conservatoire.min.css' %}{{ v }}">
+{% else %}
+<link rel="stylesheet" href="{% static 'main/dist/capsulier.min.css' %}{{ v }}">
+{% endif %}
+
+{% endif %}

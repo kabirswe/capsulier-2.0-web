@@ -1,0 +1,250 @@
+// Home Capsulier
+
+.home-page {
+	.section1 {
+		border-bottom: solid 8px $color1;
+		position: fixed;
+		top: 85px;
+		left: 0;
+		width: 100%;
+		@include mobile {
+			top: 60px;
+		}
+		.item {
+			height: calc(100vh - 95px);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			display: flex;
+			background-attachment: fixed;
+			justify-content: flex-end;
+			align-items: center;
+			.custom-carousel-caption {
+				text-align: center;
+				color: #fff;
+				display: flex;
+				align-items: flex-end;
+				flex-direction: column;
+				h1 {
+					font-family: $font1;
+					font-size: 55px;
+					text-transform: uppercase;
+					position: relative;
+					&:before {
+						content: "";
+						position: absolute;
+						top: -10px;
+						left: 50%;
+						transform: translateX(-50%);
+						height: 1px;
+						width: 45px;
+						background: $red;
+					}
+					@include mobile {
+						font-size: 45px;
+					}
+				}
+			}
+		}
+		.down-arrow {
+			bottom: 20px;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			p {
+				color: $color3;
+				font-size: 12px;
+				text-align: center;
+			}
+			.click {
+				display: inline-block;
+			}
+		}
+	}
+	.section2 {
+		margin-top: calc(100vh + 15px);
+	}
+	.section3 {
+		.block2 {
+			.zarmeur1 {
+				margin-bottom: 30px;
+				@include cmq (768px, 3000px) {
+					.col-md-2 {
+						min-width: 20%;
+						flex: 0 0 20%;
+					}
+				}
+			}
+		}
+	}
+	.section2, .section3 {
+		background-color: $color3;
+		padding: 50px 15px;
+		position: relative;
+		.block1 {
+			width: 62%;
+			@include tablet {
+				width: 100%;
+			}
+			@include mobile {
+				width: 100%;
+			}
+		}
+		.block2 {
+			.click {
+				margin: 75px auto 45px;
+			}
+		}
+	}
+	.section4 {
+		position: relative;
+		z-index: 3;
+		padding: 60px 0;
+		.text-details {
+			background-color: $white;
+			margin: 100px auto;
+			padding: 35px 0 60px;
+			text-align: center;
+			width: 620px;
+			@include mobile {
+				width: 90%;
+			}
+			h1 {
+				color: $color1;
+				font-family: $font1;
+				font-size: 52px;
+			}
+			p {
+				color: $color2;
+				margin: 20px auto 30px;
+				width: 455px;
+				@include mobile {
+					width: auto;
+					padding: 0 20px;
+				}
+			}
+		}
+	}
+	.section5 {
+		position: relative;
+		@include tablet {
+			.container {
+				max-width: 100% !important;
+			}
+		}
+		background-color: $color3;
+		padding-bottom: 50px;
+		.explorer_btn {
+			background-color: $color2;
+			border: 0;
+			display: block;
+			margin: 40px auto 60px;
+			position: static;
+			text-align: center;
+			text-transform: uppercase;
+			width: 120px;
+			a {
+				color: $color1;
+				display: block;
+				font-family: $font1;
+				font-size: 14px;
+				letter-spacing: 1px;
+				padding: 5px 18px;
+				@include mobile {
+					padding: 3px 18px;
+				}
+			}
+		}
+		.image_div {
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.full_image {
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-top: solid 11px $color3;
+			// height: 623px;
+			margin-top: -75px;
+			.text_div {
+				background-color: $color1;
+				margin: 0 auto;
+				padding: 40px 60px 20px;
+				width: 300px;
+				h1 {
+					color: $color3;
+				}
+				p {
+					color: $color3;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		.text_div {
+			background: $white;
+			// height: 274px;
+			padding: 40px 60px 20px;
+			position: relative;
+			text-align: center;
+			h1 {
+				color: $color1;
+				font-family: $font1;
+				font-size: 14px;
+				letter-spacing: 1px;
+				@include mobile {
+					margin-top: 10px;
+				}
+				@include tablet {
+					line-height: 16px;
+					margin-top: 0;
+				}
+			}
+			img {
+				@include mobile {
+					height: 11px;
+					width: 1px;
+				}
+			}
+			p {
+				color: $color2;
+				font-family: $font2-light;
+				font-size: 12px;
+				line-height: 15px;
+				margin: 10px 0 40px;
+				@include tablet {
+					margin: 10px 0 10px;
+				}
+			}
+			.arrow_left {
+				left: -16px;
+				position: absolute;
+				z-index: 9;
+				@include mobile {
+					height: 20px;
+					left: -11px;
+					top: 20px;
+					width: 11px;
+				}
+			}
+			.arrow_right {
+				position: absolute;
+				right: -16px;
+				z-index: 9;
+				@include mobile {
+					height: 20px;
+					right: -11px;
+					top: 20px;
+					width: 11px;
+				}
+			}
+			@include mobile {
+				height: 174px;
+				padding: 0 22px 20px;
+			}
+			@include tablet {
+				padding: 28px 20px 20px;
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+{% load static %}
+
+<div id="i_cart_popup" class="modal right fade cart_popup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="alpha1">
+                <div class="container bravo1">
+                    <div class="row no-gutters charlie1">
+                        <div class="col-sm-2 delta1">
+                            <img src="" class="t_text264"/>
+                        </div>
+                        <div class="col-sm-8 delta2">
+                            <p>
+                                <span class="product_count"></span> <span id="cartItemProduct"></span> <span class="t_text265"></span>
+                            </p>
+                        </div>
+                        <div class="col-sm-2 delta3">
+                            <a data-dismiss="modal" aria-label="Close">
+                                <img src="" class="t_text266" />
+                            </a>
+                        </div>
+                    </div>
+                    <div id="cartItemList" class="charlie2"></div>
+                    <div id="cartItemTotal" class="charlie3">
+                        <div class="row delta1">
+                            <div class="col-md-12 echo1">
+                                <p class="text-uppercase float-left t_text296"></p>
+                                <p class="float-right"><span id="subtotal"></span> €</p>
+                            </div>
+                            <div class="col-md-12 echo1">
+                                <p class="foxtrot1 text-uppercase float-left t_text389"></p>
+                                <p class="foxtrot1 float-right"><span id="shippingtotal"></span> €</p>
+                                <p class="foxtrot2 text-uppercase float-left">Franco de port à partir de 50€ d’achat</p>
+                            </div>
+                            <!-- <div class="col-md-12 echo1">
+                                <p class="text-uppercase float-left t_text267"></p>
+                                <p class="float-right"><span id="taxtotal"></span> €</p>
+                            </div> -->
+                            <div class="col-md-12 echo2">
+                                <p class="text-uppercase float-left t_text268"></p>
+                                <p class="float-right"><span id="carttotal"></span> €</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="{% url 'eshop:cart' %}" class="cap_button t_text269"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

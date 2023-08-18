@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block content %}
+
+<div id="profile_page" class="address_create_page">
+	<div class="container">
+		<h1 class="text-uppercase text-center t_text202"></h1>
+        <hr>
+        <div class="t_text203"></div>
+		<form method="POST" action=''>{% csrf_token %}
+			<div class="col-md-12 col-sm-12 col-xs-12">
+    			{{ form|crispy }}
+	    	</div>
+	    	<div class="col-md-12 col-sm-12 col-xs-12">
+	    		<button class="cap_button t_text259" type='submit' value=""></button>
+	    	</div>
+    	</form>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var active = false;
+	function chichingfaq(el, e){
+		$('.cl_'+e).fadeToggle('slow');
+		console.log(el.id);
+
+		if(active === false) {
+	    $('#'+el.id+' i').addClass('fa-caret-down');
+	    $('#'+el.id+' i').removeClass('fa-caret-left');
+	    active = true;
+	  } else {
+	    $('#'+el.id+' i').removeClass('fa-caret-down');
+	    $('#'+el.id+' i').addClass('fa-caret-left');
+	    active = false;
+	  }
+	}
+</script>
+
+{% endblock %}

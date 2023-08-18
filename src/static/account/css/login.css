@@ -1,0 +1,84 @@
+body {
+	background: #f7f7f7;
+}
+
+.account-login {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.account-login h1, .account-login h3 {
+	color: #ab704c;
+	font-size: 24px;
+	margin-top: 0;
+}
+
+.account-login label {
+	margin-top: 0 !important;
+}
+
+.account-login .form-group {
+	margin: 0;
+}
+
+.account-login .secondaryAction {
+	color: #ab704c;
+	font-size: 13px;
+	font-style: italic;
+	font-weight: 100;
+	text-align: left;
+}
+
+.account-submit {
+	background-color: #231f20;
+	border: 0;
+	color: #c6985a;
+	display: block;
+	font-size: 14px;
+	margin: 0 auto;
+	padding: 3px 0;
+	text-align: center;
+	transition: all .5s ease;
+	width: 125px;
+}
+
+.account-submit:hover {
+	color: #fff;
+}
+
+.white_column {
+	background: #fff;
+	min-height: 395px;
+	padding: 30px 50px;
+}
+
+/*Password Reset*/
+.password_reset_page h1 {
+	font-size: 52px;
+}
+
+.password_reset_page .account-submit {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 260px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+	.account-submit {
+		background-color: #231f20;
+		border: 0;
+		color: #c6985a;
+		display: block;
+		font-size: 14px;
+		margin: 0 auto;
+		padding: 2px 0;
+		text-align: center;
+		transition: all .5s ease;
+		width: 90px;
+	}
+
+	.white_column {
+		min-height: 0;
+		padding: 40px 50px;
+	}
+}

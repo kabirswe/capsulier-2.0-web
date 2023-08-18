@@ -1,0 +1,64 @@
+{% load static %}
+
+<div class="{{ col_class_set }} product_block">
+	<div class="product_block_cart_alpha1">
+		<div class="product_block_cart_bravo2">
+			<form id="add-form_{{ product.id }}">
+				<div class="product_block_cart_charlie1">
+				    <a href="{{ object.get_absolute_url }}">
+				        <p class="product_block_cart_delta1">{{ object.name }}</p>
+				    </a>
+					<div class="hr-style">
+						<hr style="border-color:{{ object.productextra.color}}">
+					</div>
+				    {% if object.productlang.description_short %}
+				    <p class="product_block_cart_delta2">{{ object.productlang.description_short }}</p>
+				    {% endif %}
+				    {% if object.productlang.description_short2 %}
+				    <p class="product_block_cart_delta4">{{ object.productlang.description_short2 }}</p>
+				    {% endif %}
+				    <input type="hidden" name="item" value="{{ object.variation_set.first.id }}" />
+				    {% if request.user.is_authenticated and request.user.profile.status == 'b' %}
+				    <p class="product_block_cart_delta5">
+				        {{ object.variation_set.first.price_public }} €
+				    </p>
+				    {% endif %}
+				    <p class="product_block_cart_delta6" id="price_{{ object.id }}">
+				        {% if request.user.is_authenticated and request.user.profile.status == 'b' %}
+				        {{ object.variation_set.first.price_pro }} €
+				        {% else %}
+				        {{ object.variation_set.first.price_public }} €
+				        {% endif %}
+				    </p>
+				    {% if object.productlang.description_short3 %}
+				    <p class="product_block_cart_delta7">{{ object.productlang.description_short3 }}</p>
+				    {% endif %}
+				</div>
+				{% if product.variation_set.first.inventory > 0 or product.variation_set.first.no_out_of_stock %}
+				<div class="product_block_cart_charlie2">
+					<div class="quantity_update_alpha1">
+					    <a onclick="if(cart{{ object.id }}.value > 1){cart{{ object.id }}.value = (cart{{ object.id }}.value-1)}">
+					        <p class="quantity_update_bravo1" style="background-image: url('{% static 'product/img/svg/quantity-bg.svg' %}');">-</p>
+					    </a>
+					    <a><p class="quantity_update_bravo3">
+					        <input type="text" id="cart{{ object.id }}" name="qty" value="1" min="1" style="background-image: url('{% static 'product/img/svg/white-quantity-bg.svg' %}');" />
+					    </p></a>
+					    <a onclick="cart{{ object.id }}.value = (+ cart{{ object.id }}.value + 1)">
+					        <p class="quantity_update_bravo2" style="background-image: url('{% static 'product/img/svg/quantity-bg.svg' %}');">+</p>
+					    </a>
+					</div>
+					<div class="product_block_cart_delta2">
+						<a class="t_text193" onclick="var q =$('#cart'+{{ product.id }}).val(); addToCart3({{ product.variation_set.first.id }}, q)"></a>
+					</div>
+				</div>
+				{% else %}
+				<div class="product_block_cart_charlie3">
+					<div class="product_block_cart_delta1">
+						<p class="t_text192"></p>
+					</div>
+				</div>
+				{% endif %}
+			</form>
+		</div>
+	</div>
+</div>

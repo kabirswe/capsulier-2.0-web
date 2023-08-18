@@ -1,0 +1,21 @@
+// Font-Family
+$font1: "ChaletComprimeCologneEighty", Arial, sans-serif ;
+$font2-light: "AshemoreCondLight", Arial, sans-serif ;
+$font2-medium: "AshemoreCondMedium", Arial, sans-serif ;
+$font2-regular: "AshemoreCondRegular", Arial, sans-serif ;
+
+// Color
+$color1: #a36947;   // Brown
+$color2: #2a2627;   // Light Dark
+$color3: #edece8;   // Light Grey
+$color4: #d4d2c9;   // Draker Light Grey
+$color5: #6a696a;   // Draker Light Grey
+$color6: #1a181a;   // Draker Light Grey
+$red: #d64a5c;
+$white: #fff;
+
+// Px
+$nav-height-1: 85px;
+$nav-height-2: calc(85px + 53px);
+$nav-height-3: calc(53px + 30px);
+$nav-height-vh: calc(100vh - 85px);

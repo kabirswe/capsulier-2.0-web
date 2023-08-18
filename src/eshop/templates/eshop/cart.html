@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block content %}
+
+<div class="cart_page">
+	<div class="container">
+		<div class="row alpha1">
+			<div class="col-lg-8 bravo1">
+				<div class="d-flex flex-wrap justify-content-between align-items-center charlie1">
+					<div class="delta1">
+						<hr align="left">
+						<h1 class="t_text280"></h1>
+					</div>
+					<div class="delta2 cartHideEmpty">
+						<div class="cap_button cap_button_v3 echo1">
+							<a href="{% url 'eshop:checkout' %}" class="t_text281"></a>
+						</div>
+					</div>
+				</div>
+				<div class="charlie2">
+					<h3 class="t_text385 text-center empty_cart_txt" style="padding: 30% 0; display: none;"></h3>
+					<table class="table delta1 cartHideEmpty">
+						<thead class="echo1">
+							<tr>
+								<th colspan="2" scope="col" class="text-center t_text282"></th>
+								<th scope="col" class="text-right t_text283"></th>
+								<th scope="col" class="text-center t_text284"></th>
+								<th scope="col" class="text-right t_text285"></th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody class="echo2 ajax-cart-update">
+							{% for item in object.cartitem_set.all %}
+							{% if item.item %}
+							<tr id="itemChecked">
+								<th scope="row" class="foxtrot1 d-none d-sm-block">
+									<a href="{{ item.item.product.get_absolute_url }}" >
+										<img class="img-fluid" src="{{ item.item.product.get_image_lq }}" />
+									</a>
+								</th>
+								<td class="foxtrot2">
+									<p class="golf1">{{ item.item.product.name }}</p>
+									{% if item.item.product.get_description_short %}
+									<p class="golf2 d-none d-sm-block">{{ item.item.product.get_description_short }}</p>
+									{% endif %}
+									{% if item.item.product.get_description_short3 %}
+									<p class="golf3 d-none d-sm-block">{{ item.item.product.get_description_short3 }}</p>
+									{% endif %}
+								</td>
+								<td class="foxtrot3 text-right">
+									{% if request.user.is_authenticated and request.user.profile.status == 'b'%}
+									{{ item.item.price_pro |floatformat:2  }} €
+									{% else %}
+									{{ item.item.price_public |floatformat:2  }} €
+									{% endif %}
+								</td>
+								<td class="foxtrot4">
+									{% include 'product/includes/product_block/quantity_cart_update.html' with object=item.item item=item %}
+								</td>
+								<td>
+									<p class="text-right" id="item-line-total-{{ item.item.id }}">{{ item.line_item_total|floatformat:2 }}€</p>
+								</td>
+								<td>
+									<a onclick="addToCartRemove({{ item.item.id }});" class="close_btn float-right">X</a>
+								</td>
+							</tr>
+							{% else %}
+							{% endif %}
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				<!-- <div class="charlie3">
+					<div class="row delta1">
+						<p class="t_text287"></p>
+					</div>
+					<div class="row delta2">
+						<div class="col-sm-4 col-xs-12 t_text288"></div>
+						<div class="col-sm-4 col-xs-12">
+							<button class="t_text290"></button>
+						</div>
+						<div class="col-sm-4 col-xs-12">
+							<button class="cap_button t_text291"></button>
+						</div>
+					</div>
+				</div> -->
+				<div class="charlie4 cartHideEmpty">
+					<div class="delta7">
+						<p class="t_text290"></p>
+					</div>
+					<div class="row justify-content-between delta8">
+						<div class="col">
+							<p class="text-center t_text288"></p>
+						</div>
+						<div class="col d-flex justify-content-center flex-column">
+							<input type="text" id="promo_code" placeholder="code privilège">
+							<span id="promo_code_info"></span>
+						</div>
+						<div class="col d-flex justify-content-center">
+							<a onclick="cartPromo()" class="btn btn-light t_text291"></a>
+						</div>
+					</div>
+					<div class="delta9">
+						<p class="t_text387"></p>
+					</div>
+					<div class="row justify-content-between delta10">
+						<div class="col">
+							<p class="t_text388 text-center"></p>
+						</div>
+						<div class="col d-flex justify-content-center flex-column">
+							<select onchange="cartShipping()" id="shipping_code">
+								{% for obj in shipping_service_list %}
+								<option value="{{ obj.id }}">{{ obj.name }}</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+					<div class="delta1">
+						<p class="t_text293"></p>
+					</div>
+					<div class="row justify-content-between delta4">
+						<div class="col-md-auto echo1 t_text296"></div>
+						<div class="col"><hr></div>
+						<div class="col-md-auto echo2 subtotal" id="subtotal">{{ object.get_subtotal_vi }} €</div>
+					</div>
+					<div class="row justify-content-between delta11">
+						<div class="t_text389 col-md-auto"></div>
+						<div class="col"><hr></div>
+						<div class="col-md-auto echo2 shippingtotal" id="shippingtotal">{{ object.shipping_total }} €</div>
+					</div>
+					<div class="row justify-content-between delta12">
+						<div class="t_text390 col-md-auto"></div>
+						<div class="col"><hr></div>
+						<div class="col-md-auto echo2 distotal" id="distotal">- {{ object.discount_total }} €</div>
+					</div>
+					<div class="row justify-content-between delta5">
+						<div class="col-md-auto t_text297"></div>
+						<div class="col"><hr></div>
+						<div class="col-md-auto echo2 taxtotal" id="taxtotal">{{ object.tax_total }} €</div>
+					</div>
+					<div class="row justify-content-between delta6">
+						<div class="col-12">
+							<hr align="left">
+						</div>
+						<div class="col t_text298"></div>
+						<div class="col echo2 carttotal" id="carttotal">{{ object.total }} €</div>
+					</div>
+				</div>
+				<div class="d-flex justify-content-between flex-wrap charlie5">
+					<a class="cap_button cap_button_v2 mm_table t_text299" href="{% url 'product:product_list' %}"></a>
+					<a href="{% url 'eshop:checkout' %}" id="cc_submit" class="cap_button cap_button_v2 cartHideEmpty t_text300"></a>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="bravo2">
+					<div class="header">
+						<p class="t_text301"></p>
+					</div>
+					{% for product in product_list %}
+					<div class="row">
+						<div class="col-md-5 col-sm-12">
+							<div class="charlie1">
+								<a href="{{ product.get_absolute_url }}" >
+									<img class="img-fluid" src="{{ product.get_image_lq }}" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-7 col-sm-12">
+							<div class="charlie2">
+								{% include "product/includes/product_block_cart.html" with object=product %}
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		if(!$('.ajax-cart-update tr').is('#itemChecked')){
+			$('.cartHideEmpty').hide();
+			$('.empty_cart_txt').show();
+		}
+		else {
+			$('.cartHideEmpty').show();
+			$('.empty_cart_txt').hide();
+		}
+	});
+</script>
+
+{% endblock %}

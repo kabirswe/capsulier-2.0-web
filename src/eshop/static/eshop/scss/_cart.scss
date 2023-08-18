@@ -1,0 +1,443 @@
+// Cart
+
+.cart_page {
+    padding-top: $nav-height-3;
+    .alpha1 {
+        .bravo1 {
+            background-color: $white;
+            .charlie1 {
+                background-color: $color2;
+                padding: 10px 20px;
+                .delta1 {
+                    h1 {
+                        color: $color1;
+                        font-size: 48px;
+                        margin-bottom: 0;
+                        @include mobile {
+                            font-size: 26px;
+                            margin-bottom: 15px;
+                        }
+                    }
+                    hr {
+                        border: solid 2px $red;
+                        height: 0;
+                        margin-top: 0;
+                        width: 29px;
+                    }
+                }
+            }
+            .charlie2 {
+                .delta1 {
+                    .echo2 {
+                        .foxtrot1 {
+                            img {
+                                width: 45px;
+                            }
+                        }
+                        .foxtrot2 {
+                            .golf1 {
+                                margin-bottom: 5px;
+                            }
+                            .golf2 {
+                                font-family: $font1;
+                                font-size: 16px;
+                                margin-bottom: 0;
+                                text-transform: uppercase;
+                            }
+                            .golf3 {
+                                font-size: 12px;
+                                margin-bottom: 0;
+                            }
+                        }
+                        .foxtrot4 .quantity_update_alpha1 {
+                            width: 130px;
+                            padding: 0;
+                        }
+                        .close_btn {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .charlie3 {
+                .delta1 {
+                    background-color: $color3;
+                    padding: 15px;
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+                .delta2 {
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    button {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .charlie4 {
+                .delta7 {
+                    background-color: #edece8;
+                    padding: 6px 15px;
+                    p {
+                        color: #000;
+                        margin-bottom: 0;
+                    }
+                }
+                .delta8 {
+                    padding: 30px 0;
+                    p {
+                        color: #000;
+                        margin-bottom: 0;
+                    }
+                    input {
+                        border: 0;
+                        padding-left: 12px;
+                        background-color: #edece8;
+                        border-radius: 8px;
+                        height: 34px;
+                    }
+                    span {
+                        font-size: 12px;
+                        padding: 4px;
+                    }
+                    .btn {
+                        background-color: transparent;
+                        height: 34px;
+                        padding: 0.375rem 4rem;
+                        border: 1px solid #ab704c;
+                        border-radius: 8px;
+                    }
+                }
+                .delta9 {
+                        background-color: #edece8;
+                        padding: 6px 15px;
+                        p {
+                            color: #000;
+                            margin-bottom: 0;
+                        }
+                }
+                .delta10 {
+                    padding: 30px 0;
+                    p {
+                        color: #000;
+                        margin-bottom: 0;
+                    }
+                    select {
+                        border: 0;
+                        padding-left: 12px;
+                        background-color: #edece8;
+                        border-radius: 8px;
+                        height: 34px;
+                        width: 60%;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                    .btn {
+                        background-color: transparent;
+                        height: 34px;
+                        padding: 0.375rem 4rem;
+                        border: 1px solid #ab704c;
+                        border-radius: 8px;
+                    }
+                }
+                .delta1 {
+                    background-color: $color2;
+                    padding: 15px;
+                    p {
+                        color: $color1;
+                        margin-bottom: 0;
+                    }
+                }
+                .delta2 {
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+                .delta3 {
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+                .delta4 {
+                    padding-top: 20px;
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+                .delta5 {
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+                .delta6 {
+                    font-size: 30px;
+                    hr {
+                        border-top: solid 2px $red;
+                        margin-bottom: 12px;
+                        margin-top: 10px;
+                        width: 19px;
+                    }
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+            }
+            .charlie5 {
+                background-color: $color1;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                padding: 20px;
+                @include mobile {
+                    margin-bottom: 30px;
+                }
+                .cap_button {
+                    &:first-child {
+                        @include mobile {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .bravo2 {
+            background-color: #fff;
+            @include mobile {
+                display: none;
+            }
+            .header {
+                    background-color: #000;
+                    @include tablet {
+                        margin-top: 30px;
+                    }
+                    @include mobile {
+                        margin-top: 30px;
+                    }
+                p {
+                    color: #ab704c;
+                    text-align: center;
+                    padding: 25px 0;
+                }
+            }
+            .row {
+                margin: 30px 0;
+                .charlie1 {
+                    a {
+                        img {
+                            width: auto;
+                            margin: 0 auto;
+                            display: block;
+                        }
+                    }
+                }
+                .charlie2 {
+                    a {
+                        img {
+                            width: auto;
+                            margin: 0 auto;
+                            display: block;
+                        }
+                    }
+                    .product_block {
+                    	margin-top: 0;
+                    	padding-left: 0;
+                    	padding-right: 0;
+                    	.product_block_cart_alpha1 {
+                    		background: $white;
+                    		cursor: pointer;
+                    		height: 100%;
+                    		transition: all .5s ease-in-out;
+                    		width: 100%;
+                    		.product_block_cart_bravo1 {
+                    			height: 288px;
+                    		}
+                    		.product_block_cart_bravo2 {
+                    			background: $white;
+                    			position: relative;
+                    			.product_block_cart_charlie1 {
+                    				text-align: center;
+                                    .hr-style {
+                                        width: 100%;
+                                        margin-bottom: 10px;
+                                        hr {
+                                            border-top: solid 2px;
+                                            margin-bottom: 5px;
+                                            margin-top: 2px;
+                                            width: 18px;
+                                            float: left;
+                                        }
+                                    }
+                    				.product_block_cart_delta1 {
+                    					color: $color1;
+                    					font-size: 14px;
+                    					margin-bottom: 0;
+                    					text-transform: uppercase;
+                                        text-align: left;
+                    				}
+                    				.product_block_cart_delta2 {
+                                        color: #2a2627;
+                                        font-size: 12px;
+                                        text-transform: uppercase;
+                                        float: left;
+                                        width: 100%;
+                                        text-align: left;
+                                        margin-bottom: 0;
+                    				}
+                    				.product_block_cart_delta3 {
+                    					img {
+                    						margin-bottom: 5px;
+                    						width: 100px;
+                    					}
+                    				}
+                    				.product_block_cart_delta4 {
+                    					color: $color1;
+                    					font-size: 12px;
+                                        margin-bottom: 0;
+                                        text-align: left;
+                    				}
+                    				.product_block_cart_delta5 {
+                    					color: $color3;
+                    					font-size: 12px;
+                    					margin-bottom: 5px;
+                    					text-decoration-line: line-through;
+                    					text-transform: uppercase;
+                                        text-align: left;
+                    				}
+                    				.product_block_cart_delta6 {
+                    					color: $color2;
+                    					font-size: 12px;
+                    					line-height: 9px;
+                    					margin-bottom: 10px;
+                    					text-transform: uppercase;
+                                        text-align: left;
+                    				}
+                    				.product_block_cart_delta7 {
+                    					color: $color2;
+                    					font-size: 9px;
+                                        margin-bottom: 0;
+                    					text-transform: uppercase;
+                                        text-align: left;
+                    				}
+                    			}
+                    			.product_block_cart_charlie2, .product_block_cart_charlie3 {
+                    				bottom: 0;
+                    				left: 0;
+                    				opacity: 1;
+                    				position: relative;
+                    				right: 0;
+                    				transition: all .5s ease;
+                    			}
+                    			.product_block_cart_charlie2 {
+                    				.product_block_cart_delta1 {
+                    					background: rgb(0,0,0);
+                    					background: rgba(0,0,0,.8);
+                    					padding: 7px 0 2px;
+                    					text-align: center;
+                    					.product_block_cart_echo1, .product_block_cart_echo2 {
+                    						background-repeat: no-repeat;
+                    						background-size: cover;
+                    						color: $white;
+                    						display: inline-block;
+                    						font-size: 20px;
+                    						font-weight: bold;
+                    						height: 30px;
+                    						margin: 0 5px 5px;
+                    						width: 30px;
+                    					}
+                    					.product_block_cart_echo3 {
+                    						color: $white;
+                    						display: inline-block;
+                    						font-size: 20px;
+                    						font-weight: bold;
+                    						height: 30px;
+                    						margin: 0 5px 5px;
+                    						text-align: center;
+                    						width: 30px;
+                    						input {
+                    							background-color: transparent;
+                    							background-repeat: no-repeat;
+                    							background-size: cover;
+                    							border: 0;
+                    							color: $color2;
+                    							font-size: 15px;
+                    							height: 100%;
+                    							text-align: center;
+                    							width: 100%;
+                    						}
+                    					}
+                    				}
+                    				.product_block_cart_delta2 {
+                    					border: 0;
+                    					text-align: center;
+                    					width: 100%;
+                    					a {
+                                            color: #2a2627;
+                                            display: block;
+                                            font-size: 14px;
+                                            padding: 3px;
+                                            width: 80%;
+                                            margin: 0 auto;
+                                            background-color: #a36948;
+                                            border-radius: 20px;
+                                            border: 1px solid transparent;
+                                            transition: all ease-in-out .35s;
+                                            &:hover {
+                                                color: #2a2627;
+                                                background-color: #fff;
+                                                border: 1px solid #2a2627;
+                                            }
+                    						@include mobile {
+                    							padding: 3px 0;
+                    						}
+                    					}
+                    				}
+                    				.product_block_cart_delta3 {
+                    					height: 40px;
+                    					background-color: transparent;
+                    				}
+                    				.quantity_update_alpha1 {
+                    					background-color: transparent;
+                    				}
+                    			}
+                    			.product_block_cart_charlie3 {
+                    				bottom: -38px;
+                    				.product_block_cart_delta1 {
+                    					background-color: transparent;
+                    					border: 0;
+                    					color: $color1;
+                    					cursor: initial;
+                    					margin-top: 10px;
+                    					text-align: center;
+                    					width: 100%;
+                    					a {
+                    						color: $color1;
+                    						display: block;
+                    						font-size: 14px;
+                    						padding: 8px 0;
+                    						@include mobile {
+                    							padding: 3px 0;
+                    						}
+                    					}
+                    				}
+                    			}
+                    		}
+                    	}
+                    }
+                }
+            }
+        }
+    }
+    @include mobile {
+        padding-top: 60px;
+        .table thead th {
+            padding: .3rem;
+            font-size: 10px;
+        }
+        .table td {
+            padding: .3rem;
+        }
+        .quantity_update_alpha1 .quantity_update_bravo1, .quantity_update_alpha1 .quantity_update_bravo2 {
+            margin: 0;
+        }
+    }
+}

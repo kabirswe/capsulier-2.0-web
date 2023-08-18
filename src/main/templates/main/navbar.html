@@ -1,0 +1,571 @@
+{% load static %}
+
+<div class="main_navbar fixed-top">
+	<div class="zero1">
+		<div class="alpha1">
+			<div class="bravo1">
+				{% if not request.user.is_authenticated %}
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle t_text25" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+					<ul class="dropdown-menu" role="menu">
+						<div class="charlie1">
+							<div class="delta1">
+								<h1 class="t_text39"></h1>
+								<h2 class="t_text67"></h2>
+								<form method="POST" action="{% url 'account_login' %}">{% csrf_token %}
+									<input autofocus="autofocus" id="id_login2" name="login" placeholder="Votre email" type="email" required />
+									<input id="id_password3" name="password" type="password" placeholder="mot de passe" required />
+									<p><a href="{% url 'account_reset_password' %}" class="t_text38"></a></p>
+									<div class="text-center">
+										<button type="submit" class="cap_button cap_button_v2 t_text115"></button>
+									</div>
+								</form>
+							</div>
+							<hr>
+							<div class="delta2">
+								<p class="t_text40"></p>
+								<a href="{% url 'account_signup' %}" class="cap_button cap_button_v2 mm_mt_10 t_text43"></a>
+							</div>
+						</div>
+					</ul>
+				</li>
+				{% else %}
+				<li>
+					<form method="post" action="{% url 'account_logout' %}">
+						{% csrf_token %}
+						<button class="charlie2 t_text119" type="submit"></button>
+					</form>
+				</li>
+				{% endif %}
+				<li><a href="" data-toggle="modal" data-target="#contactModal" class="t_text28"></a></li>
+				<li><a href="" data-toggle="modal" data-target="#newsletterModal" class="t_text29"></a></li>
+			</div>
+			<div class="bravo2">
+				{% if current_site.id == 2 %}
+				<a class="brand" href="{% url 'page:home' %}">
+					<img src="" class="t_text184"/>
+				</a>
+				{% else %}
+				<a class="brand" href="{% url 'page:home' %}">
+					<img src="" class="t_text22"/>
+				</a>
+				<a class="brand2 t_text23" href="{% url 'page:home' %}"></a>
+				{% endif %}
+			</div>
+			<div class="bravo3">
+				{% if request.user.is_authenticated %}
+				<li>
+					<a href="{% url 'userprofile:profile' %}">{{ request.user.first_name }} {{ request.user.last_name }}</a>
+				</li>
+				{% endif %}
+				<li class="cart">
+					<a id="pannier_link" data-toggle="modal" data-target="#i_cart_popup" class="t_text30"></a>
+					<span class="badge" id="cart-count-badge">{{ request.session.cart_item_count }}</span>
+				</li>
+				<li class="social-icon">
+					<a href="" target="_blank" class="t_text34">
+						<img src="" class="t_text31"/>
+					</a>
+					<a href="" target="_blank" class="t_text36">
+						<img src="" class="t_text33"/>
+					</a>
+				</li>
+				<li class="dropdown language-drop-down">
+					<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						{% if request.LANGUAGE_CODE == 'fr' %}
+						FR
+						{% elif request.LANGUAGE_CODE == 'en' %}
+						EN
+						{% elif request.LANGUAGE_CODE == 'es' %}
+						ES
+						{% endif %}
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						{% if request.LANGUAGE_CODE == 'fr' %}
+						<li class="dropdown-item"><a href="/en{{ request.get_full_path|slice:'3:' }}">EN</a></li><br>
+						<li class="dropdown-item"><a href="/es{{ request.get_full_path|slice:'3:' }}">ES</a></li>
+						{% endif %}
+						{% if request.LANGUAGE_CODE == 'en' %}
+						<li class="dropdown-item"><a href="/fr{{ request.get_full_path|slice:'3:' }}">FR</a></li><br>
+						<li class="dropdown-item"><a href="/es{{ request.get_full_path|slice:'3:' }}">ES</a></li>
+						{% endif %}
+						{% if request.LANGUAGE_CODE == 'es' %}
+						<li class="dropdown-item"><a href="/en{{ request.get_full_path|slice:'3:' }}">EN</a></li><br>
+						<li class="dropdown-item"><a href="/fr{{ request.get_full_path|slice:'3:' }}">FR</a></li>
+						{% endif %}
+					</ul>
+				</li>
+			</div>
+		</div>
+		<div class="alpha2">
+			<div class="container">
+				<div class="bravo1">
+					{% if current_site.id == 2 %}
+					<a href="{% url 'page:map' %}" class="t_text209"></a>
+					{% for object in navbar_category_list %}
+					<a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+					{% endfor %}
+					<a href="{% url 'blog:blog_list' %}" class="t_text56"></a>
+					<a href="{% url 'page:concept' %}" class="t_text45"></a>
+					{% else %}
+					<a href="{% url 'page:concept' %}" class="{% if navbar == 'concept' %}active {% endif %}t_text45"></a>
+					<a href="{% url 'product:product_list' %}" class="{% if navbar == 'product' %}active {% endif %}t_text57"></a>
+					<a href="{% url 'mycaps:mycaps' %}" class="t_text66"></a>
+					<a href="{% url 'page:shop' %}" class="{% if navbar == 'boutiques' %}active {% endif %}t_text53"></a>
+					<a href="{% url 'blog:blog_list' %}" class="{% if navbar == 'blog' %}active {% endif %}t_text56"></a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Start Mobile Menu -->
+	<div class="mobile-menuu-container">
+		<div class="mobile-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="total-brand">
+			{% if current_site.id == 2 %}
+			<a class="brand" href="{% url 'page:home' %}">
+				<img src="" class="t_text184"/>
+			</a>
+			{% else %}
+			<a class="brand2 t_text23" href="{% url 'page:home' %}"></a>
+			{% endif %}
+		</div>
+
+		<div class="cart d-flex align-items-center">
+			{% if request.user.is_authenticated %}
+			<a class="chirlie1" href="{% url 'userprofile:profile' %}">{{ request.user.first_name }} {{ request.user.last_name }}</a>
+			{% endif %}
+			<a id="pannier_link" data-toggle="modal" data-target="#i_cart_popup">
+				<img class="t_text183" src="" alt="" style="margin-top: -10px;">
+			</a>
+			<span class="badge" id="cart-count-badge">{{ request.session.cart_item_count }}</span>
+		</div>
+	</div>
+	<div class="mobile-nav">
+		<nav>
+			<div class="d-flex mt-5 flex-column align-items-center">
+				{% if not request.user.is_authenticated %}
+				<a href="{% url 'account_login' %}" class="t_text25"></a>
+				{% else %}
+				<a class="chirlie1" href="{% url 'userprofile:profile' %}">{{ request.user.first_name }} {{ request.user.last_name }}</a>
+				<form method="post" action="{% url 'account_logout' %}">
+					{% csrf_token %}
+					<button class="charlie2 t_text119" type="submit"></button>
+				</form>
+				{% endif %}
+				<a href="" data-toggle="modal" data-target="#contactModal" class="t_text28"></a>
+				<a href="" data-toggle="modal" data-target="#newsletterModal" class="t_text29"></a>
+				<div class="dropdown language-drop-down">
+					<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						{% if request.LANGUAGE_CODE == 'fr' %}
+						FR
+						{% elif request.LANGUAGE_CODE == 'en' %}
+						EN
+						{% elif request.LANGUAGE_CODE == 'es' %}
+						ES
+						{% endif %}
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						{% if request.LANGUAGE_CODE == 'fr' %}
+						<li class="dropdown-item"><a href="/en{{ request.get_full_path|slice:'3:' }}">EN</a></li><br>
+						<li class="dropdown-item"><a href="/es{{ request.get_full_path|slice:'3:' }}">ES</a></li>
+						{% endif %}
+						{% if request.LANGUAGE_CODE == 'en' %}
+						<li class="dropdown-item"><a href="/fr{{ request.get_full_path|slice:'3:' }}">FR</a></li><br>
+						<li class="dropdown-item"><a href="/es{{ request.get_full_path|slice:'3:' }}">ES</a></li>
+						{% endif %}
+						{% if request.LANGUAGE_CODE == 'es' %}
+						<li class="dropdown-item"><a href="/en{{ request.get_full_path|slice:'3:' }}">EN</a></li><br>
+						<li class="dropdown-item"><a href="/fr{{ request.get_full_path|slice:'3:' }}">FR</a></li>
+						{% endif %}
+					</ul>
+				</div>
+				<div class="social-icon">
+					<a href="" target="_blank" class="t_text34">
+						<img src="" class="t_text31"/>
+					</a>
+					<a href="" target="_blank" class="t_text36">
+						<img src="" class="t_text33"/>
+					</a>
+				</div>
+			</div>
+			<div class="menu d-flex flex-column align-items-center">
+				{% if current_site.id == 2 %}
+				<a href="{% url 'page:map' %}" class="t_text209"></a>
+				{% for object in navbar_category_list %}
+				<a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+				{% endfor %}
+				<a href="{% url 'blog:blog_list' %}" class="t_text56"></a>
+				<a href="{% url 'page:concept' %}" class="t_text45"></a>
+				{% else %}
+				<a href="{% url 'page:concept' %}" class="{% if navbar == 'concept' %}active {% endif %}t_text45"></a>
+				<a href="{% url 'product:product_list' %}" class="{% if navbar == 'product' %}active {% endif %}t_text57"></a>
+				<a href="{% url 'mycaps:mycaps' %}" class="t_text66"></a>
+				<a href="{% url 'page:shop' %}" class="{% if navbar == 'boutiques' %}active {% endif %}t_text53"></a>
+				<a href="{% url 'blog:blog_list' %}" class="{% if navbar == 'blog' %}active {% endif %}t_text56"></a>
+				{% endif %}
+			</div>
+		</nav>
+	</div>
+	<!-- End Mobile Menu -->
+</div>
+<div class="header-height"></div>
+{% include 'contact/contact_form.html' %}
+{% include 'contact/newsletter_form.html' %}
+{% include "eshop/includes/cart_popup.html" %}
+
+<script type="text/javascript">
+
+	var addToCart = function(id, title, description, price, q, img){
+		var formData = $("#add-form_"+id).serialize();
+		// console.log(formData);
+		$.ajax({
+			type: "GET",
+			url: "{% url 'eshop:cart' %}",
+			data: formData,
+			success: function(data) {
+				updateCartItemCount();
+				pannier(true);
+				$('#i_cart_popup').modal('show');
+			},
+			error: function(response, error) {
+				$("#add-form").submit();
+			}
+		});
+	};
+
+	var addToCart2 = function(id, title, description, price, q, img){
+		var formData = $("#add-form2_"+id).serialize();
+		// console.log(formData);
+		$.ajax({
+			type: "GET",
+			url: "{% url 'eshop:cart' %}",
+			data: formData,
+			success: function(data) {
+				updateCartItemCount();
+				pannier(true);
+				$('#i_cart_popup').modal('show');
+			},
+			error: function(response, error) {
+				$("#add-form").submit();
+			}
+		});
+	};
+
+	var addToCart3 = function(id, q){
+		var url = "{% url 'eshop:cart' %}";
+		var add_url = url + '?item=' + id + '&qty=' + q;
+		$.ajax({
+			type: "GET",
+			url: add_url,
+			success: function(data) {
+				updateCartItemCount();
+				pannierCart(true);
+			}
+		});
+	};
+
+	var addToCartRemove = function(e){
+		var cart_item = e;
+		var data = {
+			'item_id':cart_item,
+		};
+		var url_cart = "{% url 'eshop:cartitem_remove_api' %}";
+		$.get(url_cart, data, function (data) {
+			pannierCart(true);
+			updateCartItemCount();
+		}, "json");
+	};
+
+	var cartPromo = function(){
+		var e = $("#promo_code").val();
+		var url = "{% url 'eshop:cart' %}";
+		var add_url = url + '?coupon=' + e;
+		if(e == ''){
+			$("#promo_code_info").html('please input a promo code');
+		}
+		else {
+			$("#promo_code_info").hide();
+			$.ajax({
+				type: "GET",
+				url: add_url,
+				success: function(data) {
+					updateCartItemCount();
+					pannierCart(true);
+				}
+			});
+		}
+	};
+
+	var cartShipping = function(){
+		var e = $("#shipping_code").val();
+		var url = "{% url 'eshop:cart' %}";
+		var add_url = url + '?shipping=' + e;
+		$.ajax({
+			type: "GET",
+			url: add_url,
+			success: function(data) {
+				updateCartItemCount();
+				pannierCart(true);
+			}
+		});
+
+	};
+
+</script>
+
+<script type="text/javascript">
+
+	function pannier(test) {
+		var quantity_bg = "{% static 'product/img/svg/quantity-bg.svg' %}";
+		var quantity_bg_white = "{% static 'product/img/svg/white-quantity-bg.svg' %}";
+		var url_cart = "{% url 'eshop:cart_api' %}";
+		$.get(url_cart, function (data) {
+			view = ''
+			if (data.length == 0) {
+				view += '<h3 class="text-center" style="padding: 20px;">Votre panier est vide</h3>';
+				$('.product_count').html('0');
+				$('#cartItemProduct').html('produit');
+			}
+			else {
+				$('#carttotal').html(data[0].total);
+				$('#taxtotal').html(data[0].tax_total);
+				$('#subtotal').html(data[0].get_subtotal_vi);
+				$('#shippingtotal').html(data[0].shipping_total);
+				// console.log(data[0]);
+				var pq = data[0].cartitem_set.length;
+				if (pq > 1) {
+					$('#cartItemTotal').show();
+					$('#cartItemProduct').html('produits');
+				}
+				else if (pq < 1) {
+					$('#cartItemTotal').hide();
+				}
+				else {
+					$('#cartItemTotal').show();
+					$('#cartItemProduct').html('produit');
+				}
+				$('.product_count').html(pq);
+				if (test === true) {
+					view += '<div id="new_cart_item" class="delta1"><p>Merci ! Produit ajouté à votre panier avec succès !</p></div>';
+				}
+				if (pq > 0){
+					var type = 'type';
+					var url = '{{ request.get_host}}'
+					var lan = '{{ request.LANGUAGE_CODE }}'
+
+					$.each(data[0].cartitem_set, function( index, obj ) {
+						view += '<div id="item_' + obj.item.id + '" class="row delta2">';
+						view += '<div class="col-sm-5 echo1">';
+						view += '<img src="' + obj.item.product.get_image_lq + '" alt="' + obj.item.product.name + '" />';
+						view += '</div>';
+						view += '<div class="col-sm-7 echo2">';
+						view += '<h3 class="foxtrot1">' + obj.item.product.name + '</h3>';
+						view += '<div class="foxtrot2" onclick="itemRemove(' + obj.item.id + ');">';
+						view += '<img src="{% static 'page/img/svg/close2.svg' %}" class="golf1"/>';
+						view += '</div>';
+						view += '<hr class="foxtrot3"; style="border-top-color: ' + obj.item.product.get_color + ';">';
+						if (obj.item.product.get_description_short != null) {
+							view += '<p class="foxtrot4">' + obj.item.product.get_description_short + '</p>';
+						};
+						if (obj.item.product.get_description_short3 != null) {
+							view += '<p class="foxtrot5">' + obj.item.product.get_description_short3 + '</p>';
+						};
+						view += '<p class="foxtrot5">Quantité : ' + obj.quantity + ' x ' + obj.unit_price +'€</p>';
+						view += '<p class="foxtrot6">' + obj.line_item_total + ' €</p>';
+
+						view +='<div class="quantity_update_alpha1">';
+						view +='<a id="minus_p_' + obj.id + '" data-id="' + obj.item.id + '" data-link="' + obj.item.add_to_cart + '" onclick="if ( cart_' + obj.id + '.value > 1 ) { cart_' + obj.id + '.value = (+ cart_' + obj.id + '.value - 1); minus(this); };">';
+						view +='<p class="quantity_update_bravo1" style="background-image: url(' + quantity_bg + ');">-</p>';
+						view +='</a>';
+						view +='<a><p class="quantity_update_bravo3">';
+						view +='<input type="text" id="cart_' + obj.id + '" name="qty" value="' + obj.quantity + '" min="1" style="background-image: url(' + quantity_bg_white + ');" />';
+						view +='</p></a>';
+						view +='<a id="plus_p_' + obj.id + '" data-id="' + obj.item.id + '" data-link="'+ obj.item.add_to_cart +'" onclick="cart_' + obj.id + '.value = (+ cart_' + obj.id + '.value + 1); plus(this)">';
+						view +='<p class="quantity_update_bravo2" style="background-image: url(' + quantity_bg + ');">+</p>';
+						view +='</a>';
+						view +='</div>';
+
+						view += '</div>';
+						view += '<div class="col-sm-12 echo3">';
+						if (test === true && index == 0) {
+							view += '<hr class="foxtrot2">';
+						}
+						else {
+							view += '<hr class="foxtrot1">';
+						}
+						view += '</div>';
+						view += '</div>';
+					});
+				}
+				else{
+					view += '<h3 class="text-center" style="padding: 20px;">Votre panier est vide</h3>';
+				}
+			}
+			$('#cartItemList').html(view);
+		}, "json");
+	}
+
+	// cart update function for cart page only
+	function pannierCart(test) {
+
+		var quantity_bg = "{% static 'product/img/svg/quantity-bg.svg' %}";
+		var quantity_bg_white = "{% static 'product/img/svg/white-quantity-bg.svg' %}";
+		var url_cart = "{% url 'eshop:cart_api' %}";
+		$.get(url_cart, function (data) {
+			// console.log(data);
+			view = '';
+			if (data.length == 0) {
+				// view += '<h3 class="text-center" style="padding: 30vh 0;">Votre panier est vide</h3>';
+				$('.product_count').html('0');
+				$('#cartItemProduct').html('produit');
+			}
+			else {
+				var pq = data[0].cartitem_set.length;
+				if (pq > 0){
+					$('.empty_cart_txt').fadeOut(300);
+					$('.cartHideEmpty').fadeIn(300);
+					var type = 'type';
+					var url = '{{ request.get_host}}';
+					var lan = '{{ request.LANGUAGE_CODE }}';
+					$(".subtotal").html(data[0].get_subtotal_vi +'€');
+					$(".taxtotal").html(data[0].tax_total +'€');
+					$(".shippingtotal").html(data[0].shipping_total +'€');
+					$(".distotal").html(data[0].discount_total +'€');
+					$(".carttotal").html(data[0].total +'€');
+
+					$.each(data[0].cartitem_set, function( index, obj ) {
+						view +='<tr>';
+						view +='<th class="foxtrot1 d-none d-sm-block" scope="row">';
+						view +='<a href="'+ obj.get_api_absolute_url +'">';
+						view +='<img class="img-fluid" src="'+ obj.item.product.get_image_lq +'">';
+						view +='</a>';
+						view +='</th>';
+						view +='<td class="foxtrot2">';
+						view +='<p class="golf1">'+ obj.item.product.name +'</p>';
+						view +='<p class="golf2 d-none d-sm-block">'+ obj.item.title +'</p>';
+						view +='<p class="golf3 d-none d-sm-block">100g</p>';
+						view +='</td>';
+						view +='<td class="foxtrot3 text-right">'+ obj.unit_price +' €</td>';
+						view +='<td class="foxtrot4">';
+						view +='<div class="quantity_update_alpha1">';
+						view +='<a data-id="'+ obj.item.id +'" data-link="'+ obj.item.add_to_cart +'" id="minus_'+ obj.item.id +'" onclick="if ( cart'+ obj.item.id +'.value > 1 ) { cart'+ obj.item.id +'.value = (+ cart'+ obj.item.id +'.value - 1); minus(this); };">';
+						view +='<p class="quantity_update_bravo1" style="background-image: url('+ quantity_bg +');">-</p>';
+						view +='</a>';
+						view +='<a><p class="quantity_update_bravo3">';
+						view +='<input id="cart'+ obj.item.id +'" min="1" name="qty" style="background-image: url('+ quantity_bg_white +');" type="text" value="'+ obj.quantity +'">';
+						view +='</p></a>';
+						view +='<a data-id="'+ obj.item.id +'" data-link="'+ obj.item.add_to_cart +'" id="plus_'+ obj.item.id +'" onclick="cart'+ obj.item.id +'.value = (+ cart'+ obj.item.id +'.value + 1); plus(this);">';
+						view +='<p class="quantity_update_bravo2" style="background-image: url('+ quantity_bg +');">+</p>';
+						view +='</a>';
+						view +='</div>';
+						view +='</td>';
+						view +='<td>';
+						view +='<p class="text-right" id="item-line-total-'+ obj.item.id +'">'+ obj.line_item_total +'€</p>';
+						view +='</td>';
+						view +='<td>';
+						view +='<a class="close_btn float-right" onclick="addToCartRemove('+ obj.item.id +');">X</a>';
+						view +='</td>';
+						view +='</tr>';
+					});
+				}
+				else if (pq < 0) {
+					$('.cartHideEmpty').fadeOut(300);
+					$('.empty_cart_txt').fadeIn(300);
+				}
+				else{
+					$('.cartHideEmpty').fadeOut(300);
+					$('.empty_cart_txt').fadeIn(300);
+				}
+			}
+			$('.ajax-cart-update').html('');
+			$('.ajax-cart-update').html(view);
+		}, "json");
+	}
+
+	// cart item remove function
+	function itemRemove(e) {
+		var cart_item = e;
+		var data = {
+			'item_id':cart_item,
+		};
+		var url_cart = "{% url 'eshop:cartitem_remove_api' %}";
+		$.get(url_cart, data, function (data) {
+			pannier();
+			pannierCart(true);
+			updateCartItemCount();
+		}, "json");
+	}
+
+	$('#pannier_link').click(function(){
+		pannier();
+	});
+
+	// Update plus
+	function plus(e){
+		var item = $(e).attr("data-id");
+		var qty = 1;
+		var data = {
+			item: item,
+			qty: qty
+		}
+		console.log(data);
+		$.ajax({
+			type: "GET", // "POST"
+			url: "{% url 'eshop:cart' %}",
+			data: data,
+			success: function(data) {
+				// console.info(data);
+				if (data.deleted){
+					$("#item-"+item).fadeOut();
+				} else {
+					$("#item-line-total-"+item).text(data.line_total);
+					$("#item-price-"+item).text(data.price);
+				}
+				pannier();
+				updateCartItemCount();
+				pannierCart(true);
+			},
+			error: function(response, error) {
+				$("#add-form").submit()
+			}
+		})
+	}
+
+	// Update minus
+	function minus(e){
+		var item = $(e).attr("data-id");
+		var data = {
+			item: item,
+			remove: 'True'
+		}
+		console.log(data);
+		$.ajax({
+			type: "GET", // "POST"
+			url: "{% url 'eshop:cart' %}",
+			data: data,
+			success: function(data) {
+				// console.info(data);
+				if (data.deleted){
+					$("#item-"+item).fadeOut();
+					$("#subtotal").text(data.get_subtotal_vi);
+				} else {
+					$("#item-line-total-"+item).text(data.line_total);
+					$("#item-price-"+item).text(data.price);
+				}
+				updateCartItemCount();
+				pannierCart(true);
+			},
+			error: function(response, error) {
+				$("#add-form").submit()
+			}
+		})
+	}
+</script>

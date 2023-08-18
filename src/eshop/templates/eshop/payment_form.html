@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block content %}
+
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-3'>
+        <form id="payment_form" method='POST' action={{payment_url}}>
+            <input type="hidden" name="vads_version" value="{{form.vads_version}}" />
+            <input type="hidden" name="vads_page_action" value="{{form.vads_page_action}}" />
+            <input type="hidden" name="vads_action_mode" value="{{form.vads_action_mode}}" />
+            <input type="hidden" name="vads_payment_config" value="{{form.vads_payment_config}}" />
+            <input type="hidden" name="vads_site_id" value="{{form.vads_site_id}}" />
+            <input type="hidden" name="vads_ctx_mode" value="{{form.vads_ctx_mode}}" />
+            <input type="hidden" name="vads_trans_date" value="{{form.vads_trans_date}}" />
+            <input type="hidden" name="vads_amount" value="{{form.vads_amount}}" />
+            <input type="hidden" name="vads_currency" value="{{form.vads_currency}}" />
+            <input type="hidden" name="vads_language" value="{{form.vads_language}}" />
+            <input type="hidden" name="vads_trans_id" value="{{form.vads_trans_id}}" />
+            <input type="hidden" name="vads_url_return" value="{{form.vads_url_return}}" />
+            <input type="hidden" name="signature" value="{{form.signature}}" />
+            <input type="hidden" name="vads_redirect_success_timeout" value="{{form.vads_redirect_success_timeout}}" />
+            <input type="hidden" name="vads_return_mode" value="{{form.vads_return_mode}}" />
+            <input type="hidden" name="vads_order_id" value="{{form.vads_order_id}}">
+            <input type="hidden" name="vads_cust_email" value="{{form.vads_cust_email}}">
+            <input id="paymentSubmit" class='btn btn-default hide' type='submit' value='Submit' />
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $('#payment_form').trigger("submit");
+    });
+</script>
+
+{% endblock %}

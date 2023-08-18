@@ -1,0 +1,126 @@
+.account-login {
+    background-color: #edece8;
+    padding-bottom: 50px;
+}
+
+.account-login h1 {
+    color: #c6985a;
+}
+
+.account-login hr {
+    border: solid 1px #ffffff;
+    width: 80%;
+}
+
+.account-login .account-submit {
+    background-color: #231f20 !important;
+    border: 0;
+    color: #c6985a;
+    display: block;
+    font-size: 14px;
+    margin: 20px auto 0 auto !important;
+    padding: 5px 20px !important;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.alert-success {
+    background-color: rgb(163, 105, 71);
+    border-color: #d7bd97;
+    color: #ffffff;
+}
+
+.errorlist {
+    padding: 0 10%;
+}
+
+#id_gender{
+    display: block;
+    margin: 0 auto 0 10%;
+}
+
+#id_gender li{
+    float: left;
+    margin-right: 10px;
+}
+
+#id_gender li input{
+    width: auto !important;
+}
+
+#id_profile_image {
+    background-color: transparent;
+    padding-left: 0;
+    padding-top: 10px;
+}
+
+.login input {    
+    background-color: #ffffff;
+    border: 0;
+    display: block;
+    height: 36px;
+    margin: 0 auto;
+    margin-bottom: 10px !important;
+    padding-left: 10px;
+    width: 80%;
+}
+
+.login p label {
+    display: none;
+}
+
+.login p #id_remember{
+    display: none;
+}
+
+.login .account-submit {
+    background-color: #231f20 !important;
+    border: 0;
+    color: #c6985a;
+    display: block;
+    font-size: 14px;
+    margin: 20px auto 0 auto !important;
+    padding: 5px 20px !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login .check-input {    
+    float: left;
+    height: auto;
+    margin-left: 7%;
+    margin-top: 15px;
+    width: 30px;
+}
+
+.login #n_t_text113 {
+    color: #c6985a;
+    padding-left: 10%;
+}
+
+.login #n_t_text114 {
+    margin-top: 12px;
+}
+
+#n_t_text26 {
+    padding-bottom: 20px;
+}
+
+/*To clean*/
+.account-login {
+    background-color: #fff;
+    padding-bottom: 30px;
+}
+label {
+    display: none;
+}
+.radio {
+    display: inline-block;
+}
+.radio label {
+    display: initial;
+}
+span.helptext{
+    margin-left: 34px;
+}

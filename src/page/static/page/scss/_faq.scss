@@ -1,0 +1,81 @@
+// To check
+
+a {
+	text-decoration: none !important;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+//  End of check
+
+#faq_page {
+	padding-top: 100px;
+	@include mobile {
+		padding-top: 50px;
+	}
+	h1 {
+		color: $color1;
+		font-size: 48px;
+		letter-spacing: 2.3px;
+		@include tablet {
+			font-size: 26px;
+		}
+		@include mobile {
+			font-size: 26px;
+		}
+	}
+	h2 {
+		color: $color2;
+		font-size: 15px;
+		font-weight: bold;
+		letter-spacing: 3px;
+	}
+	.container {
+		@include large-screen {
+			width: 42%;
+		}
+		width: 56%;
+		@include mobile {
+			width: 100%;
+		}
+	}
+    .alfa2 {
+        margin-top: 30px;
+        .card {
+            .card-header {
+                background: #edece8;
+                h5 {
+                    text-align: center;
+                    button {
+                        border-bottom: 1px solid transparent;
+                        display: block;
+                        color: #d84e00;
+                        font-size: 15px;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        padding: 0 10px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        transition: all .5s ease;
+                        text-decoration: none;
+                        margin: 0 auto;
+                        &.collapsed {
+                            color: $color1;
+                        }
+                        &:hover {
+                            color: #d84e00;
+                        }
+                    }
+                }
+            }
+            .card-body {
+                color: #2a2627;
+                font-size: 13px;
+                letter-spacing: 1px;
+                font-weight: 400;
+            }
+        }
+    }
+}

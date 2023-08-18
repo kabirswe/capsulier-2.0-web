@@ -1,0 +1,59 @@
+.cgv-page {
+	padding-top: 100px;
+	@include mobile {
+		padding-top: 50px;
+	}
+	h1 {
+		color: $color1;
+		font-size: 48px;
+		letter-spacing: 2.3px;
+		@include tablet {
+			font-size: 26px;
+		}
+		@include mobile {
+			font-size: 26px;
+		}
+	}
+	h2 {
+		color: $color2;
+		font-size: 15px;
+		font-weight: bold;
+		letter-spacing: 3px;
+	}
+	.container {
+		@include large-screen {
+			width: 42%;
+		}
+		width: 56%;
+		@include mobile {
+			width: 100%;
+		}
+	}
+	.article_section {
+		margin-top: 50px;
+		h3 {
+			color: $color2;
+			font-size: 18px;
+			letter-spacing: 1px;
+		}
+		p {
+			color: $color2;
+			font-size: 13px;
+			letter-spacing: 1px;
+		}
+	}
+	.article_btn {
+		background-color: $color2;
+		color: $color1;
+		display: block;
+		font-size: 24px;
+		letter-spacing: 2.3px;
+		margin: 100px auto 80px;
+		padding: 20px 0;
+		text-align: center;
+		width: 432px;
+		@include mobile {
+			width: 100%;
+		}
+	}
+}

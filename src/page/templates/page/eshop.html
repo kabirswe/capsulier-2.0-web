@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load text_extras %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block content %}
+
+<div class="eshop-page">
+	<div id="section1" class="container">
+		<img src="{% static 'page/img/slider/1.jpg' %}" alt="">
+	</div>
+
+	<div id="section2" class="container eshop_filter">
+		<div class="row">
+			<p class="text-center text-uppercase">
+				<span class="t_text255"></span>
+				<span>/</span>
+				<span class="t_text256"></span>
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<input type="text"/>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<input type="text"/>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<input type="text"/>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<input type="text"/>
+			</div>
+		</div>
+	</div>
+
+	<div id="section3" class="cat_product">
+		<div class="container">
+			<div class="row main_title">
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					<hr>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 padding-off">
+					<h1 class="text-uppercase text-center t_text257"></h1>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3">
+					<hr>
+				</div>
+			</div>
+			<div class="row product">
+				{% for product in product_list %}
+				<div class="col-md-4 col-sm-4 col-xs-6">
+					<div class="product_ImageField">
+						<a href="{{ product.get_absolute_url }}" >
+							<img id="img" class="img-responsive center-block product_img_{{ product.id }}" src="{{ product.productextra.get_image_hq }}" />
+						</a>
+					</div>
+					<form id="form_{{ product.id }}" method="GET" action="{% url 'eshop:cart' %}">
+						<div class="product_details">
+							<p class="text-uppercase text-center title">{{ product.name }}</p>
+							<hr>
+							<div class="description">{{ product.productlang.description_short|linebreaks }}</div>
+							{% if product.variation_set.count > 0 %}
+							<p id="price_{{product.id}}" class="text-center price">
+								{% if request.user.is_authenticated and request.user.profile.status == 'b'%}
+								{{ product.variation_set.first.price_pro }} €
+								{% else %}
+								{{ product.variation_set.first.price_public }} €
+								{% endif %}
+							</p>
+							<input type="hidden" name="item" value="{{ product.variation_set.first.id }}" />
+							<input type="hidden" id="priceMain_{{product.id}}" name="price" value="{{ product.price }}" />
+							{% else %}
+							<p class="text-center price">{{ product.price|floatformat:2  }} €</p>
+							<input type="hidden" name="item" value="{{ product.variation_set.first.id }}" />
+							{% endif %}
+							<p class="text-center weight">{{ product.weight|floatformat:2 }}</p>
+						</div>
+						<div class="quantity">
+							<a onclick="add_cart{{ product.id }}.value = (add_cart{{ product.id }}.value-1)"><p class="minus">-</p></a>
+							<a><p class="number"><input type="text" id="add_cart{{ product.id }}" name="qty" value="1" /></p></a>
+							<a type="button" onclick="add_cart{{ product.id }}.value = (+add_cart{{ product.id }}.value+1)"><p class="plus">+</p></a>
+							<a class="add_cart t_text190" onclick="var q =$('#cart'+{{ product.id }}).val(); var img =$('.product_img_'+{{ product.id }}).attr('src'); addToCart({{ product.id }}, '{{ product.name }}', '{{ product.description }}', '{{ product.variation_set.first.price_pro }}', q, img)"></a>
+						</div>
+						<div class="order_btn">
+							<a class="191" href="{{ product.get_absolute_url }}" ></a>
+						</div>
+					</form>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	<div id="section4" class="container eshop_image_list">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<img src="{% static 'page/img/slider/1.jpg' %}" alt="" height="365px" width="100%">
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<img src="{% static 'page/img/slider/1.jpg' %}" alt="" height="365px" width="100%">
+			</div>
+		</div>
+	</div>
+
+	<div id="section5">
+		<div class="text_details">
+			<h1 class="text-center text-uppercase t_text258"></h1>
+			<p class="text-center t_text261"></p>
+			<p class="text-center t_text262"></p>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

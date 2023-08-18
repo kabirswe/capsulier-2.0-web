@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block content %}
+
+<div class="profile_page">
+    <div class="container">
+
+        <div class="alpha1">
+            <h1 class="t_text202"></h1>
+            <hr class="header-hr">
+            <div class="t_text203"></div>
+        </div>
+
+        <ul class="nav nav-tabs justify-content-center alpha2" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active t_text211" id="infos-tab" data-toggle="tab" href="#infos" role="tab" aria-controls="infos" aria-selected="true"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link t_text212" id="address-tab" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="false"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link t_text213" id="orders-tab" data-toggle="tab" href="#orders" role="tab" aria-controls="orders" aria-selected="false"></a>
+            </li>
+        </ul>
+
+        <div class="tab-content alpha3">
+            <div class="tab-pane active" id="infos" role="tabpanel" aria-labelledby="infos-tab">
+                <div id="user_div" class="bravo1">
+                    <p class="text-capitalize"><span class="t_text369"> </span><span>{{ instance.user.last_name }}</span></p>
+                    <p class="text-capitalize"><span class="t_text370"> </span><span>{{ instance.user.first_name }}</span></p>
+                    <p><span class="t_text371"> </span><span>{{ instance.date_of_birth }}</span></p><br>
+                    <p><span class="t_text372"> </span><span>{{ instance.user.email }}</span></p>
+                    <p><span class="t_text373"> </span><span>{{ instance.company_name }}</span></p>
+                    <p><span class="t_text374"> </span><span>{{ instance.siret_number }}</span></p>
+                    <div class="text-center">
+                        <button id="user_edit_btn" class="t_text215 cap_button"></button>
+                    </div>
+                    <div class="text-center">
+                        <a href="{% url 'account_change_password' %}" class="btn cap_button t_text408"></a>
+                    </div>
+                </div>
+                <div id="user_edit_form" class="bravo2">
+                    <form method="POST" action="." enctype="multipart/form-data" class="form-group">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        {{ form2|crispy }}
+                        <div class="text-center">
+                            <button type="submit" value="" id="submit_btn" class="cap_button t_text216"></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane" id="address" role="tabpanel" aria-labelledby="address-tab">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="t_text375"></h3>
+                        {% for object in address_billing_object_list %}
+                        <p>{{ object }}</p>
+                        <a href="{{ object.get_edit_url }}"></a>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="t_text376"></h3>
+                        {% for object in address_shipping_object_list %}
+                        <p>{{ object }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <a href="{% url 'userprofile:address_create' %}" class="btn cap_button t_text409"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                <table class="table delta1">
+                    <thead class="echo1">
+                        <tr>
+                            <th colspan="1" scope="col" class="t_text377"></th>
+                            <th scope="col" class="t_text378"></th>
+                            <th scope="col" class="t_text379"></th>
+                            <th scope="col" class="t_text380"></th>
+                            <th scope="col" class="t_text381"></th>
+                            <th scope="col" class="t_text382"></th>
+                            <th scope="col" class="t_text383"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="echo2">
+                        {% for object in order_object_list %}
+                        <tr>
+                            <th scope="row">
+                                <p>{{ object.order_id }}</p>
+                            </th>
+                            <td>
+                                <p>{{ object.created_on }}</p>
+                            </td>
+                            <td>
+                                <p>{{ object.shipping_address }}</p>
+                            </td>
+                            <td>
+                                <p>{{ object.billing_address }}</p>
+                            </td>
+                            <td>
+                                <p>{{ object.order_total }}€</p>
+                            </td>
+                            <td>
+                                <p>{{ object.get_status_display }}</p>
+                            </td>
+                            <td>
+                                <p><a href="{{ object.get_absolute_url }}" class="t_text384"></a></p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <link href="{% static 'assets/js/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css' %}" rel="stylesheet"/>
+    <script src="{% static 'assets/js/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#id_date_of_birth').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+    });
+
+    $('#user_edit_btn').click(function(){
+        $('#user_div').hide();
+        $('#user_edit_form').show();
+    });
+
+    var sum = 0;
+    $("input[class *= 'qty']").each(function(){
+        sum += +$(this).val();
+    });
+
+    $(".total").html(sum);
+
+    var active = false;
+    function chichingfaq(el, e){
+        $('.cl_'+e).fadeToggle('slow');
+        console.log(el.id);
+
+        if(active === false) {
+            $('#'+el.id+' i').addClass('fa-caret-down');
+            $('#'+el.id+' i').removeClass('fa-caret-left');
+            active = true;
+        } else {
+            $('#'+el.id+' i').removeClass('fa-caret-down');
+            $('#'+el.id+' i').addClass('fa-caret-left');
+            active = false;
+        }
+    }
+
+    // Show tab from hash
+    var hash = window.location.hash;
+    hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+    $('.nav-tabs a').click(function (e) {
+        $(this).tab('show');
+        var scrollmem = $('body').scrollTop();
+        window.location.hash = this.hash;
+        $('html,body').scrollTop(scrollmem);
+    });
+
+</script>
+
+{% endblock %}

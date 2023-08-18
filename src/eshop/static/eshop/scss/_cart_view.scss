@@ -1,0 +1,551 @@
+.cart-page {
+	.add_cart {
+		background-color: $color1;
+		color: $color2;
+		display: block;
+		font-size: 12px;
+		margin-top: 8px;
+		padding: 5px 8px;
+		text-align: center;
+		width: 130px;
+		@include mobile {
+			width: 100%;
+		}
+		@include tablet {
+			width: 100%;
+		}
+	}
+	.cart-top-div {
+		margin-bottom: 100px !important;
+		margin-top: 100px !important;
+		@include mobile {
+			margin-bottom: 20px !important;
+			margin-top: 10px !important;
+		}
+		@include tablet {
+			margin-top: 50px;
+		}
+	}
+	.continue_div {
+		a {
+			background-color: $color2;
+			border: solid 1px $color2;
+			border-radius: 8px;
+			color: $color3;
+			display: block;
+			font-size: 14px;
+			margin-top: 4px;
+			padding: 5px 0;
+			text-align: center;
+			text-transform: uppercase;
+			width: 255px;
+			@include mobile {
+				background:none;
+				border:0;
+				font-size: 12px;
+				padding: 5px 5px;
+				width: 100%;
+			}
+			@include tablet {
+				font-size: 12px;
+				padding: 5px 5px;
+				width: 100%;
+			}
+		}
+	}
+	.hidden_field {
+		width: 50px;
+	}
+	.panier_btn {
+		a {
+			background-color: $color1;
+			color: $color2;
+			display: block;
+			font-size: 14px;
+			font-weight: bold;
+			margin-top: 36px;
+			padding: 8px 0;
+			text-align: center;
+			text-transform: uppercase;
+			width: 100%;
+		}
+		@include mobile {
+			font-size: 12px;
+			padding: 8px 8px;
+		}
+		@include tablet {
+			font-size: 12px;
+			padding: 8px 8px;
+		}
+	}
+	.panier_text {
+		h1 {
+			color: $color1;
+			font-size: 48px;
+		}
+		hr {
+			border: solid 2px $red;
+			height: 0;
+			width: 29px;
+		}
+	}
+	.part1 {
+		background-color: $color2;
+		border-radius: 8px;
+		@include mobile {
+			height: 130px;
+		}
+	}
+	.part2 {
+		margin-top: 10px;
+		ul {
+			li {
+				display: inline-block;
+				margin: 0 40px;
+				a {
+					color: $color2;
+					font-size: 14px;
+					text-transform: uppercase;
+				}
+				&:first-child {
+					margin: 0 207px 0 35px;
+					@include tablet {
+						margin: 0 15px 0 30px;
+					}
+				}
+				&:last-child {
+					margin: 0 35px 0 0;
+				}
+				@include tablet {
+					margin: 0 30px;
+				}
+			}
+		}
+		@include mobile {
+			display: none;
+		}
+	}
+	.part3 {
+		background: $white;
+		padding-bottom: 40px !important;
+		form {
+			@include mobile {
+				display: inline-block;
+			}
+		}
+		.header {
+			background-color: $color1;
+			height: 40px;
+			p {
+				color: $color2;
+				font-size: 14px;
+				margin-left: 35px;
+				padding-top: 12px;
+				text-align: left;
+				text-transform: uppercase;
+			}
+		}
+		.item_details {
+			.des {
+				color: $color2;
+				font-size: 12px;
+			}
+			.title {
+				color: $color1;
+				font-size: 14px;
+				margin-bottom: 0;
+			}
+		}
+		.item_list {
+			padding: 40px 34px 0;
+			.close_btn {
+				background-color: $color3;
+				border-radius: 8px;
+				color: $color2;
+				display: block;
+				font-size: 14px;
+				height: 21px;
+				margin-top: 6px;
+				text-align: center;
+				width: 21px;
+				@include mobile {
+					margin-top:0;
+				}
+			}
+			.input_list {
+				margin-top: 14px;
+				text-align: center;
+			}
+			.price {
+				color: $color2;
+				font-size: 14px;
+				margin-top: 7px;
+				text-align: center;
+				@include mobile {
+					display: inline-block;
+					margin-top:0;
+				}
+			}
+			.quantity {
+				background-color: $color3;
+				border: 0;
+				border-radius: 8px;
+				color: $color2;
+				font-size: 14px;
+				padding: 5px 0;
+				text-align: center;
+				width: 40px;
+				@include mobile {
+					margin: 0 30px;
+				}
+			}
+			@include mobile {
+				background:$white;
+				padding: 40px 0 0;
+			}
+			@include tablet {
+				padding: 40px 0 0;
+			}
+		}
+		@include mobile {
+			margin-top:20px;
+		}
+	}
+	.part4 {
+		p {
+			color: $color2;
+			font-size: 14px;
+			margin-left: 35px;
+			margin-top: 10px;
+			text-transform: uppercase;
+			@include mobile {
+				margin-left:  0;
+			}
+		}
+	}
+	.part5 {
+		background: $white;
+		padding: 40px 34px;
+		p {
+			color: $color2;
+			font-size: 14px;
+			@include mobile {
+				text-align: center;
+			}
+			@include tablet {
+				font-size: 12px;
+			}
+		}
+		.code_div {
+			text-align: center;
+			button {
+				background-color: $color3;
+				border:0;
+				border-radius: 8px;
+				color: $color2;
+				font-size: 14px;
+				font-style: italic;
+				padding: 6px 25px;
+				text-align: left;
+				width: 190px;
+				@include tablet {
+					font-size: 11px;
+					padding: 6px 15px;
+					text-align: center;
+					width: 100%;
+				}
+			}
+		}
+		.ok_div {
+			text-align: right;
+			button {
+				background: none;
+				border: solid 1px $color1;
+				border-radius: 8px;
+				color: $color2;
+				font-size: 14px;
+				padding: 5px 0;
+				text-align: center;
+				width: 129px;
+				@include mobile {
+					background-color: $color1;
+					border: 0;
+					border-radius: 8px;
+					color: $color2;
+					display: block;
+					font-size: 14px;
+					margin: 20px auto 0;
+					padding: 5px 0;
+					text-align: center;
+					width: 129px;
+				}
+				@include tablet {
+					font-size: 14px;
+					padding: 5px 0;
+					width: 100%;
+				}
+			}
+			.button--ujarak::before {
+				border-radius: 8px;
+			}
+		}
+		@include tablet {
+			padding: 35px 0 25px 15px;
+		}
+	}
+	.part6 {
+		background-color: $color2;
+		p {
+			color: $color1;
+			font-size: 14px;
+			margin-left: 35px;
+			margin-top: 10px;
+			text-transform: uppercase;
+			@include mobile {
+				margin-left: 0;
+			}
+		}
+		@include mobile {
+			background:none;
+		}
+	}
+	.part7 {
+		background: $white;
+		padding: 0 35px;
+		.header {
+			border-bottom: solid 2px $color3;
+			p {
+				color: $color3;
+				font-size: 14px;
+				margin-left: 35px;
+				padding-top: 10px;
+				text-align: left;
+			}
+		}
+		.total1, .total2, .total3 {
+			padding: 0 35px !important;
+		}
+		.total1 {
+			p {
+				color: $color2;
+				font-size: 18px;
+				margin-bottom: 30px;
+				margin-top: 50px;
+				text-transform: uppercase;
+			}
+			@include mobile {
+				margin-top:  15px;
+			}
+		}
+		.total2 {
+			hr {
+				border-top: solid 1px $color3;
+				margin-top: 12px;
+				width: 100%;
+				@include mobile {
+					border-top: 0;
+					margin-top: 0;
+					width: 0;
+				}
+			}
+			p {
+				color: $color2;
+				font-size: 16px;
+				text-transform: uppercase;
+				@include mobile {
+					font-size: 24px;
+				}
+			}
+		}
+		.total3 {
+			hr {
+				border-top: solid 2px $red;
+				margin-bottom: 12px;
+				margin-top: 10px;
+				width: 19px;
+			}
+			p {
+				color: $color2;
+				font-family: $font1 !important;
+				font-size: 36px;
+				padding-bottom: 50px;
+			}
+			.price {
+				color: $color2;
+				font-size: 24px;
+			}
+		}
+	}
+	.part8 {
+		background-color: $color1;
+		padding: 10px 0;
+		.button-color {
+			&::before {
+				background: $white !important;
+				border-radius: 8px;
+			}
+			&:hover {
+				color: $color2 !important;
+			}
+		}
+		@include mobile {
+			background:none;
+		}
+	}
+	.quantity {
+		.minus, .plus, .number {
+			color: $white;
+			display: inline-block;
+			font-size: 23px;
+			font-weight: bold;
+			height: 35px;
+			margin-right: 10px;
+			text-align: center;
+			width: 35px;
+		}
+		.minus, .plus {
+			background: url('../img/quantity-bg.svg');
+			background-repeat: no-repeat !important;
+			background-size: cover !important;
+			color: $white;
+			display: inline-block;
+			font-size: 23px;
+			font-weight: bold;
+			height: 35px;
+			padding-top: 6px;
+			text-align: center;
+			width: 35px;
+		}
+		.number {
+			input {
+				background: url('../img/white-quantity-bg.svg');
+				background-repeat: no-repeat !important;
+				background-size: cover !important;
+				border: 0;
+				color: $color2;
+				font-size: 20px;
+				height: 100%;
+				padding-top: 0;
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+	.recommend_div {
+		.header {
+			background-color: $color2;
+			padding: 20px 0;
+			p {
+				color: $color1;
+				font-size: 14px;
+				margin-bottom: 0;
+				text-align: center;
+			}
+		}
+	}
+	.recommend_item {
+		background: $white;
+		.add_btn {
+			background: $color1;
+			border-radius: 50%;
+			color: $color2;
+			display: block;
+			height: 18px;
+			margin-top: 12px;
+			text-align: center;
+			width: 18px;
+		}
+		.product_details {
+			hr {
+				margin-bottom: 10px;
+				margin-top: 5px;
+				width: 18px;
+				@include mobile {
+					margin: 0 auto;
+				}
+				@include tablet {
+					text-align: center;
+				}
+			}
+			@include mobile {
+				text-align: center;
+			}
+			@include tablet {
+				margin: 0 auto;
+			}
+		}
+		.quantity {
+			@include mobile {
+				text-align: center;
+			}
+			@include tablet {
+				text-align: center;
+			}
+		}
+		.single_item {
+			border-bottom: solid 1px $color3;
+			margin-top: 46px;
+			padding-bottom: 46px;
+			h1 {
+				color: $color1;
+				font-size: 24px;
+				margin-top: 0;
+			}
+			img {
+				max-width: 100%;
+				@include mobile {
+					margin-bottom: 20px;
+					max-width: 100%;
+					width: auto !important;
+				}
+				@include tablet {
+					margin-bottom: 20px;
+					width: auto !important;
+				}
+			}
+			.description {
+				color: $color2;
+				font-size: 12px;
+			}
+			.price {
+				color: $color1;
+				font-size: 13px;
+			}
+			@include mobile {
+				border-bottom: solid 1px $color3;
+				margin-top: 20px;
+				padding-bottom: 20px;
+			}
+		}
+	}
+	.return_text {
+		a {
+			background-color: $color2;
+			border: solid 1px $color2;
+			border-radius: 8px;
+			color: $color3;
+			display: block;
+			font-size: 14px;
+			margin-top: 4px;
+			padding: 5px 0;
+			text-align: center;
+			text-transform: uppercase;
+			width: 255px;
+		}
+		p {
+			@include mobile {
+				font-size: 12px;
+				padding: 5px 5px;
+				width: 100%;
+			}
+			@include tablet {
+				font-size: 12px;
+				padding: 5px 5px;
+				width: 100%;
+			}
+		}
+	}
+	.update_item_field {
+		display: none;
+	}
+}

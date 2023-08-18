@@ -1,0 +1,30 @@
+{% load static %}
+
+<div class="product-info-block">
+    <a href="{{ object.get_absolute_url }}">
+        <p class="pi-delta1">{{ object.name }}</p>
+    </a>
+    <hr style="border-color:{{ object.productextra.color}}">
+    {% if object.productlang.description_short %}
+    <p class="pi-delta2">{{ object.productlang.description_short }}</p>
+    {% endif %}
+    {% if object.productlang.description_short2 %}
+    <p class="pi-delta4">{{ object.productlang.description_short2 }}</p>
+    {% endif %}
+    <input type="hidden" name="item" value="{{ object.variation_set.first.id }}" />
+    {% if request.user.is_authenticated and request.user.profile.status == 'b' %}
+    <p class="pi-delta5">
+        {{ object.variation_set.first.price_public }} €
+    </p>
+    {% endif %}
+    <p class="pi-delta6" id="price_{{ object.id }}">
+        {% if request.user.is_authenticated and request.user.profile.status == 'b' %}
+        {{ object.variation_set.first.price_pro }} €
+        {% else %}
+        {{ object.variation_set.first.price_public }} €
+        {% endif %}
+    </p>
+    {% if object.productlang.description_short3 %}
+    <p class="pi-delta7">{{ object.productlang.description_short3 }}</p>
+    {% endif %}
+</div>

@@ -1,0 +1,35 @@
+{% load crispy_forms_tags %}
+{% load static %}
+
+<div class="modal fade newsletter_modal newsletter_form_block" id="newsletterModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="d-flex justify-content-end">
+				<button type="button" id="newsletter_modal_close" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h1 class="t_text337"></h1>
+				<hr>
+				<h2 class="t_text338"></h2>
+				<form method="POST" id="newsletter_form" action="{% url 'contact:newsletter' %}" class="mt-20">{% csrf_token %}
+					<div class="container">
+						<div class="row">
+							<div id="div_id_email" class="col-12 align-self-center form-group">
+								<div class="controls ">
+									<input class="emailinput form-control" id="id_email_address" name="email_address" type="email" placeholder="Email" required />
+									<p id="id_email_address_v" class="news_email_field"></p>
+								</div>
+							</div>
+							<div class="col-12 align-self-center">
+								<button type="submit" value="" id="subs_btn" class="t_text339 cap_button"></button>
+								<div class="subs_reply text-center"></div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

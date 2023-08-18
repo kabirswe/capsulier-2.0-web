@@ -1,0 +1,36 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$36000$6nQBGcu6QERU$yHY2RVTIN8z4ogojZ44n/03vxo/Z6JtbI1iMFXb/IoE=",
+    "last_login": "2018-02-15T06:54:47.330Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Maison",
+    "last_name": "Mahdil",
+    "email": "hello@mahdil.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-07-01T21:57:58Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "localhost:8000",
+    "name": "Le Capsulier"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 2,
+  "fields": {
+    "domain": "localhost:8001",
+    "name": "Le Conservatoire du Caf\u00e9"
+  }
+}
+]

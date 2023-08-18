@@ -1,0 +1,112 @@
+// MM framework
+a {
+	color: inherit;
+}
+
+button {
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+img {
+	object-fit: cover;
+}
+
+.img-fluid {
+	width: 100%
+}
+
+.mm_bg_opcacity_top_bottom {
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.5));
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.mm_mt_10 {
+	margin-top: 10px !important;
+}
+
+.mm_mt_20 {
+	margin-top: 10px !important;
+}
+
+.mm_p_5 {
+	padding: 5px !important;
+}
+
+.mm-img-cover {
+	object-fit: cover;
+	width: 100%;
+}
+
+.mm-margin-auto {
+	display: block;
+	margin: auto;
+}
+
+.mm_table {
+	display: table !important;
+}
+
+.mm-bg {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+// Loader
+#mm-wrapper {
+	visibility: hidden;
+}
+
+#mm-loader-wrapper {
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	#mm-loader {
+		border: 5px solid #333;
+		border-radius: 30px;
+		height: 30px;
+		margin: auto;
+		opacity: 0;
+		position: fixed;
+		top: 50vh;
+		left: 50vw;
+		width: 30px;
+		animation: pulsate 1s ease-out;
+		animation-iteration-count: infinite;
+	}
+
+}
+
+@keyframes pulsate {
+	0% {
+		transform: scale(.1);
+		opacity: 0.0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+
+@keyframes mahdil_loading {
+	from {left: -200px; width: 30%;}
+	50% {width: 30%;}
+	70% {width: 70%;}
+	80% { left: 50%;}
+	95% {left: 120%;}
+	to {left: 100%;}
+}

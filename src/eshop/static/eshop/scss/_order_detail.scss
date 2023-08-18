@@ -1,0 +1,135 @@
+// Order detail
+
+.order_detail_page {
+    background-color: $color3;
+    padding-top: $nav-height-3;
+    .alpha1 {
+        padding-bottom: 70px;
+        .bravo1 {
+            background-color: $white;
+            .charlie1 {
+                background-color: $color2;
+                .delta1 {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    h1 {
+                        color: $color1;
+                        font-size: 30px;
+                    }
+                    hr {
+                        border: solid 1px $red;
+                        height: 0;
+                        width: 29px;
+                    }
+                }
+            }
+            .charlie2 {
+                .delta1 {
+                    .echo1 {
+
+                    }
+                    .echo2 {
+                        .foxtrot1 {
+                            img {
+                                width: 45px;
+                            }
+                        }
+                        .foxtrot2 {
+                            .golf1 {
+                                margin-bottom: 5px;
+                            }
+                            .golf2 {
+                                font-family: $font1;
+                                font-size: 16px;
+                                margin-bottom: 0;
+                                text-transform: uppercase;
+                            }
+                            .golf3 {
+                                font-size: 12px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .charlie3 {
+                .delta1 {
+                    background-color: $color2;
+                    padding: 15px;
+                    p {
+                        color: $color1;
+                        margin-bottom: 0;
+                    }
+                }
+                .delta2 {
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+                .delta3 {
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+                .delta4 {
+                    padding-top: 20px;
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+                .delta5 {
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+                .delta6 {
+                    font-size: 30px;
+                    hr {
+                        border-top: solid 2px $red;
+                        margin-bottom: 12px;
+                        margin-top: 10px;
+                        width: 19px;
+                    }
+                    .echo2 {
+                        text-align: right;
+                    }
+                }
+            }
+            .charlie4 {
+                background-color: $color1;
+                margin-top: 40px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+        }
+        .bravo2 {
+            .charlie1 {
+                background-color: $color2;
+                .delta1 {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    h2 {
+                        color: $color1;
+                        font-size: 30px;
+                    }
+                    hr {
+                        border: solid 1px $red;
+                        height: 0;
+                        width: 29px;
+                    }
+                }
+            }
+            .charlie2 {
+                background-color: $white;
+                padding: 15px;
+                h3 {
+                    font-family: $font1;
+                    font-size: 18px;
+                }
+                p {
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}

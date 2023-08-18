@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FACTURE {{ invoice.invoice_number }}</title>
+    <link rel="stylesheet" href="style.css" media="all" />
+    <style type="text/css">
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    a {
+        color: #5D6975;
+        text-decoration: underline;
+    }
+
+    body {
+        position: relative;
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0 auto;
+        color: #001028;
+        background: #FFFFFF;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    header {
+        padding: 10px 0;
+        margin-bottom: 30px;
+    }
+
+    #logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #logo img {
+        width: 90px;
+    }
+
+    h1 {
+        border-top: 1px solid  #5D6975;
+        border-bottom: 1px solid  #5D6975;
+        color: #5D6975;
+        font-size: 2.4em;
+        line-height: 1.4em;
+        font-weight: normal;
+        text-align: center;
+        margin: 0 0 20px 0;
+        background: url(dimension.png);
+    }
+
+    #project {
+        float: left;
+    }
+
+    #project span {
+        color: #5D6975;
+        text-align: right;
+        width: auto;
+        margin-right: 10px;
+        display: inline-block;
+        font-size: 0.8em;
+    }
+
+    #company {
+        float: right;
+        text-align: right;
+    }
+
+    #project div,
+    #company div {
+        white-space: nowrap;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 20px;
+    }
+
+    table tr:nth-child(2n-1) td {
+        background: #F5F5F5;
+    }
+
+    table th,
+    table td {
+        text-align: center;
+    }
+
+    table th {
+        padding: 5px 20px;
+        color: #5D6975;
+        border-bottom: 1px solid #C1CED9;
+        white-space: nowrap;
+        font-weight: normal;
+    }
+
+    table .service,
+    table .desc {
+        text-align: left;
+    }
+
+    table td {
+        padding: 20px;
+        text-align: right;
+    }
+
+    table td.service,
+    table td.desc {
+        vertical-align: top;
+    }
+
+    table td.unit,
+    table td.qty,
+    table td.total {
+        font-size: 1.2em;
+    }
+
+    table td.grand {
+        border-top: 1px solid #5D6975;;
+    }
+
+    #notices .notice {
+        color: #5D6975;
+        font-size: 1.2em;
+    }
+
+    footer {
+        color: #5D6975;
+        width: 100%;
+        height: 30px;
+        position: absolute;
+        bottom: 0;
+        border-top: 1px solid #C1CED9;
+        padding: 8px 0;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <header class="clearfix">
+        <div id="logo">
+            <img src="https://media.heyheyhey.fr/staticcontent/text/2017/11/28/thumbs/4283264c-58e4-499e-b8c5-d5af77a718c4.png.1600x0_q85_box-0%2C0%2C300%2C282_detail.png">
+        </div>
+        <h1>FACTURE {{ invoice.invoice_number }}</h1>
+        <div id="company" class="clearfix">
+            <div>HEY! SAS</div>
+            <div>4 avenue Debidour<br /> 75019 Paris<br />France</div>
+            <!-- <div>(602) 519-0450</div> -->
+            <div><a href="mailto:info@heyheyhey.fr">info@heyheyhey.fr</a></div>
+        </div>
+        <div id="project">
+            <!-- <div><span>PROJECT</span> Website development</div> -->
+            <div><span>CLIENT</span> {{ invoice.bill_to_name }} {{ invoice.bill_to_name2 }}</div>
+            <div><span>ADRESSE</span> {{ invoice.bill_to_address }} {% if invoice.bill_to_address2 %}{{ invoice.bill_to_address2 }}{% endif %} {{ invoice.bill_to_postcode }} {{ invoice.bill_to_city }} {{ invoice.bill_to_country.name }}</div>
+            <div><span>EMAIL</span> <a href="mailto:{{ invoice.customer.email }}">{{ invoice.customer.email }}</a></div>
+            <div><span>DATE</span> {{ invoice.invoiced_on }}</div>
+            <div><span>MOYEN DE PAIEMENT</span> {{ invoice.payment_method.name }}</div>
+            <!-- <div><span>DUE DATE</span> September 17, 2015</div> -->
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="service">PRODUIT</th>
+                    <!-- <th class="desc">DESCRIPTION</th> -->
+                    <th>PRIX</th>
+                    <th>QTÉ</th>
+                    <th>TVA</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for object in invoice.lines.all %}
+                <tr>
+                    <td class="service">
+                        {% if object.price.is_recurring %}
+                        {{ object.price.package }} - {{ object.price.recurring_name }}<br>
+                        {{ object.price.unit_price }}€ - TVA {{ object.price.vat_rate }}% : {{ object.amount_product_vat|floatformat:2 }}€<br>
+                        {% if object.price.shipping_service %}
+                        {{ object.price.shipping_service.base_price }}€ - TVA {{ object.price.shipping_service.base_vat_rate }}% : {{ object.amount_shipping_vat|floatformat:2 }}€ (Livraison)
+                        {% endif %}
+                        {% else %}
+                        {{ object.price.product.issue }} - {{ object.price.product.issue.category }} - {{ object.price.product.format }}
+                        {% endif %}
+                    </td>
+                    <!-- <td class="desc">Creating a recognizable design solution based on the company's existing visual identity</td> -->
+                    <td class="unit">{{ object.price.get_total_clean|floatformat:2 }}€</td>
+                    <td class="qty">{{ object.quantity|floatformat:0 }}</td>
+                    <td class="vat">
+                        {{ object.amount_line_vat|floatformat:2 }}€<br>
+                    </td>
+                    <td class="total">{{ object.amount_including_vat|floatformat:2 }}€</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="4" class="grand total">TOTAL HT</td>
+                    <td class="grand total">{{ invoice.amount|floatformat:2 }}€</td>
+                </tr>
+                <tr>
+                    <td colspan="4">TVA</td>
+                    <td class="total">{{ invoice.amount_vat|floatformat:2 }}€</td>
+                </tr>
+                <tr>
+                    <td colspan="4">TOTAL TTC</td>
+                    <td class="total">{{ invoice.amount_including_vat|floatformat:2 }}€</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <div id="notices">
+        <div>Moyens de règlement :</div>
+        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+    </div> -->
+</main>
+<footer>
+    <p>HEY! SAS</p>
+    <p>OFFICE : 4 avenue Debidour 75019 Paris - France (administration) - 9 impasse Daunay 75011 Paris - France (atelier)</p>
+    <p>Siret : 51907149200010 - TVA intracommunautaire : FR59 519071492 00010</p>
+</footer>
+</body>
+</html>

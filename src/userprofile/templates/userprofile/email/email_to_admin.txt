@@ -1,0 +1,2 @@
+New user created with {{ user_email }} 
+

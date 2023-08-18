@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load text_extras %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block content %}
+
+{% query text_list id='145' as text145 %}
+{% query text_list id='146' as text146 %}
+{% query text_list id='147' as text147 %}
+{% query text_list id='148' as text148 %}
+{% query text_list id='151' as text151 %}
+{% query text_list id='154' as text154 %}
+{% query text_list id='149' as text149 %}
+{% query text_list id='150' as text150 %}
+{% query text_list id='155' as text155 %}
+{% query text_list id='156' as text156 %}
+{% query text_list id='152' as text152 %}
+{% query text_list id='153' as text153 %}
+{% query text_list id='157' as text157 %}
+{% query text_list id='161' as text161 %}
+{% query text_list id='158' as text158 %}
+{% query text_list id='159' as text159 %}
+{% query text_list id='160' as text160 %}
+{% query text_list id='162' as text162 %}
+{% query text_list id='163' as text163 %}
+{% query text_list id='164' as text164 %}
+{% query text_list id='165' as text165 %}
+{% query text_list id='166' as text166 %}
+{% query text_list id='167' as text167 %}
+{% query text_list id='168' as text168 %}
+{% query text_list id='169' as text169 %}
+{% query text_list id='189' as text189 %}
+{% query text_list id='252' as text252 %}
+{% query text_list id='253' as text253 %}
+{% query text_list id='254' as text254 %}
+
+
+<div class="concept-page">
+    <!-- Vision & Ambition 1 -->
+    <div class="alfa1">
+        <img src="{{ text162.get_image_crop }}" width="100%" class="mm-img-cover" />
+        <img src="{{ text252.get_image }}" class="mm-margin-auto bravo1" />
+    </div>
+    <!-- End Vision & Ambition 1 -->
+
+    <!-- Vision & Ambition 2-->
+    <div class="alfa2">
+        <div class="container">
+            <h1 class="text-uppercase">{{ text145.t_CharField }}</h1>
+            <hr>
+            <h2 class="text-uppercase">{{ text146.t_CharField }}</h2>
+        </div>
+    </div>
+    <!-- End Vision & Ambition 2 -->
+
+    <div id="section2" class="alfa3">
+        <div class="row no-gutters">
+            <div class="col-sm-6">
+                <img src="{{ text147.get_image_square}}" alt="" class="img-fluid" />
+            </div>
+            <div class="col-sm-6 d-flex align-items-center">
+                <div class="bravo1">
+                    <h1 class="text-uppercase">{{ text148.t_CharField }}</h1>
+                    <h2 class="text-uppercase">{{ text151.t_CharField }}</h2>
+                    <hr align="left">
+                    <div class="">{{ text154.get_text|safe }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-sm-6 d-flex align-items-center">
+                <div class="bravo1">
+                    <h1 class="text-uppercase">{{ text148.t_CharField }}</h1>
+                    <h2 class="text-uppercase">{{ text151.t_CharField }}</h2>
+                    <hr align="left">
+                    <div class="">{{ text154.get_text|safe }}</div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ text147.get_image_square}}" alt="" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+    <!-- Conservatoire du Café -->
+    <div class="mm-bg alfa4 t_bg21" style="background-image: url('')">
+        <div class="bravo1">
+            <h1>{{ text164.t_CharField }}</h1>
+            <img src="{{ text253.get_image }}" alt="" class="center-block">
+            <p>{{ text165.get_text|safe }}</p>
+            <div class="text-center">
+                <a href="http://conservatoireducafe.fr/" target="_blank" class="cap_button">{{ text166.t_CharField }}</a>
+            </div>
+            <img src="{{ text167.get_image }}" alt="">
+        </div>
+    </div>
+
+    <!-- Partners 1 -->
+    <div class="alfa2 alfa5">
+        <div class="container">
+            <h1 class="">{{ text168.t_CharField }}</h1>
+            <hr>
+            <h2 class="">{{ text169.t_CharField }}</h2>
+        </div>
+    </div>
+    <!-- Partners 2 -->
+
+    <div class="alfa6">
+        {% for object in partners_list %}
+        <img src="" class="mm-margin-auto bravo1 t_text189" />
+        <div class="row no-gutters">
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="col-sm-6 d-flex align-items-center">
+                <div class="bravo2 mb-20">
+                    <h1>{{ object.name }}</h1>
+                    <h2>{{ object.sub_title }}</h2>
+                    <hr align="left">
+                    <div>{{ object.description|linebreaks }}</div>
+                    <div class="text-center">
+                        <a href="{{ object.link }}" target="_blank" class="cap_button t_text8"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 bravo3">
+                <img src="{{ object.get_image_hq }}" class="charlie1" />
+            </div>
+            {% else %}
+            <div class="col-sm-6 bravo3">
+                <img src="{{ object.get_image_hq }}" class="charlie1" />
+            </div>
+            <div class="col-sm-6 d-flex align-items-center">
+                <div class="bravo2 mb-20">
+                    <h1>{{ object.name }}</h1>
+                    <h2>{{ object.sub_title }}</h2>
+                    <hr align="left">
+                    <div>{{ object.description|linebreaks }}</div>
+                    <div class="text-center">
+                        <a href="{{ object.link }}" target="_blank" class="cap_button t_text8"></a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

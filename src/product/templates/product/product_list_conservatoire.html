@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load text_extras %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block head_js %}
+{% if not live_test %}
+<script src="{% static 'bower_components/jquery.easing/js/jquery.easing.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}"></script>
+<script src="{% static 'product/js/product_info.js' %}{{ v }}"></script>
+<script src="{% static 'product/js/quantity_update.js' %}{{ v }}"></script>
+<script src="{% static 'product/js/product_block_conservatoire.js' %}{{ v }}"></script>
+<script src="{% static 'product/js/product_list_conservatoire.js' %}{{ v }}"></script>
+{% else %}
+<script src="{% static 'vendor/jquery.easing/js/jquery.easing.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}"></script>
+<script src="{% static 'product/dist/product_info.min.js' %}{{ v }}"></script>
+<script src="{% static 'product/dist/quantity_update.min.js' %}{{ v }}"></script>
+<script src="{% static 'product/dist/product_block_conservatoire.min.js' %}{{ v }}"></script>
+<script src="{% static 'product/dist/product_list_conservatoire.min.js' %}{{ v }}"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="conservatoire_product_list_page">
+	<div class="alpha1">
+		<div class="container">
+			<div class="row t1_alpha bravo1">
+				<div class="col align-self-center">
+					<hr>
+				</div>
+				<div class="col-6">
+					<h1 class="t_text172"></h1>
+				</div>
+				<div class="col align-self-center">
+					<hr>
+				</div>
+				<div class="col-md-12 col-xs-12 t_text173"></div>
+			</div>
+		</div>
+		<div class="bravo2">
+			<img src="" class="t_text270">
+		</div>
+	</div>
+	<div class="alpha2">
+		<div class="container">
+			{% regroup product_list|dictsort:"category.id" by category as category_list %}
+			{% for category in category_list %}
+			<div class="row t1_alpha bravo1">
+				<div class="col align-self-center">
+					<hr>
+				</div>
+				<div class="col-6">
+					<h1 class="text-uppercase text-center">{{ category.grouper }}</h1>
+				</div>
+				<div class="col align-self-center">
+					<hr>
+				</div>
+			</div>
+			<div class="row justify-content-md-center bravo2" id="product-list-is"></div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% query text_list id='193' as text193 %}
+{% query text_list id='192' as text192 %}
+{% query text_list id='461' as text461 %}
+{% query text_list id='462' as text462 %}
+
+<script type="text/javascript">
+
+var t_text193 = '{{ text193.get_text }}';
+var t_text192 = '{{ text192.get_text }}';
+var t_text461 = '{{ text461.get_text }}';
+var t_text462 = '{{ text462.get_text }}';
+var category_id = '{{ instance.id }}';
+var url_product_api_product_list = "{% url 'product_api:product_list' %}";
+var user_is_authenticated = "{{ request.user.is_authenticated }}";
+var user_profile_status = "{{ request.user.profile.status }}";
+console.log(category_id);
+
+</script>
+
+{% endblock %}

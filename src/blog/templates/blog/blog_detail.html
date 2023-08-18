@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block head_js %}
+{% if not live_test %}
+<script src="{% static 'blog/js/blog_detail.js' %}{{ v }}"></script>
+{% else %}
+<script src="{% static 'blog/dist/blog_detail.min.js' %}{{ v }}"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="blog_detail_page">
+	<div class="container-fluid">
+		<h1>{{ instance.title }}</h1>
+		<div class="alpha1">
+			<div class="row justify-content-md-center">
+				<div class="col-12">
+					<hr>
+				</div>
+				<div class="col-sm-auto">
+					<p>{{ instance.published_date|date:"M / d / Y" }}</p>
+				</div>
+				<div class="col-sm-auto">
+					<p class="text-center"><span class="t_text367"></span> {{ instance.author }}</p>
+				</div>
+				<div class="col-sm-auto">
+					{% if instance.credit_photo %}
+					<p class="text-right"><span class="t_text368"></span> {{ instance.credit_photo }}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		{% if instance.image_set %}
+		<div class="container alpha2">
+			<div class="bravo1 slider">
+				{% for image in instance.image_set.all %}
+				<div class="slide--has-caption">
+					<img src="{{ image.get_image_hq }}" alt="{{ instance.title }}" class="img-fluid">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		{% endif %}
+		<div class="container alpha3">
+			<div class="row">
+				<div class="bravo1">{{ instance.content|safe }}</div>
+			</div>
+		</div>
+		<!-- <div class="alpha4">
+			<hr>
+			<div id="carouselExampleControls" class="web-carousel carousel slide" data-ride="carousel" data-type="multi" data-interval="false">
+				<div class="carousel-inner">
+					{% for object in blog_list %}
+					<div class="carousel-item {% if forloop.first %}active{% endif %}">
+						<div class="">
+							<a href="{{ object.get_absolute_url }}" title="{{ object.title }}"><img src="{{ object.image_set.first.get_image_mq }}" alt="{{ object.title }}" width="100%" height="274px" /></a>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div> -->
+	</div>
+</div>
+
+{% endblock %}

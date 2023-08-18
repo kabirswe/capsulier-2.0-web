@@ -1,0 +1,19 @@
+// including variables and mixins
+@import "mixins";
+@import "variables";
+
+// Custom Scss
+// @import "error";
+@import "fonts";
+@import "mahdil";
+@import "general";
+@import "navbar_conservatoire";
+@import "footer";
+
+@import "../../../../blog/static/blog/scss/blog";
+@import "../../../../contact/static/contact/scss/contact";
+@import "../../../../eshop/static/eshop/scss/eshop";
+@import "../../../../page/static/page/scss/page_conservatoire";
+@import "../../../../product/static/product/scss/product";
+@import "../../../../static/account/scss/account";
+@import "../../../../userprofile/static/userprofile/scss/userprofile";

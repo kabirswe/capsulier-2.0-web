@@ -1,0 +1,1470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-12 07:18+0200\n"
+"PO-Revision-Date: 2018-05-12 07:19+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#: blog/admin.py:35 blog/admin.py:92 eshop/admin.py:197 eshop/admin.py:267
+#: eshop/admin.py:307 page/admin.py:64 page/admin.py:139 page/admin.py:204
+msgid "Meta Data"
+msgstr "Méta données"
+
+#: blog/admin.py:76 page/admin.py:116
+msgid "Attributes"
+msgstr "Attributs"
+
+#: blog/admin.py:83
+msgid "Article"
+msgstr "Article"
+
+#: blog/models.py:31 page/models.py:493
+msgid "first name"
+msgstr "prénom"
+
+#: blog/models.py:35 page/models.py:505
+msgid "last name"
+msgstr "nom"
+
+#: blog/models.py:39 blog/models.py:220 main/models.py:49 page/models.py:72
+#: page/models.py:287 page/models.py:389 page/models.py:509
+#: product/models.py:71 product/models.py:402
+msgid "slug"
+msgstr "slug"
+
+#: blog/models.py:46 blog/models.py:233 contact/models.py:26 eshop/models.py:92
+#: eshop/models.py:238 eshop/models.py:335 eshop/models.py:443
+#: eshop/models.py:530 eshop/models.py:577 main/models.py:56 main/models.py:157
+#: main/models.py:264 main/models.py:451 mycaps/models.py:45
+#: mycaps/models.py:131 mycaps/models.py:268 mycaps/models.py:329
+#: page/models.py:83 page/models.py:208 page/models.py:298 page/models.py:402
+#: page/models.py:515 product/models.py:94 product/models.py:273
+#: product/models.py:324 product/models.py:410 product/models.py:691
+#: product/models.py:813 product/models.py:854 product/models.py:907
+#: product/models.py:1092 product/models.py:1171
+msgid "created on"
+msgstr "créé le"
+
+#: blog/models.py:57 blog/models.py:244 eshop/models.py:454 mycaps/models.py:56
+#: mycaps/models.py:142 page/models.py:94 page/models.py:309 page/models.py:411
+#: product/models.py:105 product/models.py:335 product/models.py:421
+#: product/models.py:865 product/models.py:918 product/models.py:1182
+msgid "created by"
+msgstr "créé par"
+
+#: blog/models.py:60 blog/models.py:247 eshop/models.py:97 eshop/models.py:245
+#: eshop/models.py:457 eshop/models.py:536 eshop/models.py:583
+#: main/models.py:62 main/models.py:164 main/models.py:270 main/models.py:458
+#: mycaps/models.py:59 mycaps/models.py:145 mycaps/models.py:273
+#: mycaps/models.py:334 page/models.py:97 page/models.py:215 page/models.py:312
+#: page/models.py:414 page/models.py:522 product/models.py:108
+#: product/models.py:280 product/models.py:338 product/models.py:424
+#: product/models.py:698 product/models.py:820 product/models.py:868
+#: product/models.py:921 product/models.py:1099 product/models.py:1185
+msgid "updated on"
+msgstr "mis à jour le"
+
+#: blog/models.py:70 blog/models.py:257 eshop/models.py:467 mycaps/models.py:69
+#: mycaps/models.py:155 page/models.py:107 page/models.py:322
+#: page/models.py:424 product/models.py:118 product/models.py:348
+#: product/models.py:434 product/models.py:878 product/models.py:931
+#: product/models.py:1195
+msgid "updated by"
+msgstr "mis à jour par"
+
+#: blog/models.py:90 blog/models.py:186
+msgid "author"
+msgstr "auteur"
+
+#: blog/models.py:91
+msgid "authors"
+msgstr "auteurs"
+
+#: blog/models.py:99 blog/models.py:270
+msgid "post"
+msgstr "publication"
+
+#: blog/models.py:104 blog/models.py:126 main/models.py:124 mycaps/models.py:37
+#: mycaps/models.py:105 mycaps/models.py:244 mycaps/models.py:321
+#: page/models.py:58 page/models.py:262 page/models.py:375 page/models.py:497
+#: product/models.py:76 product/models.py:265 product/models.py:301
+#: product/models.py:665 product/models.py:745 product/models.py:980
+msgid "image"
+msgstr "image"
+
+#: blog/models.py:127
+msgid "images"
+msgstr "images"
+
+#: blog/models.py:187
+msgid "post_by_author"
+msgstr ""
+
+#: blog/models.py:191
+msgid "credit photo"
+msgstr "Crédit photo"
+
+#: blog/models.py:192
+msgid "post_by_credit_photo"
+msgstr ""
+
+#: blog/models.py:198 page/models.py:33 page/models.py:240 page/models.py:359
+#: product/models.py:383
+msgid "sites"
+msgstr "sites"
+
+#: blog/models.py:203
+msgid "abstract"
+msgstr "abstract"
+
+#: blog/models.py:208 eshop/models.py:411 eshop/models.py:567
+#: mycaps/models.py:262 page/models.py:38 page/models.py:245
+#: product/models.py:52 product/models.py:388 product/models.py:958
+msgid "active"
+msgstr "actif"
+
+#: blog/models.py:212
+msgid "content"
+msgstr "contenu"
+
+#: blog/models.py:217
+msgid "published date"
+msgstr "date de publication"
+
+#: blog/models.py:225 main/models.py:99 mycaps/models.py:27
+#: product/models.py:56
+msgid "title"
+msgstr "titre"
+
+#: blog/models.py:271
+msgid "posts"
+msgstr "publications"
+
+#: contact/admin.py:25 main/admin.py:92 main/admin.py:150 main/admin.py:196
+#: main/admin.py:301 mycaps/admin.py:30 mycaps/admin.py:89 mycaps/admin.py:141
+#: product/admin.py:142 product/admin.py:182 product/admin.py:239
+#: product/admin.py:289 product/admin.py:351 product/admin.py:424
+#: product/admin.py:473 product/admin.py:558 product/admin.py:659
+msgid "Meta data"
+msgstr "Méta données"
+
+#: contact/models.py:14 eshop/models.py:424 eshop/models.py:571
+#: main/models.py:45 mycaps/models.py:95 page/models.py:66 page/models.py:276
+#: product/models.py:261 product/models.py:318 product/models.py:392
+#: product/models.py:900 product/models.py:1068
+msgid "name"
+msgstr "nom"
+
+#: contact/models.py:18 eshop/models.py:615 product/models.py:66
+msgid "email"
+msgstr "email"
+
+#: contact/models.py:21
+msgid "message"
+msgstr "message"
+
+#: contact/models.py:42
+msgid "contact"
+msgstr "contact"
+
+#: contact/models.py:43
+msgid "contacts"
+msgstr "contacts"
+
+#: contact/views.py:42 eshop/models.py:369
+msgid "Subject"
+msgstr "Objet"
+
+#: eshop/admin.py:51 eshop/admin.py:187 eshop/admin.py:301 eshop/admin.py:333
+#: eshop/admin.py:357
+msgid "Cart"
+msgstr "Panier"
+
+#: eshop/admin.py:59 eshop/admin.py:140
+msgid "User"
+msgstr "Utilisateur"
+
+#: eshop/admin.py:64 eshop/forms.py:49 eshop/models.py:634
+msgid "Shipping"
+msgstr "Livraison"
+
+#: eshop/admin.py:70
+msgid "Discount"
+msgstr "Remise"
+
+#: eshop/admin.py:76
+msgid "Values"
+msgstr "Valeurs"
+
+#: eshop/admin.py:130
+msgid "Order"
+msgstr "Commande"
+
+#: eshop/forms.py:35
+msgid "Shipping address"
+msgstr "Adresse de livraison"
+
+#: eshop/forms.py:41
+msgid "Billing address"
+msgstr "Adresse de facturation"
+
+#: eshop/forms.py:48 eshop/models.py:633
+msgid "Billing"
+msgstr "Facturation"
+
+#: eshop/forms.py:50 eshop/models.py:635
+msgid "Both"
+msgstr "Les deux"
+
+#: eshop/forms.py:59
+msgid "Address type"
+msgstr "Type d'adresse"
+
+#: eshop/forms.py:99
+msgid "Card Expiration Date"
+msgstr "Date d'expiration de la carte"
+
+#: eshop/models.py:35
+msgid "promo code"
+msgstr "code promo"
+
+#: eshop/models.py:40
+msgid "items"
+msgstr "articles"
+
+#: eshop/models.py:48
+msgid "shipping service"
+msgstr "service de livraison"
+
+#: eshop/models.py:55 eshop/models.py:608 eshop/models.py:641
+msgid "user"
+msgstr "utilisateur"
+
+#: eshop/models.py:60
+msgid "discount total"
+msgstr "remise totale"
+
+#: eshop/models.py:66
+msgid "shipping total"
+msgstr "total de livraison"
+
+#: eshop/models.py:72 eshop/models.py:203
+msgid "subtotal"
+msgstr "sous-total"
+
+#: eshop/models.py:78
+msgid "tax total"
+msgstr "total tax"
+
+#: eshop/models.py:84 eshop/models.py:195
+msgid "total"
+msgstr "total"
+
+#: eshop/models.py:174 eshop/models.py:183 eshop/models.py:297
+msgid "cart"
+msgstr "panier"
+
+#: eshop/models.py:175
+msgid "carts"
+msgstr "paniers"
+
+#: eshop/models.py:190
+msgid "item"
+msgstr "article"
+
+#: eshop/models.py:211 eshop/models.py:515 product/models.py:1048
+msgid "vat percentage"
+msgstr "pourcentage TVA"
+
+#: eshop/models.py:218
+msgid "vat total"
+msgstr "Total TVA"
+
+#: eshop/models.py:225
+msgid "unit gross price"
+msgstr "prix brut"
+
+#: eshop/models.py:232
+msgid "quantity"
+msgstr "quantité"
+
+#: eshop/models.py:271
+msgid "cart item"
+msgstr ""
+
+#: eshop/models.py:272
+msgid "cart items"
+msgstr ""
+
+#: eshop/models.py:279
+msgid "Created"
+msgstr "Créé"
+
+#: eshop/models.py:280
+msgid "Paid"
+msgstr "Payé"
+
+#: eshop/models.py:281
+msgid "Shipped"
+msgstr "Expédié"
+
+#: eshop/models.py:282
+msgid "Refunded"
+msgstr "Remboursé"
+
+#: eshop/models.py:291
+msgid "billing address"
+msgstr "adresse de facturation"
+
+#: eshop/models.py:304
+msgid "shipping address"
+msgstr "adresse de livraison"
+
+#: eshop/models.py:311
+msgid "user checkout"
+msgstr ""
+
+#: eshop/models.py:316
+msgid "order id"
+msgstr ""
+
+#: eshop/models.py:322
+msgid "order total"
+msgstr "total de la commande"
+
+#: eshop/models.py:327 userprofile/models.py:55
+msgid "status"
+msgstr "statut"
+
+#: eshop/models.py:385
+msgid "order"
+msgstr "commande"
+
+#: eshop/models.py:386
+msgid "orders"
+msgstr "commandes"
+
+#: eshop/models.py:396
+msgid "Percentage on Cart Total"
+msgstr ""
+
+#: eshop/models.py:397
+msgid "Percentage on Product Variant"
+msgstr ""
+
+#: eshop/models.py:398
+msgid "Free Product Variant"
+msgstr ""
+
+#: eshop/models.py:406
+msgid "variation"
+msgstr "variation"
+
+#: eshop/models.py:415 eshop/models.py:666
+msgid "type"
+msgstr "type"
+
+#: eshop/models.py:420 main/models.py:104 mycaps/models.py:32 page/models.py:48
+#: product/models.py:61 product/models.py:776
+msgid "description"
+msgstr "description"
+
+#: eshop/models.py:428
+msgid "code"
+msgstr "code"
+
+#: eshop/models.py:433
+msgid "discount percentage"
+msgstr "pourcentage de remise"
+
+#: eshop/models.py:437
+msgid "in %"
+msgstr "en %"
+
+#: eshop/models.py:472
+msgid "Promo Code"
+msgstr ""
+
+#: eshop/models.py:473
+msgid "Promo Codes"
+msgstr ""
+
+#: eshop/models.py:488
+msgid "shippping service"
+msgstr "service de livraison"
+
+#: eshop/models.py:493
+msgid "max cart value"
+msgstr ""
+
+#: eshop/models.py:496 eshop/models.py:502
+msgid "Euro TTC"
+msgstr ""
+
+#: eshop/models.py:499
+msgid "min cart value"
+msgstr ""
+
+#: eshop/models.py:505 product/models.py:1164
+msgid "price"
+msgstr ""
+
+#: eshop/models.py:510
+msgid "price vat excluded"
+msgstr ""
+
+#: eshop/models.py:521
+#, fuzzy
+#| msgid "Private"
+msgid "vat"
+msgstr "Privé"
+
+#: eshop/models.py:544
+msgid "Shipping Cost"
+msgstr ""
+
+#: eshop/models.py:545
+msgid "Shipping Costs"
+msgstr ""
+
+#: eshop/models.py:592
+msgid "Shipping Service"
+msgstr ""
+
+#: eshop/models.py:593
+msgid "Shipping Services"
+msgstr ""
+
+#: eshop/models.py:646
+msgid "city"
+msgstr "ville"
+
+#: eshop/models.py:650 page/models.py:282
+msgid "phone number"
+msgstr "n° de téléphone"
+
+#: eshop/models.py:658
+msgid "country"
+msgstr "pays"
+
+#: eshop/models.py:662
+msgid "street"
+msgstr "rue"
+
+#: eshop/models.py:671
+msgid "zip code"
+msgstr "code postal"
+
+#: mahdil/variables/language.py:6
+msgid "French"
+msgstr "Français"
+
+#: mahdil/variables/language.py:7
+msgid "English"
+msgstr "Anglais"
+
+#: mahdil/variables/language.py:8
+msgid "Spanish"
+msgstr "Espagnol"
+
+#: main/admin.py:129
+msgid "Meta"
+msgstr ""
+
+#: main/admin.py:139
+msgid "Facebook"
+msgstr ""
+
+#: main/admin.py:145
+msgid "Twitter"
+msgstr ""
+
+#: main/helpers.py:25 main/models.py:196 main/models.py:590 main/models.py:615
+#: mycaps/models.py:85 mycaps/models.py:174 mycaps/models.py:188
+#: mycaps/models.py:202 mycaps/models.py:216 mycaps/models.py:298
+msgid "Image File Error"
+msgstr "Erreur du fichier image"
+
+#: main/helpers.py:27 main/models.py:198 mycaps/models.py:87
+#: mycaps/models.py:176 mycaps/models.py:190 mycaps/models.py:204
+#: mycaps/models.py:218 mycaps/models.py:300 page/models.py:133
+#: page/models.py:460 product/models.py:146 product/models.py:158
+#: product/models.py:305 product/models.py:478 product/models.py:524
+msgid "None"
+msgstr "Aucun(e)"
+
+#: main/helpers.py:43 main/models.py:199 mycaps/models.py:177
+#: mycaps/models.py:301 page/models.py:134 page/models.py:461
+#: product/admin.py:109 product/models.py:147 product/models.py:525
+msgid "Image"
+msgstr "Image"
+
+#: main/helpers.py:44
+msgid "Mark selected active"
+msgstr "Activer les objets sélectionnés"
+
+#: main/helpers.py:45
+msgid "Mark selected inactive"
+msgstr "Inactiver les objets sélectionnés"
+
+#: main/models.py:39
+msgid "html"
+msgstr ""
+
+#: main/models.py:71
+msgid "Static Page"
+msgstr ""
+
+#: main/models.py:72
+msgid "Static Pages"
+msgstr ""
+
+#: main/models.py:94 main/models.py:308
+msgid "page"
+msgstr ""
+
+#: main/models.py:100
+msgid "The title of the page."
+msgstr ""
+
+#: main/models.py:106
+msgid "A short description or summary of the page. (max 160 characters)"
+msgstr ""
+
+#: main/models.py:111
+msgid "keywords"
+msgstr ""
+
+#: main/models.py:113
+msgid "A series of keywords you deem relevant to the page."
+msgstr ""
+
+#: main/models.py:119
+msgid "Defines the type of webpage."
+msgstr ""
+
+#: main/models.py:126
+msgid ""
+"It should be at least 600x315 pixels, but 1200x630 or larger is preferred "
+"(up to 5MB)."
+msgstr ""
+
+#: main/models.py:143
+msgid "The name which should be displayed for the overall site."
+msgstr ""
+
+#: main/models.py:150
+msgid "@username of website."
+msgstr ""
+
+#: main/models.py:173 main/models.py:174 product/admin.py:78
+msgid "SEO"
+msgstr ""
+
+#: main/models.py:239
+msgid "site"
+msgstr ""
+
+#: main/models.py:244
+msgid "google analytics id"
+msgstr ""
+
+#: main/models.py:250
+msgid "mailchimp api key"
+msgstr ""
+
+#: main/models.py:256
+msgid "mailchimp list id"
+msgstr ""
+
+#: main/models.py:279 main/models.py:280
+msgid "Site Extra"
+msgstr ""
+
+#: main/models.py:300
+msgid "free"
+msgstr ""
+
+#: main/models.py:301
+msgid "16x9 ratio"
+msgstr ""
+
+#: main/models.py:302
+msgid "square"
+msgstr ""
+
+#: main/models.py:467
+msgid "text"
+msgstr ""
+
+#: main/models.py:468
+msgid "texts"
+msgstr ""
+
+#: main/models.py:616
+msgid "Value FR"
+msgstr ""
+
+#: main/models.py:625
+msgid "Value EN"
+msgstr ""
+
+#: main/models.py:634
+msgid "Value ES"
+msgstr ""
+
+#: mycaps/models.py:88
+msgid "Coffee Image"
+msgstr ""
+
+#: mycaps/models.py:100 mycaps/models.py:232 product/models.py:660
+msgid "color"
+msgstr ""
+
+#: mycaps/models.py:111
+msgid "color image"
+msgstr ""
+
+#: mycaps/models.py:117
+msgid "package image"
+msgstr ""
+
+#: mycaps/models.py:123 product/models.py:650
+msgid "background image"
+msgstr ""
+
+#: mycaps/models.py:191
+#, fuzzy
+#| msgid "Image"
+msgid "Color Image"
+msgstr "Image"
+
+#: mycaps/models.py:205
+msgid "Package Image"
+msgstr ""
+
+#: mycaps/models.py:219 product/models.py:479
+msgid "Background Image"
+msgstr ""
+
+#: mycaps/models.py:227
+msgid "coffee"
+msgstr ""
+
+#: mycaps/models.py:237 product/models.py:639 product/models.py:771
+#: product/models.py:849 product/models.py:953 product/models.py:1151
+msgid "product"
+msgstr ""
+
+#: mycaps/models.py:250
+msgid "text for capsule"
+msgstr ""
+
+#: mycaps/models.py:256
+msgid "text for package"
+msgstr ""
+
+#: mycaps/models.py:315
+msgid "package"
+msgstr ""
+
+#: mycaps/models.py:316
+msgid "packages"
+msgstr ""
+
+#: mycaps/models.py:342
+msgid "crop"
+msgstr ""
+
+#: mycaps/models.py:343
+msgid "cropes"
+msgstr ""
+
+#: page/admin.py:122
+msgid "Shop"
+msgstr "Boutique"
+
+#: page/admin.py:130
+msgid "Informations"
+msgstr "Informations"
+
+#: page/models.py:42 product/models.py:313 product/models.py:374
+msgid "category"
+msgstr "catégorie"
+
+#: page/models.py:76
+msgid "link"
+msgstr "lien"
+
+#: page/models.py:152
+msgid "Partner"
+msgstr "Partenaire"
+
+#: page/models.py:153
+msgid "Partners"
+msgstr "Partenaires"
+
+#: page/models.py:160
+msgid "Monday"
+msgstr "Lundi"
+
+#: page/models.py:161
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: page/models.py:162
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: page/models.py:163
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: page/models.py:164
+msgid "Friday"
+msgstr "Vendredi"
+
+#: page/models.py:165
+msgid "Saturday"
+msgstr "Samedi"
+
+#: page/models.py:166
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: page/models.py:172 page/models.py:328 page/models.py:488
+msgid "shop"
+msgstr "boutique"
+
+#: page/models.py:177
+msgid "afternoon end time"
+msgstr ""
+
+#: page/models.py:182
+msgid "afternoon start time"
+msgstr ""
+
+#: page/models.py:187
+msgid "close"
+msgstr "fermer"
+
+#: page/models.py:191
+msgid "day"
+msgstr "jour"
+
+#: page/models.py:196
+msgid "morning end time"
+msgstr ""
+
+#: page/models.py:201
+msgid "morning start time"
+msgstr ""
+
+#: page/models.py:224
+msgid "schedule"
+msgstr ""
+
+#: page/models.py:225
+msgid "schedules"
+msgstr ""
+
+#: page/models.py:249
+msgid "address"
+msgstr "adresse"
+
+#: page/models.py:252
+msgid "address2"
+msgstr ""
+
+#: page/models.py:257
+msgid "e-mail"
+msgstr ""
+
+#: page/models.py:264
+msgid "At least 800px wide"
+msgstr ""
+
+#: page/models.py:292
+msgid "website"
+msgstr "site web"
+
+#: page/models.py:329
+msgid "shops"
+msgstr ""
+
+#: page/models.py:364
+msgid "button text"
+msgstr ""
+
+#: page/models.py:383
+msgid "alt tag"
+msgstr ""
+
+#: page/models.py:395
+msgid "url"
+msgstr ""
+
+#: page/models.py:430 page/models.py:431
+msgid "Slider"
+msgstr ""
+
+#: page/models.py:530
+msgid "team member"
+msgstr ""
+
+#: page/models.py:531
+msgid "team members"
+msgstr ""
+
+#: product/admin.py:69
+msgid "Description"
+msgstr ""
+
+#: product/admin.py:116 product/admin.py:549
+msgid "Properties"
+msgstr ""
+
+#: product/admin.py:125 product/admin.py:532
+msgid "Dimensions"
+msgstr ""
+
+#: product/admin.py:134 product/admin.py:541
+msgid "Reference"
+msgstr ""
+
+#: product/admin.py:652
+msgid "Translations"
+msgstr ""
+
+#: product/models.py:124
+msgid "Category"
+msgstr ""
+
+#: product/models.py:125
+msgid "Categories"
+msgstr ""
+
+#: product/models.py:160
+msgid "Image Square"
+msgstr ""
+
+#: product/models.py:256
+msgid "product feature category"
+msgstr ""
+
+#: product/models.py:290
+msgid "Feature"
+msgstr ""
+
+#: product/models.py:291
+msgid "Features"
+msgstr ""
+
+#: product/models.py:355
+msgid "Feature Category"
+msgstr ""
+
+#: product/models.py:356
+msgid "Features Categories"
+msgstr ""
+
+#: product/models.py:379
+msgid "related products"
+msgstr ""
+
+#: product/models.py:440
+msgid "Product"
+msgstr ""
+
+#: product/models.py:441
+msgid "Products"
+msgstr ""
+
+#: product/models.py:625
+msgid "Variation count"
+msgstr ""
+
+#: product/models.py:645
+msgid "supplier"
+msgstr ""
+
+#: product/models.py:675
+msgid "origin"
+msgstr ""
+
+#: product/models.py:683
+msgid "song"
+msgstr ""
+
+#: product/models.py:707
+msgid "Product Extra"
+msgstr ""
+
+#: product/models.py:708
+msgid "Product Extras"
+msgstr ""
+
+#: product/models.py:781
+msgid "description short 1"
+msgstr ""
+
+#: product/models.py:787
+msgid "description short 2"
+msgstr ""
+
+#: product/models.py:793
+msgid "description short 3"
+msgstr ""
+
+#: product/models.py:799
+msgid "meta description"
+msgstr ""
+
+#: product/models.py:805
+msgid "meta title"
+msgstr ""
+
+#: product/models.py:836
+msgid "Product Lang"
+msgstr ""
+
+#: product/models.py:837
+msgid "Product Langs"
+msgstr ""
+
+#: product/models.py:845
+msgid "feature"
+msgstr ""
+
+#: product/models.py:892
+msgid "Product Feature"
+msgstr ""
+
+#: product/models.py:893
+msgid "Product Features"
+msgstr ""
+
+#: product/models.py:937
+msgid "Supplier"
+msgstr ""
+
+#: product/models.py:938
+msgid "Suppliers"
+msgstr ""
+
+#: product/models.py:962
+msgid "depth"
+msgstr ""
+
+#: product/models.py:968
+msgid "ean13"
+msgstr ""
+
+#: product/models.py:974
+msgid "height"
+msgstr "hauteur"
+
+#: product/models.py:990
+msgid "inventory"
+msgstr "inventaire"
+
+#: product/models.py:994
+msgid "on sales"
+msgstr "en vente"
+
+#: product/models.py:998
+msgid "out of stock"
+msgstr "en rupture de stock"
+
+#: product/models.py:1002
+msgid "no out of stock"
+msgstr ""
+
+#: product/models.py:1006
+msgid "public price"
+msgstr ""
+
+#: product/models.py:1009 product/models.py:1024
+msgid "VAT included"
+msgstr ""
+
+#: product/models.py:1013
+msgid "public price VE"
+msgstr ""
+
+#: product/models.py:1016 product/models.py:1031
+msgid "VAT excluded"
+msgstr ""
+
+#: product/models.py:1021
+msgid "pro price"
+msgstr ""
+
+#: product/models.py:1028
+msgid "pro pro VE"
+msgstr ""
+
+#: product/models.py:1036
+msgid "reference"
+msgstr "référence"
+
+#: product/models.py:1042
+msgid "supplier reference"
+msgstr ""
+
+#: product/models.py:1054
+#, fuzzy
+#| msgid "Public"
+msgid "public vat"
+msgstr "Public"
+
+#: product/models.py:1061
+msgid "pro vat"
+msgstr ""
+
+#: product/models.py:1072
+msgid "upc"
+msgstr ""
+
+#: product/models.py:1078
+msgid "weight"
+msgstr "poids"
+
+#: product/models.py:1084
+msgid "width"
+msgstr "largeur"
+
+#: product/models.py:1158
+msgid "customer"
+msgstr "client"
+
+#: templates/account/account_inactive.html:5
+#: templates/account/account_inactive.html:14
+msgid "Account Inactive"
+msgstr ""
+
+#: templates/account/account_inactive.html:20
+msgid "This account is inactive."
+msgstr ""
+
+#: templates/account/email.html:5
+msgid "Account"
+msgstr ""
+
+#: templates/account/email.html:14
+msgid "E-mail Addresses"
+msgstr ""
+
+#: templates/account/email.html:21
+msgid "The following e-mail addresses are associated with your account:"
+msgstr ""
+
+#: templates/account/email.html:35
+msgid "Verified"
+msgstr ""
+
+#: templates/account/email.html:37
+msgid "Unverified"
+msgstr ""
+
+#: templates/account/email.html:39
+msgid "Primary"
+msgstr ""
+
+#: templates/account/email.html:45
+msgid "Make Primary"
+msgstr ""
+
+#: templates/account/email.html:46
+msgid "Re-send Verification"
+msgstr ""
+
+#: templates/account/email.html:47
+msgid "Remove"
+msgstr ""
+
+#: templates/account/email.html:54
+msgid "Warning:"
+msgstr ""
+
+#: templates/account/email.html:54
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: templates/account/email.html:59
+msgid "Add E-mail Address"
+msgstr ""
+
+#: templates/account/email.html:64
+msgid "Add E-mail"
+msgstr ""
+
+#: templates/account/email.html:73
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr ""
+
+#: templates/account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because user %(user_display)s has given yours "
+"as an e-mail address to connect their account.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s\n"
+msgstr ""
+
+#: templates/account/email/email_confirmation_message.txt:7
+#, python-format
+msgid ""
+"Thank you from %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr ""
+
+#: templates/account/email/password_reset_key_message.html:77
+#, fuzzy, python-format
+#| msgid ""
+#| "Hello from %(site_name)s!\n"
+#| "\n"
+#| "You're receiving this e-mail because you or someone else has requested a "
+#| "password for your user account.\n"
+#| "It can be safely ignored if you did not request a password reset. Click "
+#| "the link below to reset your password."
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"            You're receiving this e-mail because you or someone else has "
+"requested a password for your user account.\n"
+"            It can be safely ignored if you did not request a password "
+"reset. Click the link below to reset your password."
+msgstr ""
+"Bonjour à partir de %(site_name)s!\n"
+"\n"
+"Vous recevez cet e-mail parce que vous ou quelqu'un d'autre a demandé un mot "
+"de passe pour votre compte d'utilisateur. Il peut être ignoré si vous ne "
+"avez pas demandé une réinitialisation de mot de passe. Cliquez sur le lien "
+"ci-dessous pour réinitialiser votre mot de passe."
+
+#: templates/account/email/password_reset_key_message.html:84
+#: templates/account/email/password_reset_key_message.txt:8
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr ""
+
+#: templates/account/email/password_reset_key_message.html:86
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"            %(site_domain)s"
+msgstr ""
+
+#: templates/account/email/password_reset_key_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+"Bonjour à partir de %(site_name)s!\n"
+"\n"
+"Vous recevez cet e-mail parce que vous ou quelqu'un d'autre a demandé un mot "
+"de passe pour votre compte d'utilisateur. Il peut être ignoré si vous ne "
+"avez pas demandé une réinitialisation de mot de passe. Cliquez sur le lien "
+"ci-dessous pour réinitialiser votre mot de passe."
+
+#: templates/account/email/password_reset_key_message.txt:10
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr ""
+
+#: templates/account/email_confirm.html:8
+#: templates/account/email_confirm.html:18
+msgid "Confirm E-mail Address"
+msgstr ""
+
+#: templates/account/email_confirm.html:32
+msgid "Confirm"
+msgstr ""
+
+#: templates/account/email_confirm.html:39
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+
+#: templates/account/login.html:8
+msgid "Sign In"
+msgstr ""
+
+#: templates/account/login.html:24
+#, python-format
+msgid ""
+"Please sign in with one of your existing third party accounts. Or, <a href="
+"\"%(signup_url)s\">sign up</a>for a %(site_name)s account and sign in below:"
+msgstr ""
+
+#: templates/account/login.html:30
+msgid "or"
+msgstr ""
+
+#: templates/account/logout.html:5 templates/account/logout.html:14
+#: templates/account/logout.html:28
+msgid "Sign Out"
+msgstr "Se Déconnecter"
+
+#: templates/account/logout.html:21
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: templates/account/password_change.html:6
+#: templates/account/password_change.html:14
+#: templates/account/password_change.html:24
+#: templates/account/password_reset_from_key.html:6
+#: templates/account/password_reset_from_key.html:14
+#: templates/account/password_reset_from_key_done.html:7
+#: templates/account/password_reset_from_key_done.html:15
+msgid "Change Password"
+msgstr ""
+
+#: templates/account/password_reset.html:8
+#: templates/account/password_reset_done.html:6
+#: templates/account/password_reset_done.html:14
+msgid "Password Reset"
+msgstr ""
+
+#: templates/account/password_reset_done.html:25
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:14
+msgid "Bad Token"
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:23
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:29
+msgid "change password"
+msgstr ""
+
+#: templates/account/password_reset_from_key.html:32
+#: templates/account/password_reset_from_key_done.html:22
+msgid "Your password is now changed."
+msgstr ""
+
+#: templates/account/password_set.html:5 templates/account/password_set.html:14
+#: templates/account/password_set.html:24
+msgid "Set Password"
+msgstr ""
+
+#: templates/account/signup.html:9
+msgid "Signup"
+msgstr ""
+
+#: templates/account/signup_closed.html:5
+#: templates/account/signup_closed.html:13
+msgid "Sign Up Closed"
+msgstr ""
+
+#: templates/account/signup_closed.html:20
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: templates/account/snippets/already_logged_in.html:5
+msgid "Note"
+msgstr ""
+
+#: templates/account/snippets/already_logged_in.html:5
+#, python-format
+msgid "you are already logged in as %(user_display)s."
+msgstr ""
+
+#: templates/account/verification_sent.html:6
+#: templates/account/verification_sent.html:15
+#: templates/account/verified_email_required.html:5
+#: templates/account/verified_email_required.html:13
+msgid "Verify Your E-mail Address"
+msgstr ""
+
+#: templates/account/verification_sent.html:21
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: templates/account/verified_email_required.html:22
+msgid ""
+"This part of the site requires us to verify that you are who you claim to "
+"be. For this purpose, we require that you verify ownership of your e-mail "
+"address. "
+msgstr ""
+
+#: templates/account/verified_email_required.html:24
+msgid ""
+"We have sent an e-mail to you for verification. Please click on the link "
+"inside this e-mail. Please contact us if you do not receive it within a few "
+"minutes."
+msgstr ""
+
+#: templates/account/verified_email_required.html:26
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+
+#: templates/admin/base_site.html:22
+msgid "View site"
+msgstr ""
+
+#: templates/admin/base_site.html:27
+msgid "Documentation"
+msgstr "Documentation"
+
+#: templates/admin/base_site.html:31
+msgid "Change password"
+msgstr "Modifier le mot de passe"
+
+#: templates/admin/base_site.html:33
+msgid "Log out"
+msgstr "Se déconnecter"
+
+#: userprofile/admin.py:22
+msgid "Private Information"
+msgstr ""
+
+#: userprofile/admin.py:28
+msgid "Advanced options"
+msgstr "Options avancées"
+
+#: userprofile/forms.py:41 userprofile/models.py:18
+msgid "Mme"
+msgstr ""
+
+#: userprofile/forms.py:42 userprofile/models.py:19
+msgid "M"
+msgstr ""
+
+#: userprofile/forms.py:45
+msgid "Private"
+msgstr "Privé"
+
+#: userprofile/forms.py:46 userprofile/models.py:23
+msgid "Professional"
+msgstr "Professionnel"
+
+#: userprofile/forms.py:60
+msgid "First name"
+msgstr "Prénom"
+
+#: userprofile/forms.py:63
+msgid "Gender"
+msgstr "Sexe"
+
+#: userprofile/forms.py:69
+msgid "Last name"
+msgstr "Nom"
+
+#: userprofile/forms.py:76
+msgid "Status"
+msgstr "Statut"
+
+#: userprofile/models.py:22
+msgid "Public"
+msgstr "Public"
+
+#: userprofile/models.py:34
+msgid "company name"
+msgstr "raison sociale"
+
+#: userprofile/models.py:39
+msgid "Date of birth"
+msgstr "Date de naissance"
+
+#: userprofile/models.py:44
+msgid "gender"
+msgstr "sexe"
+
+#: userprofile/models.py:50
+msgid "siret number"
+msgstr "numéro de Siret"
+
+#: userprofile/models.py:62
+msgid "updated_on"
+msgstr ""
+
+#: userprofile/models.py:67
+msgid "created_on"
+msgstr ""
+
+#: userprofile/models.py:82
+msgid "profile"
+msgstr "profil"
+
+#: userprofile/models.py:83
+msgid "profiles"
+msgstr "profils"
+
+#~ msgid "Please check if shipping address is the same"
+#~ msgstr "Cocher si l’adresse de livraison est la même"
+
+#~ msgid "Username"
+#~ msgstr "Nom d'utilisateur"
+
+#~ msgid "Last Name"
+#~ msgstr "Nom"
+
+#~ msgid "First Name"
+#~ msgstr "Prénom"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Phone Number"
+#~ msgstr "Numéro de téléphone"
+
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgid "Date of Birth"
+#~ msgstr "Date de naissance"
+
+#~ msgid "Mr/Mrs"
+#~ msgstr "Monsieur/Madame"

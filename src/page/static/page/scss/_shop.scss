@@ -1,0 +1,339 @@
+// Shop
+
+.shop-page {
+	.alpha1 {
+		background-color: $color4;
+		margin-bottom: 0;
+		padding-top: $nav-height-3;
+		padding-bottom: 30px;
+		.bravo1 {
+			margin-top: 10px;
+			padding-bottom: 10px;
+		}
+		.bravo2 {
+			left: 0;
+			position: relative;
+			right: 0;
+			text-align: center;
+			z-index: 9;
+			img {
+				margin-left: -16px;
+				position: absolute;
+				top: 0px;
+				width: 32px;
+			}
+		}
+	}
+	.t2_alpha {
+		color: $color2;
+		font-family: $font1;
+		font-size: 24px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.alpha2 {
+		.bravo1 {
+			height: calc(100vh - 85px - 53px - 121px);
+			width:100%;
+			.charlie1 {
+				h1 {
+					color: $color1;
+					font-family: $font1;
+					font-size: 24px;
+					text-align: center;
+				}
+				p {
+					color: $color2;
+					font-size: 13px;
+					text-align: center;
+				}
+				.delta1 {
+					padding: 10px;
+					.echo1 {
+						margin-bottom: 10px;
+						p {
+							margin-bottom: 5px;
+						}
+					}
+					.echo2 {
+						p {
+							margin-bottom: 5px;
+						}
+						.foxtrot1 {
+							font-weight: bold;
+							text-transform: capitalize;
+						}
+						.foxtrot2 {
+							color: $red;
+						}
+					}
+					.echo3 {
+						margin-top: 15px;
+						text-align: center;
+					}
+				}
+				.decouvrir_btn {
+					background-color: $color2;
+					border: 0;
+					margin: 20px auto;
+					width: 83px;
+					a {
+						color: $color1;
+						display: block;
+						font-size: 13px;
+						padding: 3px 0;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	//----- Map pop up style -------//
+	.gm-style-iw {
+		background-color: #fff;
+		border-radius: 2px 2px 10px 10px;
+		// box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+		// left: 0px !important;
+		// max-width: 300px !important;
+		text-align: center;
+		top: 15px !important;
+		padding-top: 20px;
+		.charlie1 {
+			text-align: center;
+			img {
+				display: inline-block;
+				max-height: 100px;
+				margin-bottom: 10px !important;
+			}
+		}
+	}
+	#iw-container {
+		margin-bottom: 10px;
+	}
+	#iw-container .iw-content {
+		font-size: 13px;
+		line-height: 18px;
+		font-weight: 400;
+		margin-right: 1px;
+		padding: 15px 5px 20px 15px;
+		max-height: 140px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	.iw-content img {
+		float: right;
+		margin: 0 5px 5px 10px;
+	}
+	.iw-subTitle {
+		font-size: 16px;
+		font-weight: 700;
+		padding: 5px 0;
+	}
+	.iw-bottom-gradient {
+		position: absolute;
+		/* width: 326px; */
+		height: 25px;
+		bottom: 10px;
+		right: 18px;
+		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+		background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+		background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+		background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	}
+}
+
+.shop-page {
+	#googleMap {
+		form {
+			p {
+				color: $color1;
+				font-size: 20px;
+				left: 10px;
+				padding-top: 42px;
+				position: absolute;
+				z-index: 9;
+			}
+			.geoposition-map {
+				height: 500px !important;
+				margin: 0;
+			}
+			.geoposition-search {
+				padding-top: 20px;
+				position: absolute;
+				right: 10px;
+				z-index: 9;
+				input {
+					border: 0;
+					padding: 8px 10px;
+					width: 100%;
+				}
+			}
+			.geoposition-widget {
+				input {
+					border: 0;
+					padding: 4px 10px;
+					width: 200px;
+				}
+				table {
+					left: 10px;
+					margin-top: 70px;
+					position: absolute;
+					z-index: 9;
+				}
+				td {
+					font-size: 13px;
+					font-weight: bold;
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+	.gm-style-iw {
+		div {
+			&:first-child {
+				max-width: 100% !important;
+				// width: 100%;
+			}
+		}
+	}
+	.main_title {
+		hr {
+			border: solid 1px $red;
+			height: 0;
+			margin-top: 43px;
+			width: 100%;
+			@include mobile {
+				border: solid 1px $color2;
+				margin-bottom: 15px;
+				margin-top: 20px;
+				width: 17%;
+			}
+		}
+	}
+	.map_details {
+		width: 300px;
+	}
+	.member_hover_image {
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		height: 526px;
+		transition: all 1s ease-in;
+		width: 100%;
+		@include mobile {
+			height: 474px;
+		}
+	}
+	.member_image {
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		height: 526px;
+		transition: all 1s ease-in;
+		width: 100%;
+		.grid {
+			@include mobile {
+				height: 100%;
+				padding: 0;
+				padding-bottom: 20px;
+			}
+			figure {
+				@include mobile {
+					height: 100%;
+					padding: 0;
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+	.shop_header {
+		background-color: $color3;
+		position: relative;
+		z-index: 9;
+		h1 {
+			color: $color1;
+			font-size: 48px;
+			letter-spacing: 2.3px;
+			@include mobile {
+				font-size: 36px;
+				margin-top: 36px;
+			}
+			@include tablet {
+				font-size: 35px;
+			}
+		}
+		h2 {
+			color: $color2;
+			font-size: 24px;
+			margin-top: 0;
+		}
+		p {
+			color: $color2;
+			font-size: 13px;
+			font-weight: 500;
+			letter-spacing: 3px;
+			margin-top: 0;
+			text-align: center;
+			span {
+				color: $red;
+			}
+			@include mobile {
+				font-family: $font2-regular !important;
+				font-size: 16px;
+				letter-spacing: 0;
+				margin-top: 20px;
+			}
+		}
+		.container {
+			padding: 40px 0 100px;
+			width: 95%;
+			@include mobile {
+				padding: 0 0 50px;
+				width: 95%;
+			}
+			@include tablet {
+				width: 90%;
+			}
+		}
+		@include mobile {
+			background-color: $white;
+		}
+	}
+	.triangle_row {
+		left: 0;
+		position: absolute;
+		right: 0;
+		z-index: 9;
+		img {
+			margin-top: -6px;
+		}
+		@include mobile {
+			display: none;
+		}
+	}
+}
+
+// To check
+#googleMap form .geoposition-search ::-webkit-input-placeholder {
+	color: $color1;
+	font-family: $font2-medium;
+}
+
+#googleMap form .geoposition-search ::-moz-placeholder {
+	color: $color1;
+	font-family: $font2-medium;
+}
+
+#googleMap form .geoposition-search :-ms-input-placeholder {
+	color: $color1;
+	font-family: $font2-medium;
+}
+
+#googleMap form .geoposition-search :-moz-placeholder {
+	color: $color1;
+	font-family: $font2-medium;
+}
+
+.navbar .language-drop-down .dropdown-menu li > a:hover {
+	background-color: $color1;
+	width: 100%;
+}
+// End of check

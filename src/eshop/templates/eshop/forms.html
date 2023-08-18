@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+
+{% block head_css %}
+{% if not live_test %}
+<link rel="stylesheet" href="{% static 'eshop/css/checkout.css' %}{{ v }}">
+{% else %}
+<link rel="stylesheet" href="{% static 'eshop/dist/checkout.min.css' %}{{ v }}">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div id="section1" class="address_add_page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="alpha1">
+                    <div class="part">
+                        <div class="row t1_alpha">
+                            <div class="col">
+                                <hr>
+                            </div>
+                            <div class="col-6">
+                                <h1 class="text-center t_text311"></h1>
+                            </div>
+                            <div class="col">
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <form method="POST" action=''>{% csrf_token %}
+                        <div class="part2">
+                            <div class="address_details">
+                                {{ form|crispy }}
+                            </div>
+                            <div class="address_button text-center">
+                                <button type='submit' value='' class="cap_button t_text312"></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% load widget_tweaks %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block account_content %}
+<div class="row t1_alpha">
+	<div class="col">
+		<hr>
+	</div>
+	<div class="col-6">
+		<h1 class="text-center t_text120"></h1>
+	</div>
+	<div class="col">
+		<hr>
+	</div>
+</div>
+<p><a href="{{ login_url }}" class="t_text121"></a></p>
+<form class="login" id="signup_form" method="post" action="{% url 'account_signup' %}" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div class="row">
+		<div class="col-6">
+			{{ form.status|as_crispy_field }}
+		</div>
+		<div class="col-6">
+			{{ form.gender|as_crispy_field }}
+		</div>
+	</div>
+	{{ form.last_name|as_crispy_field }}
+	{{ form.first_name|as_crispy_field }}
+
+	<div class="row">
+		<div class="col-sm-6">
+			{{ form.company_name|as_crispy_field }}
+		</div>
+		<div class="col-sm-6">
+			{{ form.siret_number|as_crispy_field }}
+		</div>
+	</div>
+	{{ form.email|as_crispy_field }}
+	{{ form.password1|as_crispy_field }}
+	{{ form.password2|as_crispy_field }}
+	<div class="row">
+
+		<!-- Does it work ? -->
+		{% if redirect_field_value %}
+		<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+		{% endif %}
+		<!-- End Does it work ? -->
+
+	</div>
+	<div class="text-center">
+		<button class="cap_button t_text123" type="submit"></button>
+	</div>
+</form>
+{% endblock %}

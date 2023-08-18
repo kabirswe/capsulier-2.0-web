@@ -1,0 +1,100 @@
+{% load static %}
+
+{% block head_title %} | {% endblock %}
+{% block seo_description %}{% endblock %}
+
+{% block head_css %}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'mycaps/css/mycaps.css' %}">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static 'mycaps/css/cropper.min.css' %}">
+<script src="{% static 'mycaps/js/cropper.min.js' %}"></script>
+
+<h1 class="page-header">Album</h1>
+<!-- FORM TO UPLOAD THE IMAGES -->
+<form class="col-md-10" method="post" enctype="multipart/form-data" id="formUpload">
+    {% csrf_token %}
+    {{ form }}
+    <img src="http://via.placeholder.com/800x400" id="image2" class="img-responsive">
+</form>
+<button type="button" class="btn btn-default js-zoom-in">
+  <span class="glyphicon glyphicon-zoom-in"></span>
+</button>
+<button type="button" class="btn btn-default js-zoom-out">
+  <span class="glyphicon glyphicon-zoom-out"></span>
+</button>
+<button class="js-crop-and-upload btn-lg">submit</button>
+<div class="container">
+  <div class="row">
+      {% for p in photo %}
+      <div class="col-md-3">
+          <img src="{{ p.image.url }}" class="thumbnail img-responsive">
+      </div>
+      {% endfor %}
+  </div>
+</div>
+
+<script type="text/javascript">
+ // crop function start here
+ $(function () {
+  var $image = $("#image2");
+  $("#id_image").change(function () {
+     $image.cropper("destroy");
+     if (this.files && this.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e){
+        $("#image2").attr("src", e.target.result);
+        $("#image").attr("src", e.target.result);
+
+        var cropBoxData;
+        var canvasData;
+        $image.cropper({
+           viewMode: 4,
+           aspectRatio: 6/2,
+           minCropBoxWidth: 400,
+           minCropBoxHeight: 800,
+           rotate: 45,
+           ready: function () {
+             $image.cropper("setCanvasData", canvasData);
+             $image.cropper("setCropBoxData", cropBoxData);
+         }
+     });
+    };
+    reader.readAsDataURL(this.files[0]);
+}
+});
+
+  $(".js-zoom-in").click(function () {
+    $image.cropper("zoom", 0.1);
+});
+
+  $(".js-zoom-out").click(function () {
+    $image.cropper("zoom", -0.1);
+});
+
+  // submit form with crop data
+  $(".js-crop-and-upload").click(function () {
+    var cropData = $image.cropper("getData");
+    console.log(cropData);
+    $("#id_x").val(cropData["x"]);
+    $("#id_y").val(cropData["y"]);
+    $("#id_height").val(cropData["height"]);
+    $("#id_width").val(cropData["width"]);
+    $("#formUpload").submit();
+});
+
+});
+
+</script>
+
+
+
+
+
+{% endblock %}

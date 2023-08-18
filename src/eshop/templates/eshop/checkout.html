@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block head_js %}
+{% if not live_test %}
+<script src="{% static 'eshop/js/checkout.js' %}"></script>
+{% else %}
+<script src="{% static 'eshop/dist/checkout.min.js' %}"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="checkout_page">
+    <div class="container">
+        <div class="row alpha1">
+            <div class="col-lg-8">
+                <div class="bravo1">
+                    <form method="POST" action="{% url 'eshop:order_address' %}">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap charlie1">
+                            <div class="delta1">
+                                <hr align="left">
+                                <h1 class="t_text349"></h1>
+                            </div>
+                            <div class="delta2">
+                                <button class="cap_button cap_button_v3 echo1 t_text350" type="submit"></button>
+                            </div>
+                        </div>
+                        <div class="charlie2">
+                            <div class="echo1">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                            </div>
+                            <div class="echo2">
+                                <a href="{% url 'eshop:user_address_create' %}" class="t_text351 cap_button cap_button_v3"></a>
+                            </div>
+                        </div>
+                        <div class="charlie3">
+                            <button class="cap_button cap_button_v3 echo1 t_text350" type="submit"></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bravo2">
+                    <div class="d-flex justify-content-between align-items-center charlie1">
+                        <p class="t_text352"></p>
+                        <a href="{% url 'eshop:cart' %}" class="cap_button t_text353"></a>
+                    </div>
+                    <div class="row">
+                        {% for i in order.cart.cartitem_set.all %}
+                        <div class="col-8">
+                            <p class="title">{{ i.quantity }} x {{ i.item.product.name }}</p>
+                        </div>
+                        <div class="col-4">
+                            <p class="price text-right">{{ i.line_item_total }}€</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="title float-left t_text296"></p>
+                            <p class="price float-right">{{ order.cart.get_subtotal_vi }} €</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="title float-left t_text389"></p>
+                            <p class="price float-right">{{ order.cart.shipping_total }} €</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="des float-left t_text390"></p>
+                            <p class="price float-right">- {{ order.cart.discount_total }} €</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="des float-left t_text297"></p>
+                            <p class="price float-right">{{ order.cart.tax_total }} €</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p class="qnty float-left t_text298"></p>
+                            <p class="price float-right">{{ order.cart.total }} €</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

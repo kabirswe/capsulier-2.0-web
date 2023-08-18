@@ -1,0 +1,82 @@
+{% load text_extras %}
+{% query text_list id='22' as text22 %}
+{% query text_list id='411' as text411 %}
+{% query text_list id='412' as text412 %}
+{% query text_list id='413' as text413 %}
+{% query text_list id='414' as text414 %}
+{% query text_list id='415' as text415 %}
+{% query text_list id='416' as text416 %}
+{% query text_list id='417' as text417 %}
+{% query text_list id='418' as text418 %}
+{% query text_list id='419' as text419 %}
+{% query text_list id='420' as text420 %}
+{% query text_list id='421' as text421 %}
+{% query text_list id='422' as text422 %}
+{% query text_list id='425' as text425 %}
+{% query text_list id='394' as text394 %}
+{% query text_list id='395' as text395 %}
+<html>
+<body>
+<div class="mail-wrapper" style="max-width: 700px; width: 90%; margin: 0 auto;">
+    <table style="width:100%; border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td style="width:50%">
+                    <img src="http://media.lecapsulier.fr/main/2018/05/14/c3a5c13b-4bba-47eb-b7d2-187f9ad77b26.png" style="max-width: 110px;" alt="">
+                </td>
+                <td style="width:50%; text-align: right; border-bottom: 1px solid #a36947;">
+                    <h3 style="display: inline-block;">{{ text411.get_text }}</h3><br>
+                    <p style="display: inline-block;">{{ text412.get_text }} : <span>{{ order_instance.order_id }}</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="margin-top: 50px; margin-bottom: 0px;">{{ text413.get_text }}</p>
+    <p style="margin-top: 5px; margin-bottom: 20px;">{{ text414.get_text }}</p>
+    <table style="width:100%; border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <th style="width:25%; text-align: left; color: #a36947; padding: 1rem 2rem; border: 1px solid #ddd;">{{ text415.get_text }}</th>
+                <th style="width:25%; text-align: left; color: #a36947; padding: 1rem 2rem; border: 1px solid #ddd;">{{ text416.get_text }}</th>
+                <th style="width:25%; text-align: left; color: #a36947; padding: 1rem 2rem; border: 1px solid #ddd;">{{ text417.get_text }}</th>
+                <th style="width:25%; text-align: left; color: #a36947; padding: 1rem 2rem; border: 1px solid #ddd;">{{ text418.get_text }}</th>
+            </tr>
+            {% for object in order_instance.cart.cartitem_set.all %}
+            <tr>
+                <td style="width:25%; padding: 1rem 2rem; border: 1px solid #ddd;">{{ object.item.product.name }}</td>
+                <td style="width:25%; padding: 1rem 2rem; border: 1px solid #ddd;">{{ object.unit_price }}€</td>
+                <td style="width:25%; padding: 1rem 2rem; border: 1px solid #ddd;">{{ object.quantity }}</td>
+                <td style="width:25%; padding: 1rem 2rem; border: 1px solid #ddd;">{{ object.line_item_total }}€</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3 style="margin-bottom: 10px; color: #a36947; margin-top: 30px;">{{ text419.get_text }}</h3>
+    <table style="width:100%; border-collapse: collapse;">
+        <tbody>
+            <tr style="width:100%">
+                <th style="width:50%; text-align: left; color: #a36947; padding: 1rem 2rem; border: 1px solid #ddd;">{{ text420.get_text }}</th>
+                <td style="width:50%; padding: 1rem 2rem; border: 1px solid #ddd; text-align: right;">{{ order_instance.cart.get_subtotal_vi }} €</td>
+            </tr>
+            <tr style="width:100%">
+                <th style="width:50%; text-align: left; color: #a36947; padding: 1rem 2rem; border: 1px solid #ddd;">{{ text395.get_text }}</th>
+                <td style="width:50%; padding: 1rem 2rem; border: 1px solid #ddd; text-align: right;">{{ order_instance.cart.shipping_total }} €</td>
+            </tr>
+            <tr style="width:100%">
+                <th style="width:50%; text-align: left; color: #a36947; padding: 1rem 2rem; border: 1px solid #ddd;">{{ text394.get_text }}</th>
+                <td style="width:50%; padding: 1rem 2rem; border: 1px solid #ddd; text-align: right;">- {{ order_instance.cart.discount_total }} €</td>
+            </tr>
+            <tr style="width:100%">
+                <th style="width:50%; text-align: left; color: #a36947; padding: 1rem 2rem; border: 1px solid #ddd;">{{ text421.get_text }}</th>
+                <td style="width:50%; padding: 1rem 2rem; border: 1px solid #ddd; text-align: right;">{{ order_instance.cart.tax_total }} €</td>
+            </tr>
+            <tr style="width:100%">
+                <th style="width:50%; text-align: left; color: #a36947; padding: 1rem 2rem; border: 1px solid #ddd; border: 1px solid #ddd;">{{ text418.get_text }}</th>
+                <td style="width:50%; padding: 1rem 2rem; border: 1px solid #ddd; text-align: right;">{{ order_instance.cart.total }}€</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>{{ text422.get_text }} <a href="http://preprod.lecapsulier.fr" style="color: #a36947; text-decoration: none;">{{ text425.get_text }}</a></p>
+</div>
+</body>
+</html>

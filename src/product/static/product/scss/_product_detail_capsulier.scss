@@ -1,0 +1,213 @@
+// Product Detail Capsulier
+
+.product_detail_capsulier_page {
+	background-color: $color3;
+	padding-bottom: 50px;
+	@include mobile {
+		padding-top: 30px;
+	}
+	.alpha1 {
+		width: 100%;
+		.bravo1 {
+			bottom: auto;
+			top: calc(100vh - 150px);
+		}
+		.bravo2 {
+			position: relative;
+			.charlie1 {
+				.delta1 {
+					border-bottom: solid 8px $color1;
+					height: $nav-height-vh;
+				}
+				.delta2 {
+					position: absolute;
+					right: 15%;
+					top: 10vh;
+					left: 60%;
+					z-index: 10;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					h1 {
+						border-bottom: solid 5px;
+						color: $color1;
+						display: inline-block;
+						font-size: 30px;
+					}
+					h2 {
+						color: $white;
+						font-family: $font1;
+						font-size: 30px;
+						margin-top: 20px;
+						text-transform: uppercase;
+					}
+					hr {
+						border-top: solid 2px;
+						margin-bottom: 10px;
+						margin-top: 5px;
+						width: 45px;
+					}
+					.foxtrot1 {
+						p {
+							color: $white;
+							font-size: 15px;
+						}
+					}
+					.foxtrot2 {
+						.golf1 {
+							span {
+								color: $white;
+
+							}
+							.hotel1 {
+								font-size: 24px;
+							}
+						}
+						.golf2 {
+							.hotel1, .hotel2 {
+								color: $color2;
+								cursor: pointer;
+								display: inline-block;
+								font-size: 23px;
+								height: 50px;
+								padding-top: 11px;
+								text-align: center;
+								width: 50px;
+							}
+							.hotel3 {
+								display: inline-block;
+								font-size: 20px;
+								height: 50px;
+								margin-left: 22px;
+								margin-right: 22px;
+								text-align: center;
+								width: 50px;
+								.india1 {
+									background-color: transparent;
+									border: 0;
+									color: $color2;
+									font-size: 20px;
+									height: 100%;
+									padding-top: 0;
+									text-align: center;
+									width: 100%;
+								}
+							}
+						}
+						.golf3 {
+							button {
+								margin-left: 0;
+								width: 100%;
+							}
+						}
+					}
+				}
+				.delta3 {
+					padding-bottom: 30px;
+					padding-top: 30px;
+					h3 {
+						color: $color2;
+						font-family: $font1;
+						font-size: 36px;
+					}
+					h4 {
+						color: $color1;
+						font-family: $font1;
+						font-size: 25px;
+					}
+					hr {
+						border: solid 1px $red;
+						height: 0;
+						margin-top: 18px;
+						width: 100%;
+					}
+					img {
+						height: 16px;
+						margin-bottom: 1rem;
+					}
+					.echo1 {
+						height: 100%;
+					}
+				}
+				.delta4 {
+					position: relative;
+					.icon_div {
+						position: absolute;
+						left: 10%;
+						bottom: 100px;
+						color: #f8f9fa;
+						width: 400px;
+						display: block;
+						.player {
+							position: relative;
+							.player-playpause {
+								margin-top: -20px;
+							}
+						}
+						.player-div {
+							height: 50px;
+							width: 50px;
+							position: absolute;
+							left: 4px;
+							top: 8px;
+							transform: rotate(45deg);
+							transition: transform 2s;
+						}
+						.player-description {
+							left: 90px;
+							position: absolute;
+							top: 0;
+							width: 400px;
+							.title {
+								font-size: 24px;
+								text-transform: uppercase;
+							}
+							.artist {
+								font-style: 14px;
+								text-transform: uppercase;
+							}
+							.description {
+								font-size: 16px;
+							}
+						}
+					}
+				}
+				.delta5 {
+					a {
+						img {
+							position: absolute;
+							left: 50%;
+							top: 56%;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+		.carousel-control-prev, .carousel-control-next {
+			background-color: rgba(0,0,0,0);
+			transition: 0.5s all;
+			width: 50px;
+			&:hover {
+				background-color: rgba(0,0,0,0.3);
+			}
+			span {
+				display: block;
+				position: absolute;
+				top: calc(50vh - 90px);
+				transform: translateY(-50%);
+				img {
+					height: 40px;
+				}
+			}
+		}
+	}
+	.alpha2 {
+		.bravo1 {
+			margin-bottom: 50px;
+			margin-top: 50px;
+		}
+	}
+	.alpha3 {
+		padding: 30px;
+	}
+}

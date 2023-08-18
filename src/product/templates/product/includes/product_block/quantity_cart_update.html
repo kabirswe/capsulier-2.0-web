@@ -1,0 +1,15 @@
+<!-- Block to update qty in cart without submit (cart page and cart popup)-->
+
+{% load static %}
+
+<div class="quantity_update_alpha1">
+    <a id="minus_{{ object.id }}" data-id="{{ object.id }}" data-link="{{ object.add_to_cart }}" onclick="if ( cart{{ object.id }}.value > 1 ) { cart{{ object.id }}.value = (+ cart{{ object.id }}.value - 1); minus(this); };">
+        <p class="quantity_update_bravo1" style="background-image: url('{% static 'product/img/svg/quantity-bg.svg' %}');">-</p>
+    </a>
+    <a><p class="quantity_update_bravo3">
+        <input type="text" id="cart{{ object.id }}" name="qty" value="{{ item.quantity }}" min="1" style="background-image: url('{% static 'product/img/svg/white-quantity-bg.svg' %}');" />
+    </p></a>
+    <a id="plus_{{ object.id }}" data-id="{{ object.id }}" data-link="{{ object.add_to_cart }}" onclick="cart{{ object.id }}.value = (+ cart{{ object.id }}.value + 1); plus(this);">
+        <p class="quantity_update_bravo2" style="background-image: url('{% static 'product/img/svg/quantity-bg.svg' %}');">+</p>
+    </a>
+</div>

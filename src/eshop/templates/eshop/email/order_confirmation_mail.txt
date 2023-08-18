@@ -1,0 +1,11 @@
+{% load text_extras %}
+
+
+
+{{ text336.get_text|safe }}
+
+
+{{ text332.t_CharField }} : {{ instance.name }}<br>
+{{ text333.t_CharField }} : {{ instance.email }}<br>
+{{ text334.t_CharField }} : {{ instance.message }}<br>
+{{ text335.t_CharField }} : {{ instance.created_on }}

@@ -1,0 +1,39 @@
+// Quantity update
+.quantity-update-block {
+    padding: 7px 0 2px;
+    text-align: center;
+    background-color: rgba(0,0,0,.9);
+    .qb-bravo1, .qb-bravo2 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $white;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        height: 30px;
+        margin: 0 5px 5px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .qb-bravo3 {
+        color: $white;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        height: 30px;
+        margin: 0 5px 5px;
+        text-align: center;
+        width: 30px;
+        input {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 0;
+            color: $color2;
+            font-size: 15px;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

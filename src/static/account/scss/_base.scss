@@ -1,0 +1,52 @@
+// Account Base
+
+.account_page_base {
+    background-color: $color3;
+    padding-top: $nav-height-3;
+    @include mobile {
+        padding-top: 42px;
+    }
+    .alpha1 {
+        padding-bottom: 50px;
+        @include mobile {
+            padding-bottom: 0;
+            h1 {
+                font-size: 18px !important;
+            }
+            h2 {
+                font-size: 18px !important;
+            }
+        }
+        .bravo1 {
+            .charlie1 {
+                background-color: $white;
+                padding: 20px 50px;
+                max-width: 600px;
+                    h1 {
+                        color: $color1;
+                        font-size: 24px;
+                        font-family: $font1;
+                        text-transform: uppercase;
+                    }
+                    hr {
+                        border-top: 1px solid $red;
+                    }
+                form {
+                    label {
+                        font-family: $font2-light;
+                        font-size: 13px;
+                    }
+                    .form-control {
+                        background-color: $color3;
+                    }
+                    .secondaryAction {
+                        display: inline-block;
+                    }
+                    .cap_button {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

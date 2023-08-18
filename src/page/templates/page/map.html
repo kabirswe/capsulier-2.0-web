@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+
+{% block head_js %}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}">
+</script>
+<script src="{% static 'page/js/markerclusterer.js' %}">
+</script>
+<script type="text/javascript">
+var cluster_image= "{% static 'page/img/m' %}";
+
+    $(document).ready(function () {
+        var url_product_list = "{% url 'product:api_product_list' %}";
+        $.get(url_product_list, function (data) {
+            initMap(data);
+        }, "json");
+    });
+</script>
+<script type="text/javascript" src="{% static 'page/js/map.js' %}"></script>
+ {% endblock %}
+
+{% block content %}
+
+<div class="map-page">
+    <div id="section1">
+    	<div id="map" class="map_div">
+    	</div>
+    </div>
+</div>
+
+{% endblock %}

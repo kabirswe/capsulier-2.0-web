@@ -1,0 +1,16 @@
+[
+{
+  "model": "userprofile.signup",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "company_name": "",
+    "date_of_birth": null,
+    "gender": "f",
+    "siret_number": "",
+    "status": "b",
+    "updated_on": "2017-08-29T07:02:42.373Z",
+    "created_on": "2017-08-10T11:49:26.214Z"
+  }
+}
+]

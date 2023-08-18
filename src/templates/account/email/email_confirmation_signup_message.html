@@ -1,0 +1,91 @@
+{% load staticfiles %}
+{% load account %}
+{% load i18n %}
+
+<html>
+<head>
+	<style type="text/css">
+
+	body {
+		background-color: #515151;
+		padding-bottom: 50px 0;
+	}
+
+	.container{
+		margin:0 auto;
+		max-width: 700px;
+	}
+
+	.content {
+		background-color: #fff;
+		padding: 50px;
+	}
+
+	.copyright {
+		color: lightgrey;
+		padding-left: 10px;
+	}
+
+	.fm {
+		font-family: 'Futura-Medium' !important;
+	}
+
+	.footer1 {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;height: 50px;
+		padding: 50px;
+	}
+
+	.footer2 {
+		background-color: #ab704c;
+		color: white;
+		padding: 50px;
+		text-align: center;
+	}
+
+	.footer2 img {
+		height: 30px;
+		margin: 7px;
+	}
+
+	.footer2-content {
+		font-size: 14px;
+	}
+
+	.header {
+		background-color: #ab704c;
+		/* padding: 50px; */
+		text-align: center;
+	}
+
+	.header img {
+		max-height: 300px;
+	}
+
+</style>
+</head>
+
+<body>
+	<div class="container fm">
+		<div class="row header">
+			<a href="http://preprod.lecapsulier.fr">
+				<img src="http://media.lecapsulier.fr/main/2018/05/14/c3a5c13b-4bba-47eb-b7d2-187f9ad77b26.png" />
+			</a>
+		</div>
+		<div class="row content">
+            {% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello from {{ site_name }}!
+
+            You're receiving this e-mail because user {{ user_display }} has given yours as an e-mail address to connect their account.
+
+            To confirm this is correct, go to {{ activate_url }}
+            {% endblocktrans %}{% endautoescape %}
+            {% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you from {{ site_name }}!
+            {{ site_domain }}{% endblocktrans %}
+
+		</div>
+		<div class="row footer2">
+		</div>
+	</div>
+</body>
+</html>

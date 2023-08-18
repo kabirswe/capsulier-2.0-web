@@ -1,0 +1,41 @@
+/* Medium Layout: 1280px */
+@mixin medium {
+    @media (min-width: 992px) and (max-width: 1400px) {
+        @content;
+    }
+}
+
+/* Tablet Layout: 768px */
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+/* Mobile Layout: 320px */
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+/* Wide Mobile Layout: 480px */
+@mixin wide-mobile {
+    @media (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+/* Large Screen: 1920px */
+@mixin large-screen {
+    @media (min-width: 1500px) {
+        @content;
+    }
+}
+
+/* Custom media quaries */
+@mixin cmq ($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

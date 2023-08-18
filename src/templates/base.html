@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% block head_title %}{{ seo_main.title }}{% endblock %}</title>
+	<meta name="author" content="Maison Mahdil" />
+	<meta name="description" content="{% block seo_description %}{{ seo_main.description }}{% endblock %}"/>
+	<meta name="Resource-type" content="{% block seo_resource_type %}{{ seo_main.resource_type }}{% endblock %}" />
+	<meta name="keywords" content="{% block seo_keywords %}{{ seo_main.keywords }}{% endblock %}">
+	<link rel="image_src" href="{% block seo_image %}{{ seo_main.get_image_hq }}{% endblock %}"/>
+
+	<!-- Facebook -->
+	<meta property="fb:app_id" content="{{ seo_main.fb_app_id }}" />
+	<meta property="og:description" content="{% block seo_description_f %}{{ seo_main.description }}{% endblock %}"/>
+	<meta property="og:image" content="{% block seo_image_f %}{{ seo_main.get_image_hq }}{% endblock %}"/>
+	<meta property="og:title" content="{% block head_title_f %}{{ seo_main.title }}{% endblock %}"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="{{ request.build_absolute_uri }}"/>
+	<meta property="og:site_name" content="{{ seo_main.site_name }}"/>
+	<meta property="og:locale" content="{{ request.LANGUAGE_CODE }}_FR"/>
+	<meta name="my:fb" content="on"/>
+	<meta name="my:google" content="on"/>
+	<meta name="my:tw" content="on"/>
+	<meta name="my:in" content="on"/>
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="{{ seo_main.twitter_site }}" />
+	<meta name="twitter:title" content="{% block head_title_t %}{{ seo_main.title }}{% endblock %}" />
+	<meta name="twitter:description" content="{% block seo_description_t %}{{ seo_main.description }}{% endblock %}" />
+	<meta name="twitter:image" content="{% block seo_image_t %}{{ seo_main.get_image_hq }}{% endblock %}" />
+
+	<!-- Google -->
+	<script type="application/ld+json">
+	{
+		"@context": "http://schema.org/",
+		"@type": "WebSite",
+		"name": "{% block head_title_g %}{{ seo_main.title }}{% endblock %}",
+		"image": "{% block seo_image_g %}{{ seo_main.get_image_hq }}{% endblock %}",
+		"description": "{% block seo_description_g %}{{ seo_main.description }}{% endblock %}"
+	}
+	</script>
+
+	{% include 'main/favicon.html' %}
+
+	{% include 'main/head_css.html' %}
+	{% block head_css %}{% endblock %}
+
+	{% include 'main/head_js.html' %}
+	{% block head_js %}{% endblock %}
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</script>
+</head>
+
+<body>
+	{% include 'main/loader.html' %}
+	<div id="mm-wrapper">
+		<header>
+			{% include 'main/navbar.html' %}
+		</header>
+		<div id="main-wrapper">
+			{% block content %}{% endblock %}
+		</div>
+		<footer>
+			{% include 'main/footer.html' %}
+		</footer>
+	</div>
+	<script type="text/javascript">
+	var url_text = "{% url 'main_api:api_text' %}";
+	var url_contact = "{% url 'contact:contactform' %}";
+	var url_newsletter = "{% url 'contact:newsletter' %}";
+	</script>
+	{% include 'main/analytics.html' %}
+</body>
+</html>

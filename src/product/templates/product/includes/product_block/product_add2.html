@@ -1,0 +1,45 @@
+{% load static %}
+
+<form id="add-form2_{{ object.id }}" class="product_add">
+    {% if object.variation_set.first.inventory > 0 or object.variation_set.first.no_out_of_stock %}
+    {% if request.user.is_authenticated and request.user.profile.status == 'b'%}
+    <p class="product_add_alpha1">
+        <span class="product_add_bravo1">{{ object.variation_set.first.price_pro }} €</span>
+        {% if object.productlang.description_short3 %}
+        <span> / {{ object.productlang.description_short3 |default:"-" }}</span>
+        {% endif %}
+    </p>
+    {% else %}
+    <p class="product_add_alpha1">
+        <span class="product_add_bravo1">{{ object.variation_set.first.price_public }} €</span>
+        {% if object.productlang.description_short3 %}
+        <span> / {{ object.productlang.description_short3 |default:"-" }}</span>
+        {% endif %}
+    </p>
+    {% endif %}
+    <input type="hidden" name="item" value="{{ object.variation_set.first.id }}" />
+    <input type="hidden" id="priceMain_{{ object.id }}" name="price" value="{{ object.price }}" />
+    <div class="product_add_alpha2">
+        <a onclick="if(cart2{{ object.id }}.value > 1){cart2{{ object.id }}.value = (cart2{{ object.id }}.value-1)}">
+            <p class="mm-bg product_add_bravo1" style="background-image: url('{% static 'product/img/svg/quantity-bg.svg' %}');">-</p>
+        </a>
+        <a><p class="product_add_bravo3">
+            <input type="text" id="cart2{{ object.id }}" name="qty" value="1" min="1" style="background-image: url('{% static 'product/img/svg/white-quantity-bg.svg' %}');" class="mm-bg product_add_charlie1"/>
+        </p></a>
+        <a onclick=" cart2{{ object.id }}.value = (+cart2{{ object.id }}.value+1)">
+            <p class="mm-bg product_add_bravo2" style="background-image: url('{% static 'product/img/svg/quantity-bg.svg' %}');">+</p>
+        </a>
+    </div>
+    <div class="product_add_alpha3">
+        {% if request.user.is_authenticated and request.user.profile.status == 'b'%}
+        <div class="cap_button cap_button_v2"><a class="t_text193" onclick="var q =$('#cart2'+{{ object.id }}).val(); var img =$('.product_img_'+{{ object.id }}).attr('src'); addToCart2({{ object.id }}, '{{ object.name }}', '{{ object.description }}', '{{ object.variation_set.first.price_pro }}', q, img)"></a></div>
+        {% else %}
+        <div class="cap_button cap_button_v2"><a class="t_text193" onclick="var q =$('#cart2'+{{ object.id }}).val(); var img =$('.product_img_'+{{ object.id }}).attr('src'); addToCart2({{ object.id }}, '{{ object.name }}', '{{ object.description }}', '{{ object.variation_set.first.price_public }}', q, img)"></a></div>
+        {% endif %}
+    </div>
+    {% else %}
+    <div class="product_add_alpha3">
+        <a class="t_text192"></a>
+    </div>
+    {% endif %}
+</form>

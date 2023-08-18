@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block head_js %}
+{% if not live_test %}
+<script src="{% static 'bower_components/jquery.easing/js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'page/js/home.js' %}"></script>
+{% else %}
+<script src="{% static 'vendor/jquery.easing/js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'page/dist/home.min.js' %}"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="home-page">
+
+	<!-- Header Slider -->
+	<div class="section1">
+		<div id="header-slider" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				{% for object in slider_list %}
+				<div class="item {% if forloop.first %}active{% endif %}" style="background-image: url({{ object.get_image_hq }})">
+					<div class="container">
+						<div class="custom-carousel-caption">
+							{% if object.title %}
+							<hr>
+							<h1 class="">{{ object.title }}</h1>
+							{% endif %}
+							{% if object.url %}
+							<div>
+								<a href="{{ object.url }}">{{ object.button_text }}</a>
+							</div>
+							<img src="" class="t_text228">
+							{% endif %}
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+			<!-- Controls -->
+			{% for object in slider_list %}
+			{% if forloop.counter == 2 %}
+			<a class="left carousel-control" href="#header-slider" role="button" data-slide="prev">
+				<img src="{{ text229.get_image }}" alt="" class="left-arrow t_text229">
+			</a>
+			<a class="right carousel-control" href="#header-slider" role="button" data-slide="next">
+				<img src="{{ text230.get_image }}" alt="" class="right-arrow t_text230">
+			</a>
+			{% endif %}
+			{% endfor %}
+			<div class="down-arrow">
+				<p class="t_text96"></p>
+				<a class="click" href="#section2"><img src="" alt="Click" class="t_text231"></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Capsules -->
+	<div id="section2" class="section2">
+		<div class="container block1">
+			<div class="row t1_alpha align-items-center">
+				<div class="col">
+					<hr>
+				</div>
+				<div class="col-6">
+					<h1 class="t_text99"></h1>
+				</div>
+				<div class="col">
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				{% for object in capsule_list %}
+				{% include "product/includes/product_block.html" with product=object col_class_set="col-md-4 col-sm-3" %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	<!-- Others -->
+	<div id="section3" class="section3">
+		<div class="container block1">
+			<div class="row t1_alpha align-items-center">
+				<div class="col">
+					<hr>
+				</div>
+				<div class="col-6">
+					<h1 class="text-uppercase text-center t_text100"></h1>
+				</div>
+				<div class="col">
+					<hr>
+				</div>
+			</div>
+		</div>
+		<div class="container block2">
+			<div class="row zarmeur1">
+				{% for object in other_list %}
+				{% include "product/includes/product_block.html" with product=object col_class_set="col-md-2 col-sm-4 col-6" %}
+				{% endfor %}
+			</div>
+			<div class="text-center mm_mt_20">
+				<a href="{% url 'product:product_list' %}" class="cap_button t_text204"></a>
+			</div>
+			<div class="text-center mm_mt_20">
+				<a href="#section4" class="click"><img src="" alt="" class="center-block t_text233"></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- My Caps -->
+	<div id="section4" class="section4 t_bg92" style="background-image: url('')">
+		<div class="text-details">
+			<h1 class="text-uppercase t_text93"></h1>
+			<img src="" alt="" class="center-block t_text234">
+			<div class="t_text94"></div>
+			<!-- <div class="mycaps_btn"><a href="{% url 'mycaps:mycaps' %}" class="cap_button t_text95"></a></div> -->
+		</div>
+	</div>
+
+	<!-- Blog -->
+	<div class="section5">
+		{% include "blog/includes/blog_list_block.html" with object_list=blog_list %}
+	</div>
+
+</div>
+
+{% endblock %}

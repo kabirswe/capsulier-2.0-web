@@ -1,0 +1,28 @@
+.field_error_msg {
+	color: #ff6565;
+	font-size: 10px;
+	text-align: left;
+}
+
+.modal-content {
+	padding: 30px;
+}
+
+.modal-header {
+	border-bottom: 0;
+	padding: 0;
+}
+
+#newsletter_btn {
+	width: 100%;
+}
+
+#newsletter_modal_close {
+	margin-right: 30px;
+}
+
+.reply {
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}

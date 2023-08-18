@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% load l10n %}
+{% load static %}
+
+{% block head_js %}
+{% if not live_test %}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}"></script>
+<script src="{% static 'product/js/product_detail_capsulier.js' %}{{ v }}"></script>
+{% else %}
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}"></script>
+<script src="{% static 'product/dist/product_detail_capsulier.min.js' %}{{ v }}"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="product_detail_capsulier_others_page">
+
+	<!-- Start product image and cart -->
+	<div class="alpha1">
+		<div class="container">
+			<div class="row bravo1">
+				<div class="col-md-7 charlie1">
+					<img src="{{ instance.productextra.get_image_hq }}" alt="" class="delta1">
+				</div>
+				<div class="col-md-5 charlie2">
+					<h1>{{ instance.name }}</h1>
+					<hr align="left">
+					{% if instance.productlang.description_short %}
+					<h2>{{ instance.productlang.description_short }}</h2>
+					<hr align="left">
+					{% endif %}
+					<div class="delta1">
+						{{ instance.productlang.description|linebreaks }}
+					</div>
+					<div class="delta2">
+						{% include "product/includes/product_block/product_add.html" with object=instance %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End product image and cart -->
+
+	<!-- Start location -->
+	<div class="alpha2">
+		<div class="container">
+			<div class="row bravo1">
+				<div class="col-md-8 charlie1">
+					{% if instance.productextra.position %}
+					<script type="text/javascript">
+					$(document).ready(function () {
+						var id = {{ instance.id }};
+						var latitude = {{ instance.productextra.position.latitude|unlocalize }};
+						var longitude = {{ instance.productextra.position.longitude|unlocalize }};
+						var icon = '{% static "page/img/marker.png" %}';
+						get_map(id, latitude, longitude, icon);
+					});
+					</script>
+					<div id="map{{ instance.id }}" class="delta1"></div>
+					{% endif %}
+				</div>
+				<div class="col-md-4 charlie2">
+					{% if instance.productfeature_set.first %}
+					<div class="row delta1">
+						<div class="col-md-12">
+							<div class="row t1_alpha">
+								<div class="col">
+									<hr>
+								</div>
+								<div class="col-8">
+									<h3 class="text-center">{{ instance.name }}</h3>
+								</div>
+								<div class="col">
+									<hr>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-9">
+							{% regroup instance.productfeature_set.all by feature.product_feature_category.name as feature_list %}
+							{% for zarming in feature_list %}
+							<div>
+								<h4>{{ zarming.grouper }}</h4>
+								<p>{% for feature in zarming.list %}{{ feature.feature.name }}{% if not forloop.last %} / {% endif %}{% endfor %}</p>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End location -->
+
+	<div class="alpha3 text-center">
+		<a href="{% url 'product-others:product_list' %}" class="cap_button t_text276"></a>
+	</div>
+
+	<!-- Start related product -->
+	<div class="alpha4">
+		<div class="container">
+			<div class="row t1_alpha">
+				<div class="col">
+					<hr>
+				</div>
+				<div class="col-6">
+					<h1 class="text-uppercase text-center t_text278"></h1>
+				</div>
+				<div class="col">
+					<hr>
+				</div>
+			</div>
+			<div class="row justify-content-md-center">
+				{% if instance.related_products.active.count > 0 %}
+				{% for object in instance.related_products.active %}
+				{% include "product/includes/product_block.html" with product=object col_class_set="col-md-3 col-sm-4 col-6" %}
+				{% endfor %}
+				{% else %}
+				{% for object in other_list %}
+				{% include "product/includes/product_block.html" with product=object col_class_set="col-md-3 col-sm-4 col-6" %}
+				{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<!-- End related product -->
+
+	<div class="alpha3 text-center">
+		<a href="{% url 'product-others:product_list' %}" class="cap_button t_text276"></a>
+	</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /contact/confirmation_mail/
+Disallow: /main/error/

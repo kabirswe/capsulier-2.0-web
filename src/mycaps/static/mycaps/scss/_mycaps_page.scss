@@ -1,0 +1,874 @@
+.mycaps-page {
+	margin-top: 60px;
+	@include mobile {
+		display: flex;
+		margin-top: 0;
+	}
+	#id_package {
+		@include mobile {
+			display: block;
+			width: 100%;
+		}
+		.main_caps {
+			background-repeat: no-repeat !important;
+			background-size: cover !important;
+			height: 70vh;
+			padding: 60px 0;
+			@include mobile {
+				background-image: none !important;
+				height: auto;
+				padding: 0 0;
+			}
+
+		}
+		.mycap-round {
+			height: 20px;
+			width: 20px;
+			background: #edece8;
+			border-radius: 40px;
+			position: absolute;
+			right: 20px;
+			border: solid 1px #2a2627;
+		}
+		hr {
+			@include mobile {
+				border: 0;
+				border-top: 0 solid $white;
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+		}
+		#crop_display img {
+			width: 120px;
+		}
+		#crop_display1 img {
+			width: 120px;
+		}
+		.coffee-face-text-package2 {
+			color: #2b2627;
+			position: absolute;
+			left: 230px;
+			top: 410px;
+			font-size: 20px;
+			width: 120px;
+			height: 60px;
+			text-align: center;
+			overflow: hidden;
+		}
+		#coffee-face-input1 {
+			border: solid 1px $color1;
+			margin-bottom: 40px;
+			margin-top: 45px;
+			padding: 25px 20px;
+			width: 100%;
+		}
+		#coffee-face-input2 {
+			border: solid 1px $color1;
+			margin-bottom: 40px;
+			margin-top: 45px;
+			padding: 25px 20px;
+			width: 100%;
+		}
+		#coffee_img_display {
+			img {
+				height: auto;
+			}
+		}
+		#content {
+			padding-bottom: 150px;
+			@include mobile {
+				float: left;
+				padding-bottom: 0;
+				width: 100%;
+			}
+		}
+		#image2 {
+			height: 200px;
+		}
+		#step1_item {
+			h1 {
+				color: $color1;
+				margin-top: 0;
+			}
+			hr {
+				border-top: solid 1px $red;
+				display: block;
+				margin: 25px auto 0;
+				padding: 5px 0;
+				width: 30px;
+			}
+			@include mobile {
+				display: none;
+			}
+		}
+		.center-div {
+			height: 70%;
+		}
+		.container-fluid-right {
+			float: right;
+			width: 60%;
+			@include mobile {
+				float: left;
+				width: 100%;
+			}
+			@include tablet {
+				width: 80%;
+			}
+		}
+		.container-fluid-left {
+			float: left;
+			height: 500px;
+			width: 40%;
+			.row {
+				.coffee-capsule-box {
+					height: 400px;
+					position: relative;
+					top: 0;
+					left: 0;
+					.step2_item_img {
+						height: 300px;
+						padding-right: 0;
+						display: block;
+						margin-top: 100px;
+						position: absolute;
+						left: 0;
+						@include mobile {
+
+						}
+					}
+					.coffee-capsule-box-inner {
+						height: 200px;
+						width: 200px;
+						position: absolute;
+						left: 226px;
+						top: 160px;
+						border-radius: 120px;
+						overflow: hidden;
+						display: block;
+						.crop_display2 {
+							img {
+								width: 90px;
+								height: auto;
+							}
+						}
+						.cd2-1 {
+							position: absolute;
+							left: 45px;
+							top: 20px;
+						}
+						.cd2-2 {
+							position: absolute;
+							left: 45px;
+							top: 150px;
+						}
+						.cd2-3 {
+							position: absolute;
+							left: -50px;
+							top: 90px;
+						}
+						.cd2-4 {
+							position: absolute;
+							left: 150px;
+							top: 50px;
+						}
+						.cd2-5 {
+							position: absolute;
+							left: 150px;
+							top: 120px;
+						}
+						.coffee-face-text-package1 {
+							color: #2b2627;
+							position: absolute;
+							left: 40px;
+							top: 80px;
+							font-size: 20px;
+							width: 120px;
+							height: 60px;
+							text-align: center;
+							overflow: hidden;
+							font-style: italic;
+						}
+					}
+				}
+				.coffee-package-box {
+					height: 400px;
+					position: relative;
+					top: 0;
+					left: 0;
+					.step6_item_img {
+						position: absolute;
+						display: block;
+						height: 500px;
+						margin-top: 36px;
+						left: 200px;
+					}
+					.crop_display1 img {
+						width: 120px;
+						max-height: 90px;
+						position: absolute;
+						left: 230px;
+						top: 130px;
+						object-fit: contain;
+					}
+					.coffee-face-text-package2 {
+						color: #2b2627;
+						position: absolute;
+						left: 230px;
+						top: 230px;
+						font-size: 20px;
+						width: 120px;
+						height: 60px;
+						text-align: center;
+						overflow: hidden;
+						font-style: italic;
+					}
+				}
+			}
+			@include tablet {
+				display: none;
+			}
+		}
+		.continuer-col {
+			div {
+				.btn-supprimer {
+					background: transparent;
+				}
+				button {
+					color: $color1;
+					background: $color2;
+					border: 0;
+					display: block;
+					margin: 0 auto;
+					font-size: 16px;
+					padding: 10px 35px;
+				}
+				p {
+					color: $color1;
+					font-size: 18px !important;
+					text-align: left;
+				}
+			}
+		}
+		.cropper-container {
+			height: 200px !important;
+			width: 200px !important;
+			overflow: hidden;
+		}
+		.delete_btn {
+			background-color: $color2;
+			color: $color1;
+			display: block;
+			font-size: 18px;
+			letter-spacing: 2.3px;
+			padding: 12px 0;
+			text-align: center;
+			width: auto;
+		}
+		.etape_div {
+			background-color: $color1;
+			box-shadow: -3px 0 10px 0 rgba(60, 59, 59, 0.5);
+			height: 500px;
+			@include mobile {
+				display: none !important;
+			}
+		}
+		.etape_item {
+			min-height: 500px;
+			padding: 10px 30px;
+			text-align: left;
+			@include mobile {
+				margin: 20px 0;
+				min-height: auto;
+				text-align: center;
+			}
+		}
+		.image-control {
+			ul {
+				display: block;
+				text-align: center;
+				li {
+					img {
+						cursor: pointer;
+						height: 50px;
+					}
+					p {
+						color: $color1;
+						cursor: pointer;
+						font-size: 20px !important;
+						margin-top: 10px;
+						padding: 0 15px;
+						position: relative;
+					}
+				}
+			}
+		}
+		.img-upload {
+			background-color: transparent;
+			/*border-radius: 140px;*/
+			display: block;
+			height: 230px;
+			margin: 0 auto;
+			width: 200px;
+			label {
+				cursor: pointer;
+				height: 20px;
+				margin: 0 auto;
+				display: block;
+				width: 50%;
+				margin-bottom: 10px;
+				p {
+					cursor: pointer;
+					line-height: -2px;
+					padding: 1px 25px;
+					text-align: center;
+					font-size: 14px !important;
+					background-color: $color3;
+					border-radius: 5px;
+				}
+			}
+		}
+		.mob-mycaps-header-img {
+			@include mobile {
+				background-color: transparent;
+				height: 200px;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		.mob-mycap-header {
+			@include mobile {
+				background: $color1;
+			}
+		}
+		.mob-mycap-top {
+			h2 {
+				@include mobile {
+					color: $color1;
+					line-height: 15px;
+				}
+			}
+			h4 {
+				@include mobile {
+					color: $color1;
+				}
+			}
+			hr {
+				@include mobile {
+					border-top: 1px solid red;
+					display: block;
+					margin: 0 auto;
+					width: 10%;
+				}
+			}
+		}
+		.mycaps-ac-btn {
+			background-color: #2a2627;
+			border: 0;
+			color: #fff;
+			display: block;
+			font-size: 18px;
+			letter-spacing: 2.3px;
+			margin: 0 auto;
+			padding: 12px 0;
+			text-align: center;
+			width: 40%;
+			position: absolute;
+			bottom: 0;
+			transform: translateX(-50%);
+			left: 50%;
+			@include mobile {
+				width: 100%;
+			}
+		}
+		.mycaps_item_div {
+			background: $white;
+			height: 500px;
+			.etape_item {
+				.coffee-capsule-box-p {
+					height: 200px;
+					position: relative;
+					top: 60px;
+					left: 0;
+					@include mobile {
+						top: 0;
+					}
+					.step2_item_img {
+						width: 300px;
+						padding-right: 0;
+						display: block;
+						position: absolute;
+						left: 0;
+						@include mobile {
+							position: relative;
+							width: 200px;
+							margin: auto;
+						}
+					}
+					.coffee-capsule-box-inner {
+						height: 108px;
+						width: 108px;
+						position: absolute;
+						left: 120px;
+						top: 32px;
+						border-radius: 120px;
+						overflow: hidden;
+						display: block;
+						.crop_display2 {
+							img {
+								width: 45px;
+								height: auto;
+							}
+						}
+						.cd2-1 {
+							position: absolute;
+							left: 25px;
+							top: 10px;
+						}
+						.cd2-2 {
+							position: absolute;
+							left: 25px;
+							top: 75px;
+						}
+						.cd2-3 {
+							position: absolute;
+							left: -25px;
+							top: 45px;
+						}
+						.cd2-4 {
+							position: absolute;
+							left: 80px;
+							top: 25px;
+						}
+						.cd2-5 {
+							position: absolute;
+							left: 80px;
+							top: 60px;
+						}
+						.coffee-face-text-package1 {
+							color: #2b2627;
+							position: absolute;
+							left: 18px;
+							top: 42px;
+							width: 70px;
+							height: 40px;
+							text-align: center;
+							overflow: hidden;
+							font-style: italic;
+							font-size: 13px;
+						}
+					}
+				}
+				.coffee-package-box-p {
+					height: 300px;
+					position: relative;
+					top: 0;
+					left: 0;
+					@include mobile {
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+					.step6_item_img {
+						position: absolute;
+						display: block;
+						height: 450px;
+						margin-top: -100px;
+						left: 50px;
+						@include mobile {
+							position: absolute;
+							display: block;
+							height: 100%;
+							margin-top: -30px;
+							left: 50%;
+							transform: translateX(-50%);
+						}
+					}
+					.crop_display1 img {
+						width: 106px;
+						max-height: 80px;
+						position: absolute;
+						left: 80px;
+						top: -20px;
+						object-fit: contain;
+						@include mobile {
+							width: 80px;
+							left: 50%;
+							transform: translateX(-50%);
+							top: 30px;
+						}
+					}
+					.coffee-face-text-package2 {
+						color: #2b2627;
+						position: absolute;
+						left: 74px;
+						top: 70px;
+						font-size: 20px;
+						width: 120px;
+						height: 60px;
+						text-align: center;
+						overflow: hidden;
+						font-style: italic;
+						@include mobile {
+							left: 50%;
+							transform: translateX(-50%);
+							top: 70px;
+							font-size: 14px;
+							width: 80px;
+							height: 40px;
+						}
+					}
+				}
+				p {
+					font-size: 16px;
+					@include mobile {
+						font-size:14px;
+					}
+				}
+			}
+			.header {
+				background-color: $color3;
+				h1 {
+					color: $color1;
+					font-size: 24px;
+					margin: 0 0 0 30px;
+					padding: 10px 0;
+					text-align: left;
+					@include mobile {
+						margin-left: 0 !important;
+						text-align: center;
+					}
+				}
+			}
+			@include mobile {
+				background-image: url('../img/bg.png');
+				height: auto;
+			}
+		}
+		.mycapsNavbar {
+			@include mobile {
+				background-color: $color1;
+				height: 45px;
+			}
+			ul {
+				@include mobile {
+					margin: 0;
+				}
+				li {
+					@include mobile {
+						float: left;
+						height: 44px;
+					}
+					.nav-step-list {
+						@include mobile {
+							font-weight: 200;
+							color: $white;
+							padding: 12px 0;
+							margin-left: 60px;
+							font-size: 18px;
+							margin-bottom: 0;
+						}
+						img {
+							height: 28px;
+							position: absolute;
+							left: 10px;
+							top: 10px;
+						}
+					}
+					.nav-step-name {
+						@include mobile {
+							font-weight: 200;
+							color: #2a2627;
+							padding: 14px 0;
+							margin-left: 30px;
+							font-size: 14px;
+							margin-bottom: 0;
+						}
+					}
+					.nav-step-next {
+						height: 26px;
+						position: absolute;
+						right: 20px;
+						top: 8px;
+						display: none;
+					}
+					.nav-step-prev {
+						height: 26px;
+						position: absolute;
+						right: 50px;
+						top: 8px;
+						display: none;
+					}
+				}
+			}
+		}
+		.mob-mycaps-item {
+			@include mobile {
+				background-color: $color1;
+				width: 100%;
+				display: block;
+			}
+			ul {
+				@include mobile {
+					border-top: solid 0.5px #edece8;
+					background-color: $color1;
+					height: 45px;
+					width: 100%;
+					display: block;
+					float: left;
+					margin-bottom: 0;
+				}
+				li {
+					@include mobile {
+						float: left;
+						height: 44px;
+						position: relative;
+					}
+					.nav-step-list {
+						@include mobile {
+							font-weight: 200;
+							color: $white;
+							padding: 12px 0;
+							margin-left: 60px;
+							font-size: 18px;
+							margin-bottom: 0;
+						}
+					}
+					.nav-step-line {
+						@include mobile {
+							height: 24px;
+							width: 1px;
+							background: #2a2627;
+							display: block;
+							position: absolute;
+							top: 10px;
+							left: 130px;
+						}
+					}
+					.nav-step-name {
+						@include mobile {
+							font-weight: 200;
+							color: #2a2627;
+							padding: 12px 0;
+							margin-left: 30px;
+							font-size: 18px;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+			.mycaps-nav-footer {
+				@include mobile {
+					background-color:$color3;
+					width: 100%;
+					height: 60px;
+					padding-top: 8px;
+				}
+				li {
+					@include mobile {
+						width: 48%;
+						float: left;
+						height: 60px;
+					}
+					h3 {
+						@include mobile {
+							padding-bottom: 0;
+							margin-top: 10px;
+							text-align: center;
+							font-size: 18px;
+							color: #2a2627;
+						}
+					}
+				}
+			}
+		}
+		.product-coffee-col {
+			@include mobile {
+				display: flex;
+				width: 50%;
+				justify-content: center;
+			}
+			label {
+				border: 2px solid transparent;
+				color: $color1 !important;
+				cursor: pointer;
+				opacity: 1;
+				padding: 8px;
+				width: auto;
+				img {
+					width: 100px;
+				}
+			}
+			p {
+				cursor: pointer;
+				margin: 10px;
+			}
+		}
+		.product-color-col {
+			@include mobile {
+				display: flex;
+				width: 50%;
+				justify-content: center;
+			}
+			label {
+				border:2px solid transparent;
+				cursor: pointer;
+				opacity: 1;
+				width: auto;
+				height: 200px;
+				.coffee-img {
+					height: 120px;
+					@include mobile {
+						height: 120px;
+					}
+					img {
+						display: block;
+						margin: 0 auto;
+						width: 120px;
+						padding: 0;
+						transform: translate(50%, 50%) rotate(90deg);
+						transform-origin: left;
+						@include mobile {
+							display: block;
+							height: auto;
+							margin: 0 auto;
+						}
+					}
+				}
+				h1 {
+					font-size: 13px !important;
+					font-weight: 500;
+					letter-spacing: 1.7px;
+					text-align: left;
+					@include mobile {
+						font-size: 18px;
+						margin-top: 0;
+					}
+				}
+				@include mobile {
+					border: 2px solid transparent;
+					cursor: pointer;
+					height: auto;
+					margin-top: 0;
+					opacity: 1;
+					padding: 8px;
+					width: auto;
+				}
+			}
+		}
+		.product-img-col {
+			input {
+				display: none;
+			}
+			p {
+				padding: 0 20%;
+				font-size: 14px !important;
+			}
+		}
+		.product_item {
+			margin-bottom: 50px;
+		}
+		.selected {
+			border: 2px solid $color1 !important ;
+			border-radius: 6px;
+			opacity: 1 !important;
+		}
+		.single_etape {
+			border-bottom: solid 0.5px $color3;
+			cursor: pointer;
+			margin-bottom: 0 !important;
+			padding-bottom: 0 !important;
+			height: 60px;
+			width: 100%;
+			&:last-child {
+				border-bottom: 0px solid;
+			}
+			input {
+				cursor: pointer;
+				float: right;
+				margin-right:25px;
+			}
+			label {
+				cursor: pointer;
+				float: left;
+				margin-left:25px;
+				margin-bottom: 0;
+				p {
+					font-size: 16px;
+					text-align: left;
+					margin-bottom: 0;
+					@include tablet {
+						margin-left: 12px;
+					}
+				}
+				@include tablet {
+					margin-left: 12px;
+				}
+			}
+			@include tablet {
+				margin-bottom: 15px !important;
+				padding-bottom: 30px !important;
+				// padding-bottom: 0 !important; for 992px to 1024px
+			}
+		}
+		.single_etape_acive {
+			color: #ff0040 !important;
+		}
+		.single_etape_der1, .single_etape_der2, .single_etape_der3, .single_etape_der4, .single_etape_der5 {
+			color: #ff0040;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		.single_etape_name1, .single_etape_name2, .single_etape_name3, .single_etape_name4, .single_etape_name5 {
+			color: $color2;
+		}
+		.validate_btn {
+			@include mobile {
+				width: 100%;
+			}
+		}
+		.section-bottom-nav {
+			.link-back {
+				background-color: #a36947;
+				height: 100%;
+				.btn {
+					background-color: transparent;
+					color: #fff;
+					font-size: 30px;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+			.link-btn {
+				background-color: #edece8	;
+				.btn {
+					height: 52px;
+					background-color: #231f20;
+					color: #ab704c;
+					border-radius: 0;
+					margin: 5px 40px;
+					float: right;
+				}
+			}
+			.link-cart {
+				background-color: #a36947;
+				display: flex;
+				height: 100%;
+				.btn {
+					border-radius: 0;
+					color: #fff;
+					display: block;
+					margin: 0 auto;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+.product-color-col input[type="radio"] {
+	display: none;
+}
+
+.product-clip-col input[type="radio"] {
+	display: none;
+}

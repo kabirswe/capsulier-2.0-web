@@ -1,0 +1,261 @@
+{% load text_extras %}
+{% query text_list id='428' as text428 %}
+{% query text_list id='429' as text429 %}
+{% query text_list id='430' as text430 %}
+{% query text_list id='431' as text431 %}
+{% query text_list id='432' as text432 %}
+{% query text_list id='433' as text433 %}
+{% query text_list id='434' as text434 %}
+{% query text_list id='435' as text435 %}
+{% query text_list id='436' as text436 %}
+{% query text_list id='437' as text437 %}
+{% query text_list id='438' as text438 %}
+{% query text_list id='439' as text439 %}
+{% query text_list id='440' as text440 %}
+{% query text_list id='441' as text441 %}
+{% query text_list id='442' as text442 %}
+{% query text_list id='443' as text443 %}
+{% query text_list id='444' as text444 %}
+{% query text_list id='445' as text445 %}
+{% query text_list id='446' as text446 %}
+{% query text_list id='447' as text447 %}
+{% query text_list id='448' as text448 %}
+{% query text_list id='449' as text449 %}
+{% query text_list id='450' as text450 %}
+{% query text_list id='451' as text451 %}
+{% query text_list id='452' as text452 %}
+{% query text_list id='453' as text453 %}
+{% query text_list id='454' as text454 %}
+{% query text_list id='455' as text455 %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ text428.get_text }} {{ invoice.invoice_number }}</title>
+    <style type="text/css">
+    a {
+        color: #984806;
+        text-decoration: underline;
+    }
+
+    body {
+        max-width: 700px;
+        height: 29.7cm;
+        margin: 0 auto;
+        color: #001028;
+        background: #FFFFFF;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-family: Arial;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #9e9d9d;
+        font-weight: 300;
+    }
+    th {
+        font-weight: 300;
+        padding: 10px;
+        text-align: left;
+        background: #984806;
+        color: #fff;
+        border: 1px solid #984806;
+    }
+    th, td {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .bg-none {
+        border: none;
+        background: #fff;
+        color: #000;
+    }
+    td {
+        border: 1px solid #ddd;
+    }
+    main tbody tr:nth-child(even) {
+        background: #FDE9D9;
+        /* background: #000; */
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 20px;
+    }
+    footer {
+        text-align: center;
+        padding: 30px 50px;
+    }
+    footer h3 {
+        display: inline-block;
+        color: #9e9d9d;
+    }
+    footer img {
+        display: inline-block;
+        margin: 20px 0;
+        height: 25px;
+    }
+    footer p {
+        display: inline-block;
+    }
+    </style>
+</head>
+<body>
+    <!-- Start header area -->
+    <table style="width:100%; border-collapse: collapse;">
+        <tbody>
+            <tr style="border-bottom: 1px solid #984806;">
+                <td style="width:50%; text-align: left;  padding-bottom: 20px; border: 0px;">
+                    <img src="http://media.lecapsulier.fr/main/2018/05/14/c3a5c13b-4bba-47eb-b7d2-187f9ad77b26.png" style="max-width: 110px;" alt="">
+                </td>
+                <td style="width:50%; text-align: right;  padding-bottom: 20px; border: 0px;">
+                    <h3 style="display: inline-block; font-size: 24px; color: #9e9d9d;">{{ text428.get_text }} {{ invoice.invoice_number }}</h3><br>
+                    <div style="display: inline-block;">
+                        <span style="color: #984806;">{{ text430.get_text }}: </span><span>{{ invoice.invoiced_on }}</span><br><br>
+                        <span style="margin-top: 15px; color: #984806;">{{ text431.get_text }} JJ/MM/AAAAN° facture AAMM5xx</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- End header area -->
+    <!-- Start biling address -->
+    <table>
+        <thead>
+            <tr>
+                <th class="bg-none"></th>
+                <th class="bg-none" style="color: #984806;">{{ text432.get_text }}</th>
+                <th class="bg-none" style="color: #984806;">{{ text433.get_text }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bg-none">{{ text429.get_text }}</td>
+                <td class="bg-none"></td>
+                <td class="bg-none"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- End biling address -->
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>{{ text434.get_text }}</th>
+                    <th>{{ text435.get_text }}</th>
+                    <th>{{ text436.get_text }}</th>
+                    <th>{{ text437.get_text }}</th>
+                    <th>{{ text438.get_text }}</th>
+                    <th>{{ text439.get_text }}</th>
+                    <th>{{ text440.get_text }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>{{ text441.get_text }}</th>
+                    <th>{{ text442.get_text }}</th>
+                    <th>{{ text443.get_text }}</th>
+                    <th>{{ text444.get_text }}</th>
+                    <th>{{ text445.get_text }}</th>
+                    <th>{{ text446.get_text }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="bg-none" colspan="3"></td>
+                    <td class="bg-none" style="text-align: right;" colspan="2">{{ text447.get_text }}</td>
+                    <td>12545</td>
+                </tr>
+                <tr>
+                    <td class="bg-none" colspan="3"></td>
+                    <td class="bg-none" style="text-align: right;" colspan="2">{{ text448.get_text }}</td>
+                    <td>12545</td>
+                </tr>
+                <tr>
+                    <td class="bg-none" colspan="3"></td>
+                    <td class="bg-none" style="text-align: right;" colspan="2">{{ text449.get_text }}</td>
+                    <td>12545</td>
+                </tr>
+                <tr>
+                    <td class="bg-none" colspan="3"></td>
+                    <td class="bg-none" style="text-align: right;" colspan="2">{{ text450.get_text }}</td>
+                    <td>12545</td>
+                </tr>
+                <tr>
+                    <td class="bg-none" colspan="3"></td>
+                    <td class="bg-none" style="text-align: right;" colspan="2">{{ text451.get_text }}</td>
+                    <td>12545</td>
+                </tr>
+                <tr>
+                    <td class="bg-none" colspan="3"></td>
+                    <td class="bg-none" style="text-align: right; font-weight: 700;" colspan="2">{{ text452.get_text }}</td>
+                    <td style="font-weight: 700;">12545</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <!-- Start footer area -->
+    <footer>
+        <h3>{{ text453.get_text }}</h3> <br>
+        <img src="{{ text454.get_text }}" alt="">
+        <p>{{ text455.get_text }}</p>
+    </footer>
+    <!-- End footer area -->
+</body>
+</html>

@@ -1,0 +1,100 @@
+{% load static %}
+
+<div class="blog_list_block">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <div class="row no-gutters">
+                    {% for object in object_list %}
+                    {% if forloop.counter == 1 %}
+                    <div class="col-6 blog_list_block_alpha1">
+                        <img src="" class="blog_list_block_bravo2 t_text235">
+                        <h1>{{ object.title }}</h1>
+                        <img src="" alt="" class="t_text234" height="22px">
+                        {{ object.abstract|linebreaks }}
+                        <a class="cap_button t_text95" href="{{ object.get_absolute_url }}"></a>
+                    </div>
+                    <div class="col-6 blog_list_block_alpha2">
+                        <img src="{{ object.image_set.first.get_image_mq }}" alt="" width="100%">
+                    </div>
+                    {% elif forloop.counter == 2 %}
+                    <div class="col-6 blog_list_block_alpha2">
+                        <img src="{{ object.image_set.first.get_image_mq }}" alt="" width="100%">
+                    </div>
+                    <div class="col-6 blog_list_block_alpha1">
+                        <img src="" class="blog_list_block_bravo1 t_text236">
+                        <h1>{{ object.title }}</h1>
+                        <img src="" alt="" class="t_text234" height="22px">
+                        {{ object.abstract|linebreaks }}
+                        <a href="{{ object.get_absolute_url }}" class="cap_button t_text95"></a>
+                    </div>
+                </div>
+            </div>
+            {% elif forloop.counter == 3 %}
+            <div class="col-md-6 blog_list_block_alpha3 d-flex align-items-center" style="background-image: url('{{ object.image_set.first.get_image_hq }}');">
+                <div class="blog_list_block_bravo1">
+                    <h1>{{ object.title }}</h1>
+                    <img src="" alt="" class="t_text234" height="25px">
+                    {{ object.abstract|linebreaks }}
+                    <a href="{{ object.get_absolute_url }}" class="cap_button cap_button_v2 t_text95"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            {% elif forloop.counter == 4 %}
+            <div class="col-md-3 col-6 blog_list_block_alpha1">
+                <img src="" class="blog_list_block_bravo2 t_text235">
+                <h1>{{ object.title }}</h1>
+                <img src="" alt="" class="t_text234" height="22px">
+                {{ object.abstract|linebreaks }}
+                <a href="{{ object.get_absolute_url }}" class="cap_button t_text95"></a>
+            </div>
+            <div class="col-md-3 col-6 blog_list_block_alpha2">
+                <img src="{{ object.image_set.first.get_image_mq }}" alt="" width="100%">
+            </div>
+            {% elif forloop.counter == 5 %}
+            <div class="col-md-3 col-6 blog_list_block_alpha1">
+                <img src="" class="blog_list_block_bravo2 t_text235">
+                <h1>{{ object.title }}</h1>
+                <img src="" alt="" class="t_text234" height="22px">
+                {{ object.abstract|linebreaks }}
+                <a href="{{ object.get_absolute_url }}" class="cap_button t_text95"></a>
+            </div>
+            <div class="col-md-3 col-6 blog_list_block_alpha2">
+                <img src="{{ object.image_set.first.get_image_mq }}" alt="" width="100%">
+            </div>
+        </div>
+        <div class="row no-gutters">
+            {% elif forloop.counter == 6 %}
+            <div class="col-md-3 col-6 blog_list_block_alpha2">
+                <img src="{{ object.image_set.first.get_image_mq }}" alt="" width="100%">
+            </div>
+            <div class="col-md-3 col-6 blog_list_block_alpha1">
+                <img src="" class="blog_list_block_bravo1 t_text236">
+                <h1>{{ object.title }}</h1>
+                <img src="" alt="" class="t_text234" height="22px">
+                {{ object.abstract|linebreaks }}
+                <a href="{{ object.get_absolute_url }}" class="cap_button t_text95"></a>
+            </div>
+            {% elif forloop.counter == 7 %}
+            <div class="col-md-3 col-6 blog_list_block_alpha2">
+                <img src="{{ object.image_set.first.get_image_mq }}" alt="" width="100%">
+            </div>
+            <div class="col-md-3 col-6 blog_list_block_alpha1">
+                <img src="" class="blog_list_block_bravo1 t_text236">
+                <h1>{{ object.title }}</h1>
+                <img src="" alt="" class="t_text234" height="22px">
+                {{ object.abstract|linebreaks }}
+                <a href="{{ object.get_absolute_url }}" class="cap_button t_text95"></a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <!-- <div class="row">
+            <a href="{% url 'blog:blog_list' %}" class="cap_button t_text96"></a>
+        </div>
+        <div class="row">
+            <img src="" class="mm-margin-auto t_text98">
+        </div> -->
+    </div>
+</div>

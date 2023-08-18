@@ -1,0 +1,17 @@
+.address_add_page {
+    padding: 100px 0 150px 0;
+    background: $color3;
+    .alpha1 {
+        background: #fff;
+        padding: 30px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .form-control {
+        background: $color3;
+        &:focus {
+            outline: none;
+        }
+    }
+}

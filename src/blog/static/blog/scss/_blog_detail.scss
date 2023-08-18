@@ -1,0 +1,135 @@
+// Blog detail
+
+.blog_detail_page {
+	padding-top: $nav-height-3;
+	@include mobile {
+		padding-top: 50px;
+	}
+	h1 {
+		color: $color1;
+		font-family: $font1;
+		font-size: 64px;
+		letter-spacing: 3px;
+		margin-top: 20px;
+		text-align: center;
+		text-transform: uppercase;
+		@include mobile {
+			font-size: 15px;
+			letter-spacing: 0;
+			margin-top: 20px;
+		}
+		@include tablet {
+			font-size: 35px !important;
+			margin-top: 20px !important;
+		}
+	}
+		img {
+			object-fit: cover;
+		}
+	.alpha1 {
+		hr {
+			border-top: solid 1px $color2;
+			width: 44px;
+			@include mobile {
+				margin-top: 0;
+			}
+		}
+		p {
+			color: $color1;
+			font-size: 13px;
+		}
+	}
+	.alpha2 {
+		padding: 0;
+		width: 85%;
+		@include mobile {
+			width: 100% !important;
+		}
+		@include tablet {
+			width: 100% !important;
+		}
+		.bravo1 {
+			.slick-current {
+				opacity: 1 !important;
+			}
+			.slick-next {
+				&:before {
+					color: $color1;
+				}
+				@include mobile {
+					background-repeat: no-repeat !important;
+					background: url('../img/right-arrow.svg');
+					border: 0;
+					font-size: 0;
+					height: 40px;
+					position: absolute;
+					right:0;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 40px;
+					z-index: 9;
+				}
+			}
+			.slick-prev {
+				&:before {
+					color: $color1;
+				}
+				@include mobile {
+					background-repeat: no-repeat !important;
+					background: url('../img/left-arrow.svg');
+					border: 0;
+					font-size: 0;
+					height: 40px;
+					left: 0;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 40px;
+					z-index: 9;
+				}
+			}
+			.slick-slider {
+				background: none;
+				opacity: .4;
+				transition: all .5s;
+			}
+			.slide--has-caption {
+				img {
+					height: 458px;
+					margin: auto;
+					padding: 10px;
+				}
+			}
+		}
+	}
+	.alpha3 {
+		.bravo1 {
+			margin: 65px 0 120px;
+			@include mobile {
+				margin: 50px 0;
+			}
+			p {
+				color: $color2;
+				font-size: 20px;
+				font-weight: 500;
+				@include mobile {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	.alpha4 {
+		#bravo1 {
+			.carousel-control {
+				background-image: none;
+				@include tablet {
+					background-image: none;
+					width: 100%;
+				}
+			}
+			.col-md-2 {
+				width: 20%;
+			}
+		}
+	}
+}

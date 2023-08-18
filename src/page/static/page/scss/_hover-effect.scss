@@ -1,0 +1,81 @@
+// To check
+figure.effect-zoe:hover figcaption, figure.effect-zoe:hover p {
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-zoe:hover p {
+	transition-delay: 0.05s;
+}
+
+figure.effect-zoe figcaption {
+	background: #9A6A5A;
+	bottom: 0;
+	color: #3c4a50;
+	height: auto;
+	padding: 15px 0;
+	top: auto;
+	transform: translate3d(0,100%,0);
+	transition: transform 0.35s;
+}
+
+figure.effect-zoe p{
+	transform: translate3d(0,200%,0);
+	transition: transform 0.35s;
+}
+
+.grid {
+	list-style: none;
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 1em 0 4em;
+	position: relative;
+	text-align: center;
+}
+
+.grid figure {
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.grid figure figcaption {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	color: #fff;
+	font-size: 1.25em;
+	height: 100%;
+	left: 0;
+	padding: 2em;
+	position: absolute;
+	text-transform: uppercase;
+	top: 0;
+	width: 100%;
+}
+
+.grid figure figcaption::before, .grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure img {
+	display: block;
+	max-width: 100%;
+	min-height: 100%;
+	opacity: 0.8;
+	position: relative;
+	width: 100%;
+}
+
+.grid figure p {
+	margin: 0;
+}
+
+@media screen and (max-width: 50em) {
+	.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+}
+// End of check

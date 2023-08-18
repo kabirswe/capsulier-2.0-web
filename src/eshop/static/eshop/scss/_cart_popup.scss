@@ -1,0 +1,170 @@
+.cart_popup {
+    // z-index: 9999;
+    &.modal.right {
+        .modal-body {
+        	padding: 15px 15px 80px;
+        }
+        .modal-content {
+        	height: 100%;
+        	overflow-y: auto;
+        }
+        .modal-dialog {
+            height: 100%;
+            margin: auto;
+            position: fixed;
+            transform: translate3d(0%, 0, 0);
+            width: 320px;
+        }
+    }
+    &.modal.right.fade {
+        .modal-dialog {
+            right: -320px;
+            transition: opacity 0.3s linear, right 0.3s ease-out;
+        }
+    }
+    &.modal.right.fade.show {
+        .modal-dialog {
+            right: 0;
+        }
+    }
+    .modal-content {
+        height: 100%;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 393px;
+        padding: 0;
+        @include mobile {
+            width: 100%;
+        }
+    }
+    .alpha1 {
+        background-color: $white;
+        display: block;
+        .bravo1 {
+            padding: 0;
+            width: 100%;
+            .charlie1 {
+                background-color: $color2;
+                padding: 10px 0;
+                .delta1 {
+                    text-align: center;
+                    img {
+                        width: 33px;
+                    }
+                }
+                .delta2 {
+                    p {
+                        color: $white;
+                        font-size: 14px;
+                        margin-top: 10px;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+                .delta3 {
+                    text-align: center;
+                    a {
+                        cursor: pointer;
+                        img {
+                            margin-top: 10px;
+                            width: 18px;
+                        }
+                    }
+                }
+            }
+            .charlie2 {
+                height: calc(100vh - 260px);
+                overflow: hidden;
+                overflow-y: scroll;
+                @include mobile {
+                    height: 50vh;
+                    padding: 30px 0;
+                }
+                .delta1 {
+                    padding: 20px 20px 0;
+                    text-align: center;
+                }
+                .delta2 {
+                    padding: 20px 55px 0;
+                    .echo1 {
+                        img {
+                            width: 95px;
+                        }
+                    }
+                    .echo2 {
+                        .foxtrot1 {
+                            color: $color1;
+                            font-size: 13px;
+                            margin-bottom: 5px;
+                        }
+                        .foxtrot2 {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 18px;
+                            cursor: pointer;
+                            .golf1 {
+                                width: 100%;
+                            }
+                        }
+                        .foxtrot3 {
+                            border-top: solid 2px;
+                            margin: 0;
+                            width: 18px;
+                        }
+                        .foxtrot4 {
+                            color: $color2;
+                            font-size: 12px;
+                            margin: 5px 0;
+                            text-transform: uppercase;
+                        }
+                        .foxtrot5 {
+                            color: $color2;
+                            font-size: 11px;
+                            margin: 5px 0;
+                        }
+                        .foxtrot6 {
+                            color: $color1;
+                            font-size: 13px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .echo3 {
+                        .foxtrot1 {
+                            border-top: solid 1px $color3;
+                            margin-bottom: 0
+                        }
+                        .foxtrot2 {
+                            border-top: solid 7px $color2;
+                            margin-bottom: 0
+                        }
+                    }
+                }
+            }
+            .charlie3 {
+                background-color: $color3;
+                bottom: 0;
+                padding: 20px;
+                position: absolute;
+                width: 100%;
+                .delta1 {
+                    padding: 0 35px 0;
+                    @include mobile {
+                        padding: 0;
+                    }
+                    .echo1 {
+                        color: $color2;
+                        font-size: 12px;
+                        .foxtrot1 {
+                            margin-bottom: 0;
+                        }
+                        .foxtrot2 {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

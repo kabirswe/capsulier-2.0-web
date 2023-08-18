@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load text_extras %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block content %}
+
+<div class="home-conservatoire-page">
+
+	<!-- Start main slider -->
+	<div class="alfa1">
+		<div id="mainSlider" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				{% for object in slider_list %}
+				<div class="item {% if forloop.first %}active{% endif %}">
+					<img src="{{ object.get_image_hq }}" alt="">
+					<div class="carousel-caption">
+						{% if object.title %}
+						<hr>
+						<h1>{{ object.title }}</h1>
+						{% endif %}
+						{% if object.url %}
+						<div class="slider_btn"><a href="{{ object.url }}">{{ object.button_text }}</a></div>
+						<img src="{{ text238.get_image }}" class="button-rectangle">
+						{% endif %}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+			<!-- Controls -->
+			{% for object in slider_list %}
+			{% if forloop.counter == 2 %}
+			<a class="left carousel-control" href="#mainSlider" role="button" data-slide="prev">
+				<img src="{{ text239.get_image }}" alt="" class="left-arrow">
+			</a>
+			<a class="right carousel-control" href="#mainSlider" role="button" data-slide="next">
+				<img src="{{ text240.get_image }}" alt="" class="right-arrow">
+			</a>
+			{% endif %}
+			{% endfor %}
+		</div>
+
+		<div class="down-arrow">
+			<p class="t_text241"></p>
+			<a href="#section2"><img class="t_text242" src="" alt="Click"></a>
+		</div>
+	</div>
+	<!-- End main slider -->
+
+	<!-- Start Category -->
+	<div class="alfa2">
+		<div class="container">
+			<div class="row no-gutters justify-content-center">
+				{% for category in navbar_category_list %}
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="bravo1" href="{{ category.get_absolute_url }}">
+						<img src="{{ category.get_image_square_hq }}">
+						<div class="charlie1">
+							<h1 class="text-uppercase text-center">{{ category.title }}</h1>
+							<p class="text-center">{{ category.description|truncatewords:6 }}</p>
+						</div>
+					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- End category -->
+
+	<!-- Start Map -->
+	<div class="alfa3">
+		<div class="bravo1 t_bg135" src="" alt=""></div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="bravo2 text-center">
+						<h1 class="t_text136"></h1>
+						<hr>
+						<p class="t_text137"></p>
+						<a href="{% url 'page:map' %}" class="cap_button t_text138"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Map -->
+
+	<!-- Start logo -->
+	<div class="alfa4">
+		<div class="bravo1">
+			<img class="t_text139" src="">
+		</div>
+	</div>
+	<!-- End logo -->
+
+	<!-- Start call to action -->
+	<div class="alfa5 t_bg143">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-7 col-md-10">
+					<div class="bravo1">
+						<h1 class="t_text140"></h1>
+						<img class="t_text246" src="" alt="">
+						<p class="t_text141"></p>
+						<a href="" class="cap_button t_text142"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End call to action -->
+
+	<!-- Start blog -->
+	<div class="alfa6">
+		{% include "blog/includes/blog_list_block.html" with object_list=blog_list %}
+		<div class="d-flex justify-content-center">
+			<a href="{% url 'blog:blog_list' %}" class="cap_button t_text144"></a>
+		</div>
+	</div>
+	<!-- End blocg -->
+
+</div>
+
+
+
+<!-- googlemap -->
+<script src="http://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}"></script>
+<script>
+    function initialize() {
+        var myLatLng = {lat: 48.842224, lng: 2.311086};
+
+        var mapProp = {
+            center:myLatLng,
+            zoom:17,
+            mapTypeId:google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Le Capsulier!'
+        });
+
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<script type="text/javascript">
+	$('.down-arrow a').on('click', function (e) {
+		e.preventDefault();
+
+		var target = this.hash;
+		var $target = $(target);
+
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top-160
+		}, 900, 'swing', function () {
+			window.location.hash = target;
+		});
+	});
+</script>
+
+{% endblock %}

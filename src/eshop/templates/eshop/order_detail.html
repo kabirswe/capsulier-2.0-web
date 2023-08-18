@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block content %}
+
+<div class="order_detail_page">
+    <div class="container">
+        <div class="row alpha1">
+            <div class="col-sm-8 col-xs-12 bravo1">
+                <div class="row charlie1">
+                    <div class="delta1">
+                        <hr align="left">
+                        <h1>
+                            <span class="t_text313"></span>
+                            <span> {{ instance.order_id }}</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="charlie2">
+                    <table class="table delta1">
+                        <thead class="echo1">
+                            <tr>
+                                <th colspan="2" scope="col" class="text-center t_text282"></th>
+                                <th scope="col" class="text-right t_text283"></th>
+                                <th scope="col" class="text-right t_text284"></th>
+                                <th scope="col" class="text-right t_text285"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="echo2">
+                            {% for object in instance.cart.cartitem_set.all %}
+                            <tr>
+                                <th scope="row" class="foxtrot1">
+                                    <a href="{{ object.item.product.get_absolute_url }}" >
+                                        <img class="img-fluid" src="{{ object.item.product.get_image_lq }}" />
+                                    </a>
+                                </th>
+                                <td class="foxtrot2">
+                                    <p class="golf1">{{ object.item.product.name }}</p>
+                                    {% if object.item.product.get_description_short %}
+                                    <p class="golf2">{{ object.item.product.get_description_short }}</p>
+                                    {% endif %}
+                                    {% if object.item.product.get_description_short3 %}
+                                    <p class="golf3">{{ object.item.product.get_description_short3 }}</p>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <p class="text-right">{{ object.unit_price }}€</p>
+                                </td>
+                                <td>
+                                    <p class="text-right">{{ object.quantity }}</p>
+                                </td>
+                                <td>
+                                    <p class="text-right">{{ object.line_item_total }}€</p>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="charlie3">
+                    <div class="row delta1">
+                        <p class="t_text293"></p>
+                    </div>
+                    <div class="row justify-content-between delta4">
+                        <div class="col echo1 t_text296"></div>
+                        <div class="col echo2" id='subtotal'>{{ instance.cart.get_subtotal_vi }} €</div>
+                    </div>
+                    <div class="row justify-content-between delta5">
+                        <div class="t_text394 col"></div>
+                        <div class="col echo2">{{ instance.cart.shipping_total }} €</div>
+                    </div>
+                    <div class="row justify-content-between delta5">
+                        <div class="t_text405 col"></div>
+                        <div class="col echo2" id='taxtotal'>- {{ instance.cart.discount_total }} €</div>
+                    </div>
+                    <div class="row justify-content-between delta5">
+                        <div class="col t_text297"></div>
+                        <div class="col echo2" id='taxtotal'>{{ instance.cart.tax_total }} €</div>
+                    </div>
+                    <div class="row justify-content-between delta6">
+                        <div class="col-12">
+                            <hr align="left">
+                        </div>
+                        <div class="col t_text298"></div>
+                        <div class="col echo2" id='carttotal'>{{ instance.cart.total }} €</div>
+                    </div>
+                </div>
+                <div class="row charlie4">
+                    <div class="col-md-12 col-sm-12 col-xs-12 delta1">
+                        <a class="float-left cap_button cap_button_v2 t_text299" href="{% url 'page:home' %}"></a>
+                        <a class="float-left cap_button cap_button_v2 t_text410" href="{% url 'userprofile:profile' %}#orders" style="margin-left: 20px;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-12 bravo2">
+                <div class="row no-gutters charlie1">
+                    <div class="delta1">
+                        <hr align="left">
+                        <h2 class="t_text391"></h2>
+                    </div>
+                </div>
+                <div class="charlie2">
+                    <h3 class="t_text392"></h3>
+                    <p>{{ instance.created_on }}</p>
+                    <h3 class="t_text393"></h3>
+                    <p>{{ instance.get_status_display }}{% if instance.invoice_number %} - {{ instance.invoice_number }}{% endif %}</p>
+                    <h3 class="t_text394"></h3>
+                    <p>{{ instance.cart.shipping_total }} €</p>
+                    <h3 class="t_text395"></h3>
+                    <p>{{ instance.cart.discount_total }} €</p>
+                    <h3 class="t_text396"></h3>
+                    <p>
+                        {{ instance.shipping_address.street }}<br>
+                        {{ instance.shipping_address.zipcode }} - {{ instance.shipping_address.city }}<br>
+                        {{ instance.shipping_address.state }}
+                    </p>
+                    <h3 class="t_text397"></h3>
+                    <p>
+                        {{ instance.billing_address.street }}<br>
+                        {{ instance.billing_address.zipcode }} - {{ instance.billing_address.city }}<br>
+                        {{ instance.billing_address.state }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

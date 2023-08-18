@@ -1,0 +1,389 @@
+// Navbar Capsulier
+
+.main_navbar {
+	@include mobile {
+		padding: 20px 15px;
+		background-color: $color6;
+	}
+	.alpha1 {
+		background-color: $color6;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.5);
+		padding: 10px 15px;
+		a {
+			color: $color1;
+			font-size: 14px;
+			font-weight: 500;
+			padding: 0 12px;
+			text-align: center;
+			transition: all .5s ease;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+		li {
+			border-right: 1px solid $white;
+			display: inline-block;
+			list-style: none;
+			&:last-child {
+				border: 0;
+			}
+		}
+		.dropdown-menu {
+			.dropdown-item {
+				padding: 0;
+				a {
+					padding: .25rem 1.5rem;
+					display: block;
+					text-align: left;
+				}
+			}
+		}
+		.bravo1 {
+			width: 33%;
+			li {
+				margin-right: 6px;
+			}
+			.charlie1 {
+				background: $color3;
+				display: block;
+				left: 100px;
+				padding: 30px 0 50px;
+				top: 42px;
+				width: 270px;
+				z-index: 99;
+				h1 {
+					color: $color1;
+					font-size: 24px;
+					text-align: center;
+					text-transform: uppercase;
+				}
+				h2 {
+					color: $color2;
+					font-family: $font2-regular;
+					font-size: 13px;
+					font-weight: bold;
+					margin-bottom: 40px;
+					margin-top: 0;
+					text-align: center;
+				}
+				hr {
+					border: solid 1px $white;
+					height: 0;
+					width: 100%;
+				}
+				input {
+					background-color: $white;
+					border: 0;
+					color: $color2;
+					line-height: 36px;
+					margin-bottom: 10px;
+					padding-left: 8px;
+					display: block;
+					width: 100%;
+				}
+				p {
+					color: $color2;
+				    font-size: 13px;
+				    font-weight: 500;
+				    margin: 0 35px;
+				    text-align: center;
+				}
+				.delta1 {
+					padding: 0 50px;
+					form {
+						p {
+							color: $color1;
+							font-size: 13px;
+							font-weight: 500;
+							margin: 0;
+							margin-bottom: 20px;
+							margin-top: 10px;
+						}
+					}
+				}
+				.delta2 {
+					padding: 0 50px;
+					text-align: center;
+				}
+			}
+			.charlie2 {
+				background: transparent;
+				border: 0;
+				color: $color1;
+				font-size: 12px;
+				padding: 0 12px;
+			}
+			.dropdown-menu {
+				margin-left: 10px;
+				margin-top: 20px;
+				padding: 0;
+			}
+		}
+		.bravo2 {
+			width: 33%;
+			text-align: center;
+			.brand {
+				img {
+					@include mobile {
+						max-width: 200px;
+					}
+				}
+			}
+			.brand2 {
+				display: none;
+			}
+		}
+		.bravo3 {
+			width: 33%;
+			text-align: right;
+			.cart {
+				padding-right: 10px;
+				cursor: pointer;
+				transition: all ease-in .35s;
+				&:hover {
+					color: #d84e00;
+				}
+				.badge {
+					background: $color1;
+					color: $color3;
+					padding-top: 5px;
+					width: 22px;
+				}
+			}
+		}
+	}
+	.alpha2 {
+		background-color: $color6;
+		box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.5);
+    	.bravo1 {
+    		display: flex;
+    		justify-content: space-between;
+    		flex-wrap: wrap;
+    		padding: 15px 0;
+    		a {
+    			border-bottom: 1px solid transparent;
+    			color: $color1;
+    			display: block;
+    			font-size: 15px;
+    			font-weight: bold;
+    			letter-spacing: 3px;
+    			padding: 0 10px;
+    			text-align: center;
+    			text-transform: uppercase;
+    			transition: all .5s ease;
+    			@include mobile {
+    				font-size: 12px;
+    				padding: 0 7px;
+    			}
+    			&:hover {
+    				color: #d84e00;
+    			}
+    		}
+    		.active {
+    			color: #d84e00;
+    		}
+    	}
+    }
+    .social-icon {
+    	a {
+    		background: $color1;
+    		border-radius: 50%;
+    		display: inline-block;
+    		height: 22px;
+    		margin: 0 8px;
+    		padding: 0;
+    		transition: all .5s ease;
+    		width: 22px;
+    		img {
+    			height: 22px;
+    			padding: 5px;
+    		}
+    	}
+    }
+    .zero1 {
+    	@include mobile {
+			display: none;
+		}
+    }
+}
+
+//----------- Start Mobile Menu ----------//
+.mobile-menu {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	cursor: pointer;
+}
+
+.mobile-menu span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: $color1;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.mobile-menu span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background: $color1;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.mobile-menu span:nth-child(even) {
+  left: 50%;
+}
+
+.mobile-menu span:nth-child(odd) {
+  left:0px;
+}
+
+.mobile-menu span:nth-child(1), .mobile-menu span:nth-child(2) {
+  top: 0px;
+}
+
+.mobile-menu span:nth-child(3), .mobile-menu span:nth-child(4) {
+  top: 8px;
+}
+
+.mobile-menu span:nth-child(5), .mobile-menu span:nth-child(6) {
+  top: 16px;
+}
+
+.mobile-menu.open span:nth-child(1),.mobile-menu.open span:nth-child(6) {
+  transform: rotate(45deg);
+}
+
+.mobile-menu.open span:nth-child(2),.mobile-menu.open span:nth-child(5) {
+  transform: rotate(-45deg);
+}
+
+.mobile-menu.open span:nth-child(1) {
+  left: 3px;
+  top: 6px;
+}
+
+.mobile-menu.open span:nth-child(2) {
+  left: calc(50% - 3px);
+  top: 6px;
+}
+
+.mobile-menu.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.mobile-menu.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+.mobile-menu.open span:nth-child(5) {
+  left: 3px;
+  top: 15px;
+}
+
+.mobile-menu.open span:nth-child(6) {
+  left: calc(50% - 3px);
+  top: 15px;
+}
+
+// End Numberger
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: #fff;
+    width: 100vw;
+    z-index: 18;
+    display: none;
+    @include mobile {
+    	overflow: scroll;
+    }
+    a {
+    	margin-bottom: 10px;
+    }
+    .social-icon {
+    	margin: 10px 0;
+    }
+    .charlie2 {
+    	margin-bottom: 10px;
+	}
+	.dropdown-menu {
+		.dropdown-item {
+			padding: 0;
+			a {
+				padding: .25rem 1.5rem;
+				display: block;
+				text-align: left;
+			}
+		}
+	}
+	nav {
+		background-color: $color6;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
+    	width: 100%;
+    	height: 100vh;
+        @include wide-mobile {
+            padding-top: 25px;
+        }
+		a {
+			color: $color1;
+		}
+        .menu {
+        	a {
+        		display: inline-block;
+        		color: $color1;
+        	}
+        }
+    }
+}
+
+.mobile-menuu-container {
+	position: relative;
+	z-index: 20;
+    margin-top: 10px;
+	display: none;
+	position: relative;
+	@include mobile {
+		display: flex;
+		justify-content: space-between;
+		.cart .chirlie1 {
+			display: none;
+		}
+	}
+	.total-brand {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		img {
+			height: 25px;
+		}
+	}
+	.chirlie1 {
+		font-size: 12px;
+		margin-right: 10px;
+	}
+}
+
+
+//----------- End Mobile Menu ----------//

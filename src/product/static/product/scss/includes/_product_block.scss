@@ -1,0 +1,142 @@
+// Product block
+
+.product_block {
+	margin-top: 20px;
+	padding-left: 8px;
+	padding-right: 8px;
+	.pb-alpha1 {
+		background: $white;
+		cursor: pointer;
+		height: 100%;
+		transition: all .5s ease-in-out;
+		width: 100%;
+		.pb-bravo1 {
+			height: 288px;
+			@include mobile {
+				height: 180px;
+			}
+		}
+		.pb-bravo2 {
+			background: $white;
+			padding: 5px;
+			position: relative;
+
+			.pb-charlie2, .pb-charlie3 {
+				bottom: 0;
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				right: 0;
+				transition: all .5s ease;
+			}
+			.pb-charlie2 {
+				.pb-delta1 {
+					background: rgb(0,0,0);
+					background: rgba(0,0,0,.8);
+					padding: 7px 0 2px;
+					text-align: center;
+					.pb-echo1, .pb-echo2 {
+						background-repeat: no-repeat;
+						background-size: cover;
+						color: $white;
+						display: inline-block;
+						font-size: 20px;
+						font-weight: bold;
+						height: 30px;
+						margin: 0 5px 5px;
+						width: 30px;
+					}
+					.pb-echo3 {
+						color: $white;
+						display: inline-block;
+						font-size: 20px;
+						font-weight: bold;
+						height: 30px;
+						margin: 0 5px 5px;
+						text-align: center;
+						width: 30px;
+						input {
+							background-color: transparent;
+							background-repeat: no-repeat;
+							background-size: cover;
+							border: 0;
+							color: $color2;
+							font-size: 15px;
+							height: 100%;
+							text-align: center;
+							width: 100%;
+						}
+					}
+				}
+				.pb-delta2 {
+					background-color: $color1;
+					border: 0;
+					text-align: center;
+					width: 100%;
+					a {
+						color: $color2;
+						display: block;
+						font-size: 14px;
+						padding: 8px 0;
+						@include mobile {
+							padding: 3px 0;
+							font-size: 10px;
+						}
+					}
+				}
+				.pb-delta3 {
+					height: 40px;
+					background-color: transparent;
+				}
+				.quantity_update_alpha1 {
+					background-color: rgba(0,0,0,0.9);
+				}
+			}
+			.pb-charlie3 {
+				bottom: -38px;
+				.pb-delta1 {
+					background-color: transparent;
+					border: 0;
+					color: $color1;
+					cursor: initial;
+					margin-top: 10px;
+					text-align: center;
+					width: 100%;
+					a {
+						color: $color1;
+						display: block;
+						font-size: 14px;
+						padding: 8px 0;
+						@include mobile {
+							padding: 3px 0;
+						}
+					}
+				}
+			}
+		}
+		&:hover {
+			box-shadow: 0 2px 4px 0 rgba(183, 183, 183, 0.5);
+			position: relative;
+			transform: scale(1.1);
+			z-index: 99;
+			.pb-charlie2 {
+				bottom: -118px;
+				left: 0;
+				opacity: 1;
+				right: 0;
+				z-index: 9;
+			}
+			.pb-charlie3 {
+				background-color: rgba(0, 0, 0, 0.9);
+				bottom: -41px;
+				left: 0;
+				opacity: 1;
+				right: 0;
+				z-index: 9;
+			}
+		}
+		@include mobile {
+			padding: 0 !important;
+		}
+	}
+}

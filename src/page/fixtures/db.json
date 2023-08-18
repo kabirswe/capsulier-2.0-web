@@ -1,0 +1,678 @@
+[
+{
+  "model": "page.faq",
+  "pk": 1,
+  "fields": {
+    "content": "Les capsules en amidon de ma\u00efs que nous utilisons sont bio-compostables au sens de la norme europ\u00e9enne EN13-432. Il s'agit d'un cycle de compostage long.\r\n\r\nUne fois utilis\u00e9es, nous vous conseillons simplement de les jeter dans votre poubelle de d\u00e9chets m\u00e9nagers sans tri sp\u00e9cifique.\r\n\r\nSi vous avez la chance d'avoir un composteur d'une taille significative - plus de 100kg - vous pouvez alors les y ajouter.\r\n\r\nDans tous les cas, si vous avez la patience de r\u00e9cup\u00e9rer le marc de caf\u00e9 des capsules, c'est un excellent engrais pour vos plantes et un bon moyen de nettoyer r\u00e9guli\u00e8rement les tuyauteries d'\u00e9viers.",
+    "content_fr": "Les capsules en amidon de ma\u00efs que nous utilisons sont bio-compostables au sens de la norme europ\u00e9enne EN13-432. Il s'agit d'un cycle de compostage long.\r\n\r\nUne fois utilis\u00e9es, nous vous conseillons simplement de les jeter dans votre poubelle de d\u00e9chets m\u00e9nagers sans tri sp\u00e9cifique.\r\n\r\nSi vous avez la chance d'avoir un composteur d'une taille significative - plus de 100kg - vous pouvez alors les y ajouter.\r\n\r\nDans tous les cas, si vous avez la patience de r\u00e9cup\u00e9rer le marc de caf\u00e9 des capsules, c'est un excellent engrais pour vos plantes et un bon moyen de nettoyer r\u00e9guli\u00e8rement les tuyauteries d'\u00e9viers.",
+    "content_en": "",
+    "content_es": "",
+    "ordering": 1,
+    "title": "Compostage",
+    "title_fr": "Compostage",
+    "title_en": null,
+    "title_es": null,
+    "created_on": "2018-05-22T09:46:08.655Z",
+    "updated_on": "2018-05-28T19:51:52.146Z"
+  }
+},
+{
+  "model": "page.faq",
+  "pk": 2,
+  "fields": {
+    "content": "il s'agit de la 3\u00e8me g\u00e9n\u00e9ration de capsules compatibles Nespresso. La plupart des probl\u00e8mes de compatibilit\u00e9 ont \u00e9t\u00e9 r\u00e9gl\u00e9s.\r\n\r\nSi vous avez l'habitude d'utiliser des Capsules Comptatibles, alors n'h\u00e9sitez pas, nos capsules fonctionneront.\r\n\r\nSi votre machine \u00e0 capsules date d'apr\u00e8s 2012, il n'y a a priori aucun probl\u00e8me \u00e0 l'exception du Cube (Magimix et Krups) et de la game Lattissima de D\u00e9longhi\r\n\r\nPour les machines plus anciennes, nous n'avons identifi\u00e9 que 6 mod\u00e8les (sur plus d'une centaine) pour lesquelles vous n'obtiendrez qu'une tasse d'eau chaude... frustrant quand vous voulez un caf\u00e9... \r\n\r\nVeuillez noter qu'aucune machine n'a jamais \u00e9t\u00e9 abim\u00e9e durant nos tests et ce, quelque soit la marque.",
+    "content_fr": "il s'agit de la 3\u00e8me g\u00e9n\u00e9ration de capsules compatibles Nespresso. La plupart des probl\u00e8mes de compatibilit\u00e9 ont \u00e9t\u00e9 r\u00e9gl\u00e9s.\r\n\r\nSi vous avez l'habitude d'utiliser des Capsules Comptatibles, alors n'h\u00e9sitez pas, nos capsules fonctionneront.\r\n\r\nSi votre machine \u00e0 capsules date d'apr\u00e8s 2012, il n'y a a priori aucun probl\u00e8me \u00e0 l'exception du Cube (Magimix et Krups) et de la game Lattissima de D\u00e9longhi\r\n\r\nPour les machines plus anciennes, nous n'avons identifi\u00e9 que 6 mod\u00e8les (sur plus d'une centaine) pour lesquelles vous n'obtiendrez qu'une tasse d'eau chaude... frustrant quand vous voulez un caf\u00e9... \r\n\r\nVeuillez noter qu'aucune machine n'a jamais \u00e9t\u00e9 abim\u00e9e durant nos tests et ce, quelque soit la marque.",
+    "content_en": "",
+    "content_es": "",
+    "ordering": 2,
+    "title": "Compatibilit\u00e9",
+    "title_fr": "Compatibilit\u00e9",
+    "title_en": null,
+    "title_es": null,
+    "created_on": "2018-05-22T10:05:50.121Z",
+    "updated_on": "2018-05-28T19:52:36.457Z"
+  }
+},
+{
+  "model": "page.faq",
+  "pk": 3,
+  "fields": {
+    "content": "Si il arrive que votre caf\u00e9 coule plus lentement ou de fa\u00e7on saccad\u00e9e, ne vous inqui\u00e9tez pas! C'est un gage de qualit\u00e9 !\r\n\r\nNous produisons des capsules compatibles de fa\u00e7on artisanale:\r\n- sans ar\u00f4mes artificiels ou naturels ni stabilisateurs pour le go\u00fbt du caf\u00e9.\r\n- sans \u00e9mulsionnants ni tensio-actifs pour la cr\u00e9ma du caf\u00e9\r\n- sans conservateur ni gaz d'inertage pour la conservation du caf\u00e9\r\n\r\nNous compensons donc en mettant plus de caf\u00e9 dans la capsule (de 5,5 \u00e0 6,5 gr suivant les vari\u00e9t\u00e9s) et le moulons de fa\u00e7on plus fine pour extraire en profondeur Saveurs et Ar\u00f4mes des caf\u00e9s que nous proposons. \r\n\r\nM\u00e9caniquement, l'eau effectue un parcours plus long dans la capsule.",
+    "content_fr": "Si il arrive que votre caf\u00e9 coule plus lentement ou de fa\u00e7on saccad\u00e9e, ne vous inqui\u00e9tez pas! C'est un gage de qualit\u00e9 !\r\n\r\nNous produisons des capsules compatibles de fa\u00e7on artisanale:\r\n- sans ar\u00f4mes artificiels ou naturels ni stabilisateurs pour le go\u00fbt du caf\u00e9.\r\n- sans \u00e9mulsionnants ni tensio-actifs pour la cr\u00e9ma du caf\u00e9\r\n- sans conservateur ni gaz d'inertage pour la conservation du caf\u00e9\r\n\r\nNous compensons donc en mettant plus de caf\u00e9 dans la capsule (de 5,5 \u00e0 6,5 gr suivant les vari\u00e9t\u00e9s) et le moulons de fa\u00e7on plus fine pour extraire en profondeur Saveurs et Ar\u00f4mes des caf\u00e9s que nous proposons. \r\n\r\nM\u00e9caniquement, l'eau effectue un parcours plus long dans la capsule.",
+    "content_en": "",
+    "content_es": "",
+    "ordering": 3,
+    "title": "Ecoulement lent ou saccad\u00e9",
+    "title_fr": "Ecoulement lent ou saccad\u00e9",
+    "title_en": null,
+    "title_es": null,
+    "created_on": "2018-05-22T10:15:54.900Z",
+    "updated_on": "2018-05-28T19:53:30.988Z"
+  }
+},
+{
+  "model": "page.partner",
+  "pk": 2,
+  "fields": {
+    "active": true,
+    "category": "Artisanale",
+    "category_fr": "Artisanale",
+    "category_en": null,
+    "category_es": null,
+    "description": "Torr\u00e9facteurs Tradition France est une association de torr\u00e9facteurs ind\u00e9pendants dont le but est de promouvoir le caf\u00e9 et le th\u00e9 au travers d\u2019animations communes. Les boutiques sont \u00e0 l\u2019image de leurs propri\u00e9taires toutes diff\u00e9rentes, mais partout vous y serez accueillis et conseill\u00e9s avec professionnalisme par ces passionn\u00e9s du caf\u00e9 que sont les Torr\u00e9facteurs Tradition France.",
+    "description_fr": "Torr\u00e9facteurs Tradition France est une association de torr\u00e9facteurs ind\u00e9pendants dont le but est de promouvoir le caf\u00e9 et le th\u00e9 au travers d\u2019animations communes. Les boutiques sont \u00e0 l\u2019image de leurs propri\u00e9taires toutes diff\u00e9rentes, mais partout vous y serez accueillis et conseill\u00e9s avec professionnalisme par ces passionn\u00e9s du caf\u00e9 que sont les Torr\u00e9facteurs Tradition France.",
+    "description_en": null,
+    "description_es": null,
+    "index": 3,
+    "image": "partner/2018/01/16/torrefacteurs-tradition-france_vVFW7hf.png",
+    "image_cropping": "0,0,164,165",
+    "name": "Torr\u00e9facteurs Tradition France",
+    "name_fr": "Torr\u00e9facteurs Tradition France",
+    "name_en": null,
+    "name_es": null,
+    "slug": "torrefacteurs-tradition-france",
+    "link": "http://www.torrefacteurstraditionfrance.com/",
+    "created_on": "2017-06-07T23:57:35.359Z",
+    "created_by": 1,
+    "updated_on": "2018-02-12T16:38:33.952Z",
+    "updated_by": 1,
+    "sites": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "page.partner",
+  "pk": 3,
+  "fields": {
+    "active": true,
+    "category": "Artisanale",
+    "category_fr": "Artisanale",
+    "category_en": null,
+    "category_es": null,
+    "description": "Artisan Torr\u00e9facteur depuis 35 ans en Alsace, Maestro Rasco met \u00e0 disposition son expertise pour la selection des caf\u00e9s, son savoir faire pour la creation des recettes ainsi que son \"tour de main\" pour la Torr\u00e9faction. Son enthousiasme n'a d'\u00e9gale que sa gentillesse et sa g\u00e9n\u00e9rosit\u00e9 ! Un Personnage, un vrai.",
+    "description_fr": "Artisan Torr\u00e9facteur depuis 35 ans en Alsace, Maestro Rasco met \u00e0 disposition son expertise pour la selection des caf\u00e9s, son savoir faire pour la creation des recettes ainsi que son \"tour de main\" pour la Torr\u00e9faction. Son enthousiasme n'a d'\u00e9gale que sa gentillesse et sa g\u00e9n\u00e9rosit\u00e9 ! Un Personnage, un vrai.",
+    "description_en": null,
+    "description_es": null,
+    "index": 2,
+    "image": "partner/2018/01/19/cafes-rasco.PNG",
+    "image_cropping": "0,1,232,229",
+    "name": "Caf\u00e9s Rasco",
+    "name_fr": "Caf\u00e9s Rasco",
+    "name_en": null,
+    "name_es": null,
+    "slug": "cafes-rasco",
+    "link": "https://fr-fr.facebook.com/CafesRasco/",
+    "created_on": "2017-06-07T23:58:52.252Z",
+    "created_by": 1,
+    "updated_on": "2018-05-14T13:06:57.847Z",
+    "updated_by": 3,
+    "sites": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "page.partner",
+  "pk": 4,
+  "fields": {
+    "active": true,
+    "category": "Artisanale",
+    "category_fr": "Artisanale",
+    "category_en": null,
+    "category_es": null,
+    "description": "HDSI croit en notre projet et nous soutient \u00e0 travers un finacement, des ateliers collectifs et un parrainange individualis\u00e9.",
+    "description_fr": "HDSI croit en notre projet et nous soutient \u00e0 travers un finacement, des ateliers collectifs et un parrainange individualis\u00e9.",
+    "description_en": null,
+    "description_es": null,
+    "index": 7,
+    "image": "partner/2018/01/16/haut-de-seine-initiative.png",
+    "image_cropping": "0,0,11410,3919",
+    "name": "Haut De Seine Initiative",
+    "name_fr": "Haut De Seine Initiative",
+    "name_en": null,
+    "name_es": null,
+    "slug": "haut-de-seine-initiative",
+    "link": "https://www.hdsi.asso.fr/",
+    "created_on": "2017-06-07T23:59:40.436Z",
+    "created_by": 1,
+    "updated_on": "2018-02-22T16:29:50.521Z",
+    "updated_by": 18,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "page.partner",
+  "pk": 5,
+  "fields": {
+    "active": true,
+    "category": null,
+    "category_fr": null,
+    "category_en": null,
+    "category_es": null,
+    "description": "P\u00e2tissiers depuis 1990, la Biscuiterie Les Gavroches a voulu revenir \u00e0 la tradition et au go\u00fbt. Celle-ci est tr\u00e8s attentif \u00e0 la s\u00e9lection des ingr\u00e9dients et n'ajoute ni colorant, ni conservateur, et ni exhausteur de go\u00fbt.\r\nFabrication 100% artisanale.\r\nMade in Paris.",
+    "description_fr": "P\u00e2tissiers depuis 1990, la Biscuiterie Les Gavroches a voulu revenir \u00e0 la tradition et au go\u00fbt. Celle-ci est tr\u00e8s attentif \u00e0 la s\u00e9lection des ingr\u00e9dients et n'ajoute ni colorant, ni conservateur, et ni exhausteur de go\u00fbt.\r\nFabrication 100% artisanale.\r\nMade in Paris.",
+    "description_en": null,
+    "description_es": null,
+    "index": 5,
+    "image": "page/2018/02/22/b0c185d6-d080-4654-b84b-977ef7831031.jpg",
+    "image_cropping": "0,0,225,225",
+    "name": "Les Gavroches",
+    "name_fr": "Les Gavroches",
+    "name_en": "Les Gavroches",
+    "name_es": "Les Gavroches",
+    "slug": "les-gavroches",
+    "link": "http://biscuiterie.lesgavroches.paris/",
+    "created_on": "2018-02-22T15:05:50.817Z",
+    "created_by": 18,
+    "updated_on": "2018-02-22T15:06:48.940Z",
+    "updated_by": 18,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "page.partner",
+  "pk": 6,
+  "fields": {
+    "active": true,
+    "category": null,
+    "category_fr": null,
+    "category_en": null,
+    "category_es": null,
+    "description": "Entreprise cr\u00e9\u00e9e en 1935, par Fernande Gobert, fille d'un ma\u00eetre chocolatier Lillois renomm\u00e9.\r\nDepuis, l'entreprise ne cesse de monter en gamme. Celle-ci propose des produits de haute qualit\u00e9, s\u00e9lectionne les meilleurs ingr\u00e9dients et soigne la fabrication.\r\nFabrication 100% artisanale, la marque pousse sa production en torr\u00e9fiant son cacao, en fabricant son propre pralin\u00e9 et en turbinant les amandes, noisettes et autres fruits secs.\r\nLa marque se construit autour de valeurs responsables : recherche de petits producteurs locaux, sacs et emballages fabriqu\u00e9s en France, biod\u00e9gradable lorsque cela est possible.\r\nL'entreprise compte comme chef chocolatier, Christophe Bertrand, qui a re\u00e7u le prix de \"l'\u00e9thique\" du dernier salon du chocolat.\r\nMade in Ile-de-France.",
+    "description_fr": "Entreprise cr\u00e9\u00e9e en 1935, par Fernande Gobert, fille d'un ma\u00eetre chocolatier Lillois renomm\u00e9.\r\nDepuis, l'entreprise ne cesse de monter en gamme. Celle-ci propose des produits de haute qualit\u00e9, s\u00e9lectionne les meilleurs ingr\u00e9dients et soigne la fabrication.\r\nFabrication 100% artisanale, la marque pousse sa production en torr\u00e9fiant son cacao, en fabricant son propre pralin\u00e9 et en turbinant les amandes, noisettes et autres fruits secs.\r\nLa marque se construit autour de valeurs responsables : recherche de petits producteurs locaux, sacs et emballages fabriqu\u00e9s en France, biod\u00e9gradable lorsque cela est possible.\r\nL'entreprise compte comme chef chocolatier, Christophe Bertrand, qui a re\u00e7u le prix de \"l'\u00e9thique\" du dernier salon du chocolat.\r\nMade in Ile-de-France.",
+    "description_en": null,
+    "description_es": null,
+    "index": 4,
+    "image": "page/2018/02/22/fd36c9b7-e981-4060-b154-f4c9c6daaef5.jpg",
+    "image_cropping": "0,0,220,229",
+    "name": "\u00e0 la reine astrid",
+    "name_fr": "\u00e0 la reine astrid",
+    "name_en": "\u00e0 la reine astrid",
+    "name_es": "\u00e0 la reine astrid",
+    "slug": "a-la-reine-astrid",
+    "link": "https://www.alareineastrid.fr/",
+    "created_on": "2018-02-22T15:14:32.732Z",
+    "created_by": 18,
+    "updated_on": "2018-02-22T16:24:27.656Z",
+    "updated_by": 18,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "page.partner",
+  "pk": 7,
+  "fields": {
+    "active": true,
+    "category": null,
+    "category_fr": null,
+    "category_en": null,
+    "category_es": null,
+    "description": "Missions de proximit\u00e9 au service des visiteurs et de la population locale, en collaboration avec la collectivit\u00e9 locale et les socio-professionnels du tourisme.\r\nIssy-les-Moulineaux, commune des Hauts-de-Seine, est r\u00e9put\u00e9e dans le monde comme LA cyber cit\u00e9 (elle a par ailleurs re\u00e7ue en 2016 le titre de la Ville pionni\u00e8re de l'internet citoyen.",
+    "description_fr": "Missions de proximit\u00e9 au service des visiteurs et de la population locale, en collaboration avec la collectivit\u00e9 locale et les socio-professionnels du tourisme.\r\nIssy-les-Moulineaux, commune des Hauts-de-Seine, est r\u00e9put\u00e9e dans le monde comme LA cyber cit\u00e9 (elle a par ailleurs re\u00e7ue en 2016 le titre de la Ville pionni\u00e8re de l'internet citoyen.",
+    "description_en": null,
+    "description_es": null,
+    "index": 6,
+    "image": "page/2018/02/22/b90640eb-b8e5-4cb3-a96d-13d07cee2556.png",
+    "image_cropping": "0,0,225,225",
+    "name": "Office de Tourisme Issy-les-Moulineaux",
+    "name_fr": "Office de Tourisme Issy-les-Moulineaux",
+    "name_en": "Office de Tourisme Issy-les-Moulineaux",
+    "name_es": "Office de Tourisme Issy-les-Moulineaux",
+    "slug": "office-de-tourisme-issy-les-moulineaux",
+    "link": "https://www.issytourisme.com/",
+    "created_on": "2018-02-22T16:04:59.345Z",
+    "created_by": 18,
+    "updated_on": "2018-02-22T16:05:06.989Z",
+    "updated_by": 18,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "page.partner",
+  "pk": 8,
+  "fields": {
+    "active": true,
+    "category": null,
+    "category_fr": null,
+    "category_en": null,
+    "category_es": null,
+    "description": "Eric est un designer complet et accompli qui a 20 ans d'exp\u00e9rience dans le design de produits, de mobiliers, le graphisme, la sc\u00e9nographie d'expositions ou d'\u00e9v\u00e9nements, l'am\u00e9nagement de stands et de boutiques, l'\u00e9dition, l'illustration et la calligraphie.\r\n\r\nIl a travaill\u00e9 sur des projets d'envergure avec de grands noms de la cr\u00e9ation comme Issey Miyake, Philippe Starck ou encore Yann Arthus-Bertrand. \r\n\r\nSon carnet de chasse est incroyable: Danone, Evian, P&G Prestige Products, Philip Morris, BIC, Accor, Axa, Cr\u00e9dit Agricole, Biotherm, Givenchy, Ermenegildo Zegna, Cartier, Bentley, Bugatti, Emu, Philippe Hurel, Zilli, Herm\u00e8s, ...\r\n\r\nIl a mis son coeur et sa passion pour faire de la marque Le Capsulier et de nos succulentes capsules, simplement un bel objet !",
+    "description_fr": "Eric est un designer complet et accompli qui a 20 ans d'exp\u00e9rience dans le design de produits, de mobiliers, le graphisme, la sc\u00e9nographie d'expositions ou d'\u00e9v\u00e9nements, l'am\u00e9nagement de stands et de boutiques, l'\u00e9dition, l'illustration et la calligraphie.\r\n\r\nIl a travaill\u00e9 sur des projets d'envergure avec de grands noms de la cr\u00e9ation comme Issey Miyake, Philippe Starck ou encore Yann Arthus-Bertrand. \r\n\r\nSon carnet de chasse est incroyable: Danone, Evian, P&G Prestige Products, Philip Morris, BIC, Accor, Axa, Cr\u00e9dit Agricole, Biotherm, Givenchy, Ermenegildo Zegna, Cartier, Bentley, Bugatti, Emu, Philippe Hurel, Zilli, Herm\u00e8s, ...\r\n\r\nIl a mis son coeur et sa passion pour faire de la marque Le Capsulier et de nos succulentes capsules, simplement un bel objet !",
+    "description_en": null,
+    "description_es": null,
+    "index": 8,
+    "image": "page/2018/05/28/d7ed6eaf-d43e-4fac-a21a-29024dc2f5ca.png",
+    "image_cropping": "0,0,591,591",
+    "name": "Eric LAVEDRINE",
+    "name_fr": "Eric LAVEDRINE",
+    "name_en": null,
+    "name_es": null,
+    "slug": "eric-lavedrine",
+    "link": "http://www.behance.net/elavedrine",
+    "created_on": "2018-05-28T13:22:05.137Z",
+    "created_by": 3,
+    "updated_on": "2018-05-28T19:49:29.023Z",
+    "updated_by": 3,
+    "sites": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 1,
+  "fields": {
+    "shop": 1,
+    "afternoon_end_time": null,
+    "afternoon_start_time": null,
+    "close": true,
+    "day": "1",
+    "morning_end_time": null,
+    "morning_start_time": null,
+    "created_on": "2017-06-07T22:14:46.550Z",
+    "updated_on": "2018-02-13T15:16:29.224Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 2,
+  "fields": {
+    "shop": 1,
+    "afternoon_end_time": "19:30:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "2",
+    "morning_end_time": null,
+    "morning_start_time": "09:30:00",
+    "created_on": "2017-06-07T22:17:15.985Z",
+    "updated_on": "2018-02-13T15:16:29.231Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 3,
+  "fields": {
+    "shop": 1,
+    "afternoon_end_time": "19:30:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "3",
+    "morning_end_time": null,
+    "morning_start_time": "09:30:00",
+    "created_on": "2017-06-07T22:17:15.985Z",
+    "updated_on": "2018-02-13T15:16:29.233Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 4,
+  "fields": {
+    "shop": 1,
+    "afternoon_end_time": "19:30:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "4",
+    "morning_end_time": null,
+    "morning_start_time": "09:30:00",
+    "created_on": "2017-06-07T22:17:15.986Z",
+    "updated_on": "2018-02-13T15:16:29.241Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 5,
+  "fields": {
+    "shop": 1,
+    "afternoon_end_time": "19:30:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "5",
+    "morning_end_time": null,
+    "morning_start_time": "09:30:00",
+    "created_on": "2017-06-07T22:17:15.986Z",
+    "updated_on": "2018-02-13T15:16:29.344Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 6,
+  "fields": {
+    "shop": 1,
+    "afternoon_end_time": "19:30:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "6",
+    "morning_end_time": null,
+    "morning_start_time": "09:30:00",
+    "created_on": "2017-06-07T22:17:15.987Z",
+    "updated_on": "2018-02-13T15:16:29.346Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 7,
+  "fields": {
+    "shop": 1,
+    "afternoon_end_time": null,
+    "afternoon_start_time": null,
+    "close": true,
+    "day": "7",
+    "morning_end_time": null,
+    "morning_start_time": null,
+    "created_on": "2017-06-07T22:17:15.987Z",
+    "updated_on": "2018-02-13T15:16:29.347Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 8,
+  "fields": {
+    "shop": 2,
+    "afternoon_end_time": null,
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "3",
+    "morning_end_time": "13:00:00",
+    "morning_start_time": "08:00:00",
+    "created_on": "2018-01-16T14:28:03.937Z",
+    "updated_on": "2018-02-13T15:17:57.368Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 9,
+  "fields": {
+    "shop": 2,
+    "afternoon_end_time": null,
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "5",
+    "morning_end_time": "13:00:00",
+    "morning_start_time": "08:00:00",
+    "created_on": "2018-01-16T14:28:03.939Z",
+    "updated_on": "2018-02-13T15:17:57.369Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 10,
+  "fields": {
+    "shop": 2,
+    "afternoon_end_time": null,
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "7",
+    "morning_end_time": "13:00:00",
+    "morning_start_time": "08:00:00",
+    "created_on": "2018-01-16T14:28:03.946Z",
+    "updated_on": "2018-02-13T15:17:57.371Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 11,
+  "fields": {
+    "shop": 3,
+    "afternoon_end_time": "20:00:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "1",
+    "morning_end_time": null,
+    "morning_start_time": "14:00:00",
+    "created_on": "2018-01-16T14:47:35.429Z",
+    "updated_on": "2018-02-13T15:14:56.501Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 12,
+  "fields": {
+    "shop": 3,
+    "afternoon_end_time": "20:00:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "2",
+    "morning_end_time": null,
+    "morning_start_time": "11:00:00",
+    "created_on": "2018-01-16T14:47:35.495Z",
+    "updated_on": "2018-02-13T15:14:56.504Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 13,
+  "fields": {
+    "shop": 3,
+    "afternoon_end_time": "20:00:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "3",
+    "morning_end_time": null,
+    "morning_start_time": "11:00:00",
+    "created_on": "2018-01-16T14:47:35.607Z",
+    "updated_on": "2018-02-13T15:14:56.580Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 14,
+  "fields": {
+    "shop": 3,
+    "afternoon_end_time": "20:00:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "4",
+    "morning_end_time": null,
+    "morning_start_time": "11:00:00",
+    "created_on": "2018-01-16T14:47:35.608Z",
+    "updated_on": "2018-02-13T15:14:56.582Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 15,
+  "fields": {
+    "shop": 3,
+    "afternoon_end_time": "20:00:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "5",
+    "morning_end_time": null,
+    "morning_start_time": "11:00:00",
+    "created_on": "2018-01-16T14:47:35.608Z",
+    "updated_on": "2018-02-13T15:14:56.584Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 16,
+  "fields": {
+    "shop": 3,
+    "afternoon_end_time": "20:00:00",
+    "afternoon_start_time": null,
+    "close": false,
+    "day": "6",
+    "morning_end_time": null,
+    "morning_start_time": "10:00:00",
+    "created_on": "2018-01-16T14:47:35.609Z",
+    "updated_on": "2018-02-13T15:14:56.585Z"
+  }
+},
+{
+  "model": "page.schedule",
+  "pk": 17,
+  "fields": {
+    "shop": 3,
+    "afternoon_end_time": null,
+    "afternoon_start_time": null,
+    "close": true,
+    "day": "7",
+    "morning_end_time": null,
+    "morning_start_time": null,
+    "created_on": "2018-01-16T14:47:35.610Z",
+    "updated_on": "2018-02-13T15:14:56.592Z"
+  }
+},
+{
+  "model": "page.shop",
+  "pk": 1,
+  "fields": {
+    "active": true,
+    "address": "48.8248678,2.2718042000000196",
+    "address2": "",
+    "email": "alexandre.a.julien@gmail.com",
+    "image": "shop/2018/01/25/le-conservatoire-du-cafe.JPG",
+    "image_cropping": "0,0,302,160",
+    "logo": "shop/logo/2017/06/08/conservatoire_blanc-01.svg",
+    "name": "Le Conservatoire du Caf\u00e9",
+    "phone": "+33620161527",
+    "slug": "le-conservatoire-du-cafe",
+    "website": "",
+    "created_on": "2017-06-06T10:04:50.416Z",
+    "created_by": null,
+    "updated_on": "2018-02-13T15:16:29.215Z",
+    "updated_by": 18,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "page.shop",
+  "pk": 2,
+  "fields": {
+    "active": true,
+    "address": "48.80419999999999,2.174376499999994",
+    "address2": "",
+    "email": "",
+    "image": "shop/2018/01/23/marche-de-viroflay.jpg",
+    "image_cropping": "58,0,305,138",
+    "logo": "",
+    "name": "March\u00e9 de Viroflay",
+    "phone": "",
+    "slug": "marche-de-viroflay",
+    "website": "",
+    "created_on": "2017-08-11T10:28:09.965Z",
+    "created_by": 1,
+    "updated_on": "2018-02-13T15:17:57.351Z",
+    "updated_by": 18,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "page.shop",
+  "pk": 3,
+  "fields": {
+    "active": true,
+    "address": "48.827244,2.2415719000000536",
+    "address2": "",
+    "email": "",
+    "image": "shop/2018/01/25/la-medaille-des-saveurs.png",
+    "image_cropping": "0,0,248,248",
+    "logo": "",
+    "name": "La m\u00e9daille des saveurs",
+    "phone": "",
+    "slug": "la-medaille-des-saveurs",
+    "website": "",
+    "created_on": "2018-01-16T14:47:35.345Z",
+    "created_by": 3,
+    "updated_on": "2018-02-20T13:40:38.208Z",
+    "updated_by": 18,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "page.slider",
+  "pk": 1,
+  "fields": {
+    "button_text": "Visitez",
+    "button_text_fr": "Visitez",
+    "button_text_en": null,
+    "button_text_es": null,
+    "index": 2,
+    "image": "slider/2017/08/04/slider.jpg",
+    "image_cropping": "0,207,1689,1333",
+    "title": "Le Capsulier",
+    "title_fr": "Le Capsulier",
+    "title_en": null,
+    "title_es": null,
+    "slug": "le-capsulier",
+    "url": "",
+    "created_on": "2017-05-17T10:35:21.763Z",
+    "created_by": 1,
+    "updated_on": "2017-08-07T05:02:44.203Z",
+    "updated_by": 1,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "page.conceptmap",
+  "pk": 1,
+  "fields": {
+    "address": "48.856614,2.3522219000000177",
+    "marker": "page/marker/2018/05/14/630403ab-8e05-4c19-ac7c-ee0e7af395e5.png",
+    "name": "Conservatoire du Caf\u00e9",
+    "created_on": "2018-05-14T21:00:58.325Z",
+    "created_by": 1,
+    "updated_on": "2018-05-14T21:00:58.325Z",
+    "updated_by": 1
+  }
+},
+{
+  "model": "page.conceptmap",
+  "pk": 2,
+  "fields": {
+    "address": "47.322047,5.041479999999979",
+    "marker": "page/marker/2018/05/14/c8b3c0e0-b7b2-49f5-bc7d-28d0f8aa273d.png",
+    "name": "Emballage",
+    "created_on": "2018-05-14T21:01:34.450Z",
+    "created_by": 1,
+    "updated_on": "2018-05-14T21:01:51.698Z",
+    "updated_by": 1
+  }
+},
+{
+  "model": "page.conceptmap",
+  "pk": 3,
+  "fields": {
+    "address": "45.439695,4.387177899999983",
+    "marker": "page/marker/2018/05/14/95352dd0-b645-455f-9556-797e7428ed77.png",
+    "name": "Encapsuleuse",
+    "created_on": "2018-05-14T21:02:16.872Z",
+    "created_by": 1,
+    "updated_on": "2018-05-14T21:02:22.453Z",
+    "updated_by": 1
+  }
+},
+{
+  "model": "page.conceptmap",
+  "pk": 4,
+  "fields": {
+    "address": "43.10901565236982,0.19586443749994942",
+    "marker": "page/marker/2018/05/14/f3fd004e-33b4-4a70-9500-8ec7df6e4041.png",
+    "name": "Eco-Capsule",
+    "created_on": "2018-05-14T21:03:08.102Z",
+    "created_by": 1,
+    "updated_on": "2018-05-14T21:03:08.102Z",
+    "updated_by": 1
+  }
+}
+]

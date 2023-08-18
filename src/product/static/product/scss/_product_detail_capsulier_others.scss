@@ -1,0 +1,124 @@
+// Product Detail Capsulier
+
+.product_detail_capsulier_others_page {
+	background-color: $color3;
+	margin-top: 45px;
+	@include mobile {
+		margin-top: 45px;
+	}
+	.alpha1 {
+		padding-top: 50px;
+		.bravo1 {
+			.charlie1 {
+				text-align: center;
+				.delta1 {
+					max-height: 500px;
+					width: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+			.charlie2 {
+				background-color: $white;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				h1 {
+					color: $color1;
+					display: inline-block;
+					font-family: $font1;
+					font-size: 36px;
+					text-transform: uppercase;
+				}
+				h2 {
+					color: $color2;
+					font-family: $font1;
+					font-size: 30px;
+					// margin-top: 20px;
+					text-transform: uppercase;
+				}
+				hr {
+					border-top: solid 2px;
+					border-top-color: $red;
+					// margin-bottom: 30px;
+					margin-top: 5px;
+					width: 45px;
+				}
+				.delta1 {
+					p {
+						color: $color2;
+						font-size: 15px;
+					}
+				}
+				.delta2 {
+					.product_add {
+						.product_add_alpha1 {
+							.product_add_bravo1 {
+								color: $color2;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.alpha2 {
+		padding-bottom: 30px;
+		padding-top: 30px;
+		.bravo1 {
+			.charlie1 {
+				.delta1 {
+					height: 100%;
+					@include mobile {
+						height: 300px;
+					}
+				}
+			}
+			.charlie2 {
+				background-color: $white;
+				padding: 20px;
+				.delta1 {
+					h3 {
+						color: $color2;
+						font-family: $font1;
+						font-size: 36px;
+					}
+					h4 {
+						color: $color1;
+						font-family: $font1;
+						font-size: 25px;
+					}
+					hr {
+						border: solid 1px $red;
+						height: 0;
+						margin-top: 18px;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.alpha3 {
+		padding: 30px;
+	}
+	.alpha4 {
+		overflow-y: hidden;
+		.bravo1 {
+			margin-bottom: 50px;
+			margin-top: 50px;
+			h1 {
+				color: $color1;
+				font-family: $font1;
+				font-size: 48px;
+				@include mobile {
+					font-size: 36px;
+				}
+			}
+			hr {
+				border: solid 1px $red;
+				height: 0;
+				margin-top: 25px;
+				width: 100%;
+			}
+		}
+	}
+}

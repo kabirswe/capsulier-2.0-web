@@ -1,0 +1,206 @@
+[
+{
+  "model": "eshop.promocode",
+  "pk": 1,
+  "fields": {
+    "variation": null,
+    "active": true,
+    "c_type": "a",
+    "description": "",
+    "description_fr": null,
+    "description_en": null,
+    "description_es": null,
+    "name": "Percentage on Cart Total",
+    "name_fr": "Percentage on Cart Total",
+    "name_en": null,
+    "name_es": null,
+    "code": "PCT",
+    "percentage": "10.00",
+    "created_on": "2018-03-11T14:18:29.643Z",
+    "created_by": 1,
+    "updated_on": "2018-03-11T14:18:29.643Z",
+    "updated_by": 1
+  }
+},
+{
+  "model": "eshop.promocode",
+  "pk": 2,
+  "fields": {
+    "variation": 36,
+    "active": true,
+    "c_type": "b",
+    "description": "",
+    "description_fr": null,
+    "description_en": null,
+    "description_es": null,
+    "name": "Percentage on Product Variant",
+    "name_fr": "Percentage on Product Variant",
+    "name_en": null,
+    "name_es": null,
+    "code": "PPV",
+    "percentage": "50.00",
+    "created_on": "2018-03-11T14:18:57.942Z",
+    "created_by": 1,
+    "updated_on": "2018-04-23T13:32:30.691Z",
+    "updated_by": 3
+  }
+},
+{
+  "model": "eshop.promocode",
+  "pk": 3,
+  "fields": {
+    "variation": 37,
+    "active": true,
+    "c_type": "c",
+    "description": "",
+    "description_fr": null,
+    "description_en": null,
+    "description_es": null,
+    "name": "Free Product Variant",
+    "name_fr": "Free Product Variant",
+    "name_en": null,
+    "name_es": null,
+    "code": "FPV",
+    "percentage": "100.00",
+    "created_on": "2018-03-11T14:20:01.877Z",
+    "created_by": 1,
+    "updated_on": "2018-04-23T13:19:21.656Z",
+    "updated_by": 18
+  }
+},
+{
+  "model": "eshop.shippingcost",
+  "pk": 1,
+  "fields": {
+    "shipping_service": 1,
+    "max_value": "50.00",
+    "min_value": "0.00",
+    "price": "6.50",
+    "price_ve": "5.42",
+    "tax_percentage": "0.200",
+    "tax": "1.08",
+    "created_on": "2018-03-11T14:15:59.630Z",
+    "updated_on": "2018-03-11T14:15:59.630Z"
+  }
+},
+{
+  "model": "eshop.shippingcost",
+  "pk": 2,
+  "fields": {
+    "shipping_service": 1,
+    "max_value": "99999999.00",
+    "min_value": "50.01",
+    "price": "0.00",
+    "price_ve": "0.00",
+    "tax_percentage": "0.200",
+    "tax": "0.00",
+    "created_on": "2018-03-11T14:16:35.645Z",
+    "updated_on": "2018-03-11T14:16:35.645Z"
+  }
+},
+{
+  "model": "eshop.shippingcost",
+  "pk": 3,
+  "fields": {
+    "shipping_service": 2,
+    "max_value": "150.00",
+    "min_value": "0.00",
+    "price": "16.50",
+    "price_ve": "13.75",
+    "tax_percentage": "0.200",
+    "tax": "2.75",
+    "created_on": "2018-03-11T14:16:53.278Z",
+    "updated_on": "2018-03-11T14:16:53.278Z"
+  }
+},
+{
+  "model": "eshop.shippingcost",
+  "pk": 4,
+  "fields": {
+    "shipping_service": 2,
+    "max_value": "99999999.00",
+    "min_value": "150.01",
+    "price": "0.00",
+    "price_ve": "0.00",
+    "tax_percentage": "0.200",
+    "tax": "0.00",
+    "created_on": "2018-03-11T14:17:07.671Z",
+    "updated_on": "2018-03-11T14:17:07.671Z"
+  }
+},
+{
+  "model": "eshop.shippingservice",
+  "pk": 1,
+  "fields": {
+    "active": true,
+    "name": "Colissimo",
+    "created_on": "2018-03-11T14:15:33.671Z",
+    "updated_on": "2018-03-11T14:15:33.671Z"
+  }
+},
+{
+  "model": "eshop.shippingservice",
+  "pk": 2,
+  "fields": {
+    "active": true,
+    "name": "Chronopost",
+    "created_on": "2018-03-11T14:15:37.265Z",
+    "updated_on": "2018-03-11T14:15:37.265Z"
+  }
+},
+{
+  "model": "eshop.usercheckout",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "email": "hello@mahdil.com"
+  }
+},
+{
+  "model": "eshop.usercheckout",
+  "pk": 8,
+  "fields": {
+    "user": 3,
+    "email": ""
+  }
+},
+{
+  "model": "eshop.useraddress",
+  "pk": 13,
+  "fields": {
+    "user": 4,
+    "city": "Paris",
+    "phone_number": "",
+    "state": "France",
+    "street": "15 Place Andr\u00e9 Masson",
+    "types": "a",
+    "zipcode": "75013"
+  }
+},
+{
+  "model": "eshop.useraddress",
+  "pk": 14,
+  "fields": {
+    "user": 8,
+    "city": "5555",
+    "phone_number": "",
+    "state": "55555",
+    "street": "55555",
+    "types": "a",
+    "zipcode": "55555"
+  }
+},
+{
+  "model": "eshop.useraddress",
+  "pk": 20,
+  "fields": {
+    "user": 4,
+    "city": "Paris",
+    "phone_number": "",
+    "state": "France",
+    "street": "15 Place Andr\u00e9 Masson",
+    "types": "b",
+    "zipcode": "75013"
+  }
+}
+]

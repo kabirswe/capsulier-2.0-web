@@ -1,0 +1,92 @@
+{% load text_extras %}
+
+{% query text_list id='293' as text293 %}
+{% query text_list id='296' as text296 %}
+{% query text_list id='297' as text297 %}
+{% query text_list id='298' as text298 %}
+{% query text_list id='389' as text389 %}
+{% query text_list id='390' as text390 %}
+{% query text_list id='392' as text392 %}
+{% query text_list id='393' as text393 %}
+{% query text_list id='396' as text396 %}
+{% query text_list id='397' as text397 %}
+
+<h2>Order confirmation mail</h2>
+
+<div> Order Id : {{ order_instance.order_id }}</div>
+
+<div class="charlie2">
+	<h3>{{ text392.get_text }}</h3>
+	<p>{{ order_instance.created_on }}</p>
+	<h3>{{ text393.get_text }}</h3>
+	<p>{{ order_instance.get_status_display }}</p>
+	<h3>{{ text396.get_text }}</h3>
+	<p>
+		{{ order_instance.shipping_address.street }}<br>
+		{{ order_instance.shipping_address.zipcode }} - {{ order_instance.shipping_address.city }}<br>
+		{{ order_instance.shipping_address.state }}
+	</p>
+	<h3>{{ text397.get_text }}</h3>
+	<p>
+		{{ order_instance.billing_address.street }}<br>
+		{{ order_instance.billing_address.zipcode }} - {{ order_instance.billing_address.city }}<br>
+		{{ order_instance.billing_address.state }}
+	</p>
+</div>
+<div>
+{% for object in order_instance.cart.cartitem_set.all %}
+<tr>
+	<th scope="row" class="foxtrot1">
+		<a href="{{ object.item.product.get_absolute_url }}" >
+			<img class="img-fluid" src="{{ object.item.product.get_image_lq }}" />
+		</a>
+	</th>
+	<td class="foxtrot2">ARTICLE:
+		<p class="golf1">{{ object.item.product.name }}</p>
+		{% if object.item.product.get_description_short %}
+		<p class="golf2">{{ object.item.product.get_description_short }}</p>
+		{% endif %}
+		{% if object.item.product.get_description_short3 %}
+		<p class="golf3">{{ object.item.product.get_description_short3 }}</p>
+		{% endif %}
+	</td>
+	<td>
+		<p class="text-right">PRIX UNITAIRE: {{ object.unit_price }}€</p>
+	</td>
+	<td>
+		<p class="text-right">QUANTITÉ: {{ object.quantity }}</p>
+	</td>
+	<td>
+		<p class="text-right">TOTAL: {{ object.line_item_total }}€</p>
+	</td>
+</tr>
+{% endfor %}
+</div>
+<div class="charlie3">
+	<div class="row delta1">
+		<p class="">{{ text293.get_text }}</p>
+	</div>
+	<div class="row justify-content-between delta4">
+		<div class="col echo1">{{ text296.get_text }}</div>
+		<div class="col echo2" id='subtotal'>{{ order_instance.cart.get_subtotal_vi }} €</div>
+	</div>
+	<div class="row justify-content-between delta4">
+		<div class="col echo1">{{ text389.get_text }}</div>
+		<div class="col echo2" id='subtotal'>{{ order_instance.cart.shipping_total }} €</div>
+	</div>
+	<div class="row justify-content-between delta5">
+		<div class="col">{{ text390.get_text }}</div>
+		<div class="col echo2" id='taxtotal'>- {{ order_instance.cart.discount_total }} €</div>
+	</div>
+	<div class="row justify-content-between delta5">
+		<div class="col">{{ text297.get_text }}</div>
+		<div class="col echo2" id='taxtotal'>{{ order_instance.cart.tax_total }} €</div>
+	</div>
+	<div class="row justify-content-between delta6">
+		<div class="col-12">
+			<hr align="left">
+		</div>
+		<div class="col">{{ text298.get_text }}</div>
+		<div class="col echo2">{{ order_instance.cart.total }} €</div>
+	</div>
+</div>

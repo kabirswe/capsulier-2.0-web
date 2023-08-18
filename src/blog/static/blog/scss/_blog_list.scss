@@ -1,0 +1,60 @@
+// Blog list
+.blog_list_page {
+	background-color: $color3;
+	padding-top: $nav-height-3;
+	@include mobile {
+		padding-top: 50px;
+	}
+	.alpha1 {
+		.bravo1 {
+			margin-bottom: 60px;
+			h1 {
+				color: $color1;
+				font-family: $font1;
+				font-size: 64px;
+				letter-spacing: 3px;
+				text-transform: uppercase;
+				text-align: center;
+				@include mobile {
+					font-size: 40px;
+				}
+			}
+			h2 {
+				color: $color2;
+				font-family: $font1;
+				font-size: 36px;
+				margin-top: 10px;
+				text-transform: uppercase;
+				text-align: center;
+				@include mobile {
+					font-size: 24px;
+				}
+			}
+			hr {
+				border-top: solid 1px $red;
+				margin: 0 auto 20px;
+				width: 44px;
+			}
+			.charlie1 {
+				margin: auto;
+				width: 68%;
+				p {
+					color: $color2;
+					margin: 0 auto 50px;
+					text-align: center;
+					span {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+	.alpha2 {
+		.blog_list_block {
+			.blog_list_block_alpha3 {
+				border-top: 0;
+				margin-top: 0;
+			}
+		}
+	}
+}

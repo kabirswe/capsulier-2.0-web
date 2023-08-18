@@ -1,0 +1,20 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$30000$cCmzvj8JqK9a$u8lBm8oRSdgkbK3SH3EX2VggHPmxESUXZeX7zYRgKRE=",
+    "last_login": "2017-07-01T22:03:29.274Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "hello@mahdil.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-07-01T21:57:58.181Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

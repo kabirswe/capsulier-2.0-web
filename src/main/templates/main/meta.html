@@ -1,0 +1,46 @@
+{% load cropping %}
+{% load static %}
+
+<title>{% block head_title %}{% endblock %}{{ seo_main.title }}</title>
+<meta name="author" content="Maison Mahdil" />
+<meta name="description" content="{% block seo_description %}{{ seo_main.description }}{% endblock %}"/>
+<meta name="Resource-type" content="{% block seo_resource_type %}{{ seo_main.resource_type }}{% endblock %}" />
+<!-- To change when live iwht static and media link -->
+<link rel="image_src" href="{{ request.build_absolute_uri|slice:':-1' }}{% block seo_image %}{% if seo_main.image %}{{ seo_main 'image_cropping' scale=1 %}{% endif %}{% endblock %}"/>
+
+<!-- Facebook -->
+<meta property="fb:app_id" content="{{ seo_main.fb_app_id }}" />
+<meta property="og:description" content="{% block seo_description_f %}{{ seo_main.description }}{% endblock %}"/>
+<!-- To change when live with static and media link -->
+<meta property="og:image" content="{{ request.build_absolute_uri|slice:':-1' }}{% block seo_image_f %}{% if seo_main.image %}{{ seo_main 'image_cropping' scale=1 %}{% endif %}{% endblock %}"/>
+<meta property="og:title" content="{% block head_title_f %}{% endblock %}{{ seo_main.title }}"/>
+<meta property="og:url" content="{{ request.build_absolute_uri }}"/>
+<meta property="og:site_name" content="{{ seo_main.site_name }}"/>
+<meta property="og:locale" content="{{ request.LANGUAGE_CODE }}_FR"/>
+<meta name="my:fb" content="on"/>
+<meta name="my:google" content="on"/>
+<meta name="my:tw" content="on"/>
+<meta name="my:in" content="on"/>
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="{{ seo_main.twitter_site }}" />
+<meta name="twitter:title" content="{% block head_title_t %}{% endblock %}{{ seo_main.title }}" />
+<meta name="twitter:description" content="{% block seo_description_t %}{{ seo_main.description }}{% endblock %}" />
+<!-- To change when live with static and media link -->
+<meta name="twitter:image" content="{{ request.build_absolute_uri|slice:':-1' }}{% block seo_image_t %}{% if seo_main.image %}{{ seo_main 'image_cropping' scale=1 %}{% endif %}{% endblock %}" />
+
+<!-- Google -->
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org/",
+		"@type": "WebSite",
+		"name": "{% block head_title_g %}{% endblock %}{{ seo_main.title }}",
+		/*To change when live with static and media link*/
+		"image": "{{ request.build_absolute_uri|slice:':-1' }}{% block seo_image_g %}{% if seo_main.image %}{{ seo_main 'image_cropping' scale=1 %}{% endif %}{% endblock %}",
+		"description": "{% block seo_description_g %}{{ seo_main.description }}{% endblock %}"
+	}
+</script>
+
+<meta name="google-site-verification" content="2ycvowazjavwNx_3RC8pXtbz-LGlU0HUZ4ZrvlK1jdI" />

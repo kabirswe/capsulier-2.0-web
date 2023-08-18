@@ -1,0 +1,139 @@
+a:hover {
+	text-decoration: none;
+}
+
+body {
+	background: url('../img/bg.png');
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+.checkbox_div input {
+	height: auto !important;
+	width: auto !important;
+}
+
+.checkbox_div label, .newsletter_text {
+	color: #101010;
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1.3px;
+	padding-left: 5px;
+}
+
+.day, .month, .year {
+	color: #a36947;
+	text-align: center;
+	width: 20% !important;
+}
+
+.down_arrow {
+	margin: 50px 0;
+}
+
+.inspiration_btn a {
+	background-color: #231f20;
+	color: #c6985a;
+	display: block;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	padding: 5px 0;
+	text-align: center;
+	width: 100%;
+}
+
+#inspiration_page form ::-moz-placeholder {
+	color: #101010;
+	font-family: 'AshemoreCondLight';
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1.3px;
+	padding-left: 5px;
+}
+
+#inspiration_page form :-moz-placeholder, #inspiration_page form :-ms-input-placeholder, #inspiration_page form ::-webkit-input-placeholder {
+	color: #101010;
+	font-family: 'AshemoreCondLight';
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1.3px;
+	padding-left: 5px;
+}
+
+#inspiration_page form label {
+	color: #a36947;
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	margin-left: 6px;
+}
+
+#inspiration_page input, #inspiration_page textarea {
+	border: solid 1px #a36947;
+	height: 36px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+#inspiration_page textarea {
+	height: 96px;
+}
+
+#inspiration_page .container {
+	width: 55%;
+}
+
+#inspiration_page .address {
+	margin: 30px 0;
+}
+
+#inspiration_page .address .main_title .left_hr {
+	width: 70%;
+}
+
+#inspiration_page .billing input {
+	height: auto;
+	width: auto;
+}
+
+#inspiration_page .billing  .main_title .left_hr {
+	width: 76%;
+}
+
+#inspiration_page .professionals .main_title .left_hr {
+	width: 49%;
+}
+
+.main_title h1 {
+	color: #a36947;
+	float: left;
+	font-size: 28px;
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+}
+
+.main_title .left_hr {
+	border-top: solid 1.5px #231f20;
+	float: left;
+	margin-left: 15px;
+	margin-top: 26px;
+	width: 56%;
+}
+
+.main_title .top_hr {
+	border-top: solid 2px #ff0000;
+	margin-bottom: 0;
+	margin-top: 0;
+	width: 20px;
+}
+
+.professionals {
+	margin-top: 30px;
+}
+
+#submit_btn {
+	background-color: #231f20;
+	color: #c6985a;
+	font-size: 13px;
+	text-align: center;
+}

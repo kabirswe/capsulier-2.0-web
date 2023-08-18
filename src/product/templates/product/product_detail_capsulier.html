@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% load l10n %}
+{% load static %}
+
+{% load text_extras %}
+
+{% block head_title %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_f %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_g %}{{ seo.get_seo_title }}{% endblock %}
+{% block head_title_t %}{{ seo.get_seo_title }}{% endblock %}
+
+{% block seo_description %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_f %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_g %}{{ seo.get_seo_description }}{% endblock %}
+{% block seo_description_t %}{{ seo.get_seo_description }}{% endblock %}
+
+{% block seo_image %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_f %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_g %}{{ seo.get_seo_image }}{% endblock %}
+{% block seo_image_t %}{{ seo.get_seo_image }}{% endblock %}
+
+{% block head_js %}
+{% if not live_test %}
+<script src="{% static 'bower_components/jquery.easing/js/jquery.easing.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}"></script>
+<script src="{% static 'product/js/product_detail_capsulier.js' %}{{ v }}"></script>
+{% else %}
+<script src="{% static 'vendor/jquery.easing/js/jquery.easing.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GEOPOSITION_GOOGLE_MAPS_API_KEY }}"></script>
+<script src="{% static 'product/dist/product_detail_capsulier.min.js' %}{{ v }}"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="product_detail_capsulier_page">
+	<div id="i_alpha1" class="carousel slide alpha1" data-ride="carousel" data-interval="false">
+		<ol class="carousel-indicators bravo1">
+			{% for object in product_list %}
+			<li data-target="#i_alpha1" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+			{% endfor %}
+		</ol>
+		<div class="carousel-inner bravo2">
+			{% for object in product_list %}
+			<div class="carousel-item {% if forloop.first %}active{% endif %} charlie1">
+				<div class="mm_bg_opcacity_top_bottom"></div>
+				<img class="d-block w-100 delta1" src="{{ object.get_background_image_hq }}" alt="{{ object.name }}"/>
+
+				<!-- Caption -->
+				<div class="d-none d-md-block delta2">
+					<h1 style="border-bottom-color: {{ object.productextra.color }}">{{ object.name }}</h1>
+					<h2>{{ object.productlang.description_short |default:"-" }}</h2>
+					<hr align="left" style="border-top-color: {{ object.productextra.color }}">
+					<div class="foxtrot1">
+						{{ object.productlang.description|linebreaks }}
+					</div>
+					<div class="foxtrot2">
+						{% include "product/includes/product_block/product_add2.html" with object=object %}
+					</div>
+
+				</div>
+
+				<!-- music div -->
+				<div class="delta4">
+					<div class="icon_div">
+						{% if object.productextra.song %}
+						<div class="triangle_bg">
+							<div class="player-div" style="border: 2px solid {{ object.productextra.color }};"></div>
+							<audio controls preload="auto">
+								<source src="{{ object.productextra.song.url }}" type="audio/mpeg"/>
+							</audio>
+							<div class="player-description">
+								<div class="title">{{ object.productextra.song_track_name }}</div>
+								<div class="artist">{{ object.productextra.song_artist }}</div>
+								<div class="description">{{ object.productextra.description }}</div>
+							</div>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+
+				<!-- music div -->
+				<div class="delta5">
+					<a href="#scroll-bottom" class="top-to-bottom">
+						<img src="" class="t_text271" alt="">
+					</a>
+				</div>
+
+				<!-- Details -->
+				<div id="scroll-bottom" class="delta3">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								{% if object.productextra.position %}
+								<script type="text/javascript">
+								$(document).ready(function () {
+									var id = {{ object.id }};
+									var latitude = {{ object.productextra.position.latitude|unlocalize }};
+									var longitude = {{ object.productextra.position.longitude|unlocalize }};
+									var icon = '{% static "page/img/marker.png" %}';
+									get_map(id, latitude, longitude, icon);
+								});
+								</script>
+								<div id="map{{ object.id }}" class="echo1"></div>
+								{% endif %}
+							</div>
+							<div class="col-md-4">
+								{% if object.productfeature_set.first %}
+								<div class="row">
+									<div class="col-md-12">
+										<div class="row t1_alpha">
+											<div class="col">
+												<hr>
+											</div>
+											<div class="col-6">
+												<h3 class="text-center">{{ object.name }}</h3>
+											</div>
+											<div class="col">
+												<hr>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9">
+										{% regroup object.productfeature_set.all by feature.product_feature_category as feature_list %}
+										{% for zarming in feature_list %}
+										<div>
+											<h4>{{ zarming.grouper.name }}</h4>
+											{% if zarming.grouper.id == 6 %}
+											{% for feature in zarming.list %}<img src="{{ feature.feature.image.url }}" alt="">{% endfor %}
+											{% else %}
+											<p>{% for feature in zarming.list %}{{ feature.feature.name }}{% if not forloop.last %} / {% endif %}{% endfor %}</p>
+											{% endif %}
+										</div>
+										{% endfor %}
+									</div>
+								</div>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<a class="carousel-control-prev" href="#i_alpha1" role="button" data-slide="prev">
+			<span class="" aria-hidden="true"><img class="t_text272" src="" alt=""></span>
+			<span class="sr-only"></span>
+		</a>
+		<a class="carousel-control-next" href="#i_alpha1" role="button" data-slide="next">
+			<span class="" aria-hidden="true"><img class="t_text273" src="" alt=""></span>
+			<span class="sr-only"></span>
+		</a>
+	</div>
+
+	<div class="alpha3 text-center">
+		<a href="{% url 'product:product_list' %}" class="cap_button t_text276"></a>
+	</div>
+
+	{% if instance.related_products.active.count > 0 %}
+	<div class="alpha2 container">
+		<div class="row t1_alpha bravo1">
+			<div class="col">
+				<hr>
+			</div>
+			<div class="col-6">
+				<h1 class="text-uppercase text-center t_text278"></h1>
+			</div>
+			<div class="col">
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			{% for object in instance.related_products.active %}
+			{% include "product/includes/product_block.html" with product=object col_class_set="col-sm-4 col-6" %}
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="alpha3 text-center">
+		<a href="{% url 'product:product_list' %}" class="cap_button t_text276"></a>
+	</div>
+
+	{% endif %}
+
+	<div class="alpha2 container">
+		<div class="row t1_alpha">
+			<div class="col">
+				<hr>
+			</div>
+			<div class="col-6">
+				<h1 class="text-uppercase text-center t_text275"></h1>
+			</div>
+			<div class="col">
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			{% for object in product_list1 %}
+			{% include "product/includes/product_block.html" with product=object col_class_set="col-sm-4 col-6" %}
+			{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+{% query text_list id='271' as text271 %}
+
+
+<script src="{% static 'assets/js/vendor/audioplayer.js' %}"></script>
+
+<script type="text/javascript">
+var t_text271 = "{{ text271.get_image }}";
+var play_img = "{% static 'product/img/play.png' %}";
+var play = '<img style="height: 60px;" src="' + play_img + '" />';
+var pause_img = "{% static 'product/img/pause.png' %}";
+var pause = '<img style="height: 60px;" src="'+ pause_img +'" />';
+$('audio').audioPlayer({
+	classPrefix: 'player', // default value: 'audioplayer'
+	strPlay: play, // default value: 'Play'
+	strPlayTitle: 'play', // default value: 'Play Title'
+	strPause: pause, // default value: 'Pause'
+	strPauseTitle: 'pause', // default value: 'Pause Title'
+});
+
+$( function() {
+	$('.player-volume, .player-time').hide();
+	// $('#i_alpha1 .active .player-playpause').trigger('click');
+	// $('#i_alpha1 .active audio').trigger('play');
+	$('#i_alpha1 .carousel-item.active .audioplayer').addClass('audioplayer-playing');
+	$( '#i_alpha1 .carousel-control-prev, #i_alpha1 .carousel-control-next' ).click(function(){
+		setTimeout(function(){
+			$('#i_alpha1 .carousel-item audio').trigger('pause');
+			$('.player-playpause a').html(play);
+			$('#i_alpha1 .carousel-item.active .audioplayer').addClass('audioplayer-playing');
+			// $('#i_alpha1 .carousel-item.active .player-playpause').trigger('click');
+			if($('#i_alpha1 .carousel-item.active audio .player-playpause').attr('title') == 'pause'){
+				$('.player-playpause a').html(pause);
+				$('#i_alpha1 .carousel-item.active audio').trigger('pause');
+			}
+		}, 1000);
+	});
+
+	// $( '.audioplayer-playpause img' ).click(function(){
+	// 	$('#mainSlider .item audio').trigger('pause');
+	// });
+
+
+
+});
+</script>
+
+<script type="text/javascript">
+var url_product = "{% url 'product:api_product_list' %}";
+
+$('#i_alpha1').on('slid.bs.carousel', function () {
+	{% for object in product_list %}
+	get_map({{ object.id }}, {{ object.productextra.position.latitude|unlocalize }}, {{ object.productextra.position.longitude|unlocalize }});
+	{% endfor %}
+});
+</script>
+
+{% endblock %}

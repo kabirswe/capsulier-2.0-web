@@ -1,0 +1,24 @@
+.legal-notice-page {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	overflow-x: hidden;
+	@include mobile {
+		padding-top: 80px;
+		h1 {
+			font-size: 36px;
+		}
+		h2 {
+			font-size: 20px;
+		}
+	}
+	.container {
+		width: 56%;
+		@include large-screen {
+			width: 42%;
+		}
+		width: 56%;
+		@include mobile {
+			width: 100%;
+		}
+	}
+}

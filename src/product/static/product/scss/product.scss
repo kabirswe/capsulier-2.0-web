@@ -1,0 +1,13 @@
+// including variables and mixins
+@import "../../../../main/static/main/scss/variables";
+
+// Custom Scss
+@import "includes/product_block/product_info";
+@import "includes/product_block/quantity_update";
+@import "includes/product_block";
+@import "includes/product_block/product_add";
+@import "product_detail_capsulier_others";
+@import "product_detail_capsulier";
+@import "product_list_capsulier";
+@import "product_detail_conservatoire";
+@import "product_list_conservatoire";

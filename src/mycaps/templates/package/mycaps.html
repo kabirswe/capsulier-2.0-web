@@ -1,0 +1,631 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %} | {% endblock %}
+{% block seo_description %}{% endblock %}
+
+{% block head_css %}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'mycaps/css/cropper.min.css' %}">
+<script src="{% static 'mycaps/js/cropper.min.js' %}"></script>
+<script src="{% static 'mycaps/js/image_crop.js' %}"></script>
+
+<div class="mycaps-page">
+	<form id="id_package" method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+		<div class="container d-none d-sm-block d-md-none">
+			<div class="row mob-mycap-top">
+				<h2 class="text-center">MYCAPS</h2>
+				<hr>
+				<h4 class="text-center">PERSONNALISEZ VOTRE</h4>
+			</div>
+		</div>
+
+		<div id="section1">
+			<div class="main_caps" style="background-image: url({% static 'mycaps/img/bg-web.jpg' %});">
+				<div class="center-div">
+					<div class="center-element">
+						<div class="container-fluid-left padding-off d-none d-sm-block">
+							<div class="row">
+								<div class="coffee-capsule-box" style="display: none;">
+									<img class="img-responsive step2_item_img" src="" alt="">
+									<div class="coffee-capsule-box-inner">
+										<span class="crop_display2 cd2-1"></span>
+										<span class="crop_display2 cd2-2"></span>
+										<span class="crop_display2 cd2-3"></span>
+										<span class="crop_display2 cd2-4"></span>
+										<span class="crop_display2 cd2-5"></span>
+										<span class="coffee-face-text-package1"></span>
+									</div>
+								</div>
+								<div class="coffee-package-box" style="display: none;">
+									<img class="img-responsive step6_item_img" src="" alt="">
+									<span class="crop_display1"></span>
+									<span class="coffee-face-text-package2"></span>
+								</div>
+							</div>
+						</div>
+						<div class="container-fluid-right padding-off">
+							<div class="row no-gutters mob-mycap-header">
+								<div class="col-xl-12 d-block d-sm-none">
+									<img class="mob-mycaps-header-img" src="{% static 'mycaps/img/bitmap.jpg' %}" alt="">
+								</div>
+								<div id="mob-mycaps-nav" class="col-xl-12 d-block d-sm-none">
+									<div class="mycapsNavbar">
+										<ul class="list-inline">
+											<li class="list-inline-item"><p class="nav-step-list"><img id="nav-step-list-img" onclick="mobMyCapsNav();" src="{% static 'mycaps/img/icons/mycap-nav.png' %}" alt="">ÉTAPE  <span id="nav-step-number"></span></p></li>
+											<li class="list-inline-item"><p class="nav-step-name" id="nav-step-number-name"></p></li>
+											<li class="list-inline-item"><img src="{% static 'mycaps/img/icons/icon-arrow-left.png' %}" alt="" class="nav-step-prev" onclick=""><img src="{% static 'mycaps/img/icons/icon-arrow-right.png' %}" alt="" class="nav-step-next" onclick=""></li>
+										</ul>
+									</div>
+									<div class="mob-mycaps-item">
+										<ul id="mob-mycaps-item-1" onclick="mobMycapsItem(1);"  class="list-inline">
+											<li class="list-inline-item"><p class="nav-step-list">ÉTAPE 1 <span class="nav-step-line"></span></p></li>
+											<li class="list-inline-item"><p class="nav-step-name">CAFÉ</p></li>
+										</ul>
+										<ul id="mob-mycaps-item-2" onclick="mobMycapsItem(2);"  class="list-inline">
+											<li class="list-inline-item"><p class="nav-step-list">ÉTAPE 2 <span class="nav-step-line"></span></p></li>
+											<li class="list-inline-item"><p class="nav-step-name">COULEUR OPERCULE</p></li>
+										</ul>
+										<ul id="mob-mycaps-item-3" onclick="mobMycapsItem(3);"  class="list-inline">
+											<li class="list-inline-item"><p class="nav-step-list">ÉTAPE 3 <span class="nav-step-line"></span></p></li>
+											<li class="list-inline-item"><p class="nav-step-name">TEXTE OPERCULE</p></li>
+										</ul>
+										<ul id="mob-mycaps-item-4" onclick="mobMycapsItem(4);"  class="list-inline">
+											<li class="list-inline-item"><p class="nav-step-list">ÉTAPE 4 <span class="nav-step-line"></span></p></li>
+											<li class="list-inline-item"><p class="nav-step-name">IMAGE OPERCULE</p></li>
+										</ul>
+										<ul id="mob-mycaps-item-5" onclick="mobMycapsItem(5);"  class="list-inline">
+											<li class="list-inline-item"><p class="nav-step-list">ÉTAPE 5 <span class="nav-step-line"></span></p></li>
+											<li class="list-inline-item"><p class="nav-step-name">TEXTE SACHET</p></li>
+										</ul>
+										<ul id="mob-mycaps-item-6" onclick="mobMycapsItem(6);"  class="list-inline">
+											<li class="list-inline-item"><p class="nav-step-list">ÉTAPE 6 <span class="nav-step-line"></span></p></li>
+											<li class="list-inline-item"><p class="nav-step-name">IMAGE SACHET</p></li>
+										</ul>
+										<ul id="mob-mycaps-item-7" onclick="mobMycapsItem(7);"  class="list-inline">
+											<li class="list-inline-item"><p class="nav-step-list">ÉTAPE 7 <span class="nav-step-line"></span></p></li>
+											<li class="list-inline-item"><p class="nav-step-name">PACKAGIN</p></li>
+										</ul>
+										<ul class="list-inline mycaps-nav-footer">
+											<li class="list-inline-item"><h3 class="text-center">SAUVEGARDER</h3></li>
+											<li class="list-inline-item"><h3 class="text-center">RÉINITIALISER</h3></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-9 mycaps_item_div" id="step1_item">
+									<div class="header d-none d-sm-block">
+										<h1>CHOISISSEZ VOTRE CAFÉ</h1>
+									</div>
+									<div class="etape_item">
+										<div class="product_item">
+											<div class="row">
+												{% for c in coffee %}
+												<div class="col-md-3 product-color-col">
+													<input type="radio" name="coffee" id="id_coffee_{{ c.id }}" value="{{ c.id }}" {% if forloop.counter == 1 %}checked{% endif %}>
+													<input type="hidden" id="coffeename_{{ c.id }}" value="{{ c.title }}">
+													<input type="hidden" id="coffeeimg_{{ c.id }}" value="{{ c.image.url }}">
+
+													<label for="id_coffee_{{ c.id }}" id="coffee_label_{{ c.id }}" class="{% if forloop.counter == 1 %}selected{% endif %}">
+														<div class="coffee-img">
+															<img src="{{ c.image.url }}">
+														</div>
+														<hr class="coffee-hr">
+														<h1 class="text-uppercase text-center txt-c">{{ c.title }}</h1>
+													</label>
+												</div>
+												{% endfor %}
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-12 mycaps_item_div" id="step2_item" style="display: none;">
+									<div class="header d-none d-sm-block">
+										<h1>CHOISISSEZ LA COULEUR DES CAPSULES</h1>
+									</div>
+									<div class="etape_item">
+										<div class="col-md-12 col-sm-12 product_item">
+											<div class="row">
+												{% for cl in color %}
+												<div class="col-md-3 col-6 product-coffee-col">
+													<input type="radio" class="d-none" name="color" id="id_color_{{ cl.id }}" value="{{ cl.id }}" {% if forloop.counter == 1 %}checked{% endif %}>
+													<input type="hidden" id="colorname_{{ cl.id }}" value="{{ cl.name }}">
+													<input type="hidden" id="colorimg_{{ cl.id }}" value="{{ cl.image.url }}">
+													{% if cl.color_image %}<input type="hidden" id="color_img_{{ cl.id }}" value="{{ cl.color_image.url}}">{% endif %}
+													{% if cl.package_image %}<input type="hidden" id="package_img_{{ cl.id }}" value="{{ cl.package_image.url}}">{% endif %}
+													{% if cl.background_image %}<input type="hidden" id="background_img_{{ cl.id }}" value="{{ cl.background_image.url}}">{% endif %}
+													<label for="id_color_{{ cl.id }}" id="color_label_{{ cl.id }}" style="cursor: pointer;" class="{% if forloop.counter == 1 %}selected{% endif %}">
+														<img src="{{ cl.image.url }}">
+														<p class="text-center">{{ cl.name }}</p>
+													</label>
+												</div>
+												{% endfor %}
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-12 mycaps_item_div" id="step3_item" style="display: none;">
+									<div class="header d-none d-sm-block">
+										<h1>VOUS POUVEZ AJOUTER UN MASSAGE SUR LES CAPSULES</h1>
+									</div>
+									<div class="etape_item col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+										<input id="coffee-face-input1" name="text1" maxlength="30" placeholder="9 caractères maximulm" />
+										<br>
+										<span id="step4_go" style="cursor: pointer;" class="delete_btn coffee-face-input1-clear">EFFACER LE TEXTE</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-12 mycaps_item_div" id="step4_item" style="display: none;">
+									<div class="header d-none d-sm-block">
+										<h1>AJOUTEZ UNE IMAGE AU</h1>
+									</div>
+									<div class="col-sm-12 etape_item product-img-col">
+										<p class="text-center">Faites glisser pour repositionner l’image. Utilisez les boutons pour modifier le niveau de zoom et <br>l’orientation.</p>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="img-upload">
+												{{ form.image }}
+												<label for="id_image">
+													<p>upload</p>
+												</label>
+												<img id="image2" src="{% static 'mycaps/img/icons/crop-def.png' %}" alt="Picture">
+												{{ form.x }}
+												{{ form.y }}
+												{{ form.width }}
+												{{ form.height }}
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12 image-control">
+											<ul class="list-inline">
+												<li class="list-inline-item img-zoom-in"><img src="{% static 'mycaps/img/icons/zoomin.png' %}" style="padding:8px 0px;"></li>
+												<li class="list-inline-item img-zoom-out"><img src="{% static 'mycaps/img/icons/zoomout.png' %}" style="padding:8px 0px;"></li>
+												<li class="list-inline-item img-reset"><p>RÉINITIALISER</p></li>
+												<li class="list-inline-item img-rotate-45"><img src="{% static 'mycaps/img/icons/left.png' %}" style="padding:8px 0px;"></li>
+												<li class="list-inline-item img-rotate45"><img src="{% static 'mycaps/img/icons/right.png' %}" style="padding:8px 0px;"></li>
+											</ul>
+										</div>
+										<div class="col-sm-12 continuer-col">
+											<div class="row">
+												<div class="col">
+													<!-- <p class="align-middle">SUPPRIMER L’IMAGE</p> -->
+													<button id="crop_image_clear" class="btn-supprimer">SUPPRIMER L’IMAGE</button>
+												</div>
+												<div class="col">
+													<button id="crop_image">save image</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-12 mycaps_item_div" id="step5_item"  style="display: none;">
+									<div class="header d-none d-sm-block">
+										<h1>VOUS POUVEZ AJOUTER UN MASSAGE SUR LES CAPSULES</h1>
+									</div>
+									<div class="etape_item col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+										<input id="coffee-face-input2" name="text2" maxlength="30" placeholder="9 caractères maximulm" />
+										<br>
+										<span style="cursor: pointer;" class="delete_btn coffee-face-input2-clear">EFFACER LE TEXTE</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-12 mycaps_item_div" id="step6_item" style="display: none;">
+									<div class="header d-none d-sm-block">
+										<h1>AJOUTEZ UNE IMAGE AU 2</h1>
+									</div>
+									<div class="col-sm-12 etape_item product-img-col">
+										<p class="text-center">Faites glisser pour repositionner l’image. Utilisez les boutons pour modifier le niveau de zoom et <br>l’orientation.</p>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="img-upload">
+												{{ form.image1 }}
+												<label for="id_image1">
+													<p>upload</p>
+												</label>
+												<img id="image1" src="{% static 'mycaps/img/icons/crop-def.png' %}" alt="Picture">
+												{{ form.x1 }}
+												{{ form.y1 }}
+												{{ form.width1 }}
+												{{ form.height1 }}
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12 image-control">
+											<ul class="list-inline">
+												<li class="list-inline-item img-zoom-in1"><img src="{% static 'mycaps/img/icons/zoomin.png' %}" style="padding:8px 0px;"></li>
+												<li class="list-inline-item img-zoom-out1"><img src="{% static 'mycaps/img/icons/zoomout.png' %}" style="padding:8px 0px;"></li>
+												<li class="list-inline-item img-reset1"><p>RÉINITIALISER</p></li>
+												<li class="list-inline-item img-rotate-451"><img src="{% static 'mycaps/img/icons/left.png' %}" style="padding:8px 0px;"></li>
+												<li class="list-inline-item img-rotate451"><img src="{% static 'mycaps/img/icons/right.png' %}" style="padding:8px 0px;"></li>
+											</ul>
+										</div>
+										<div class="col-sm-12 continuer-col">
+											<div class="row">
+												<div class="col">
+													<button id="crop_image1_clear" class="btn-supprimer">SUPPRIMER L’IMAGE</button>
+												</div>
+												<div class="col">
+													<button id="crop_image1">save image</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-12 mycaps_item_div" id="step7_item"  style="display: none;">
+									<div class="row etape_item package-content">
+										<div class="col-sm-12 col-xs-12">
+											<h5>Selected coffee : </h5>
+											<span id="coffee_img_display" style="margin: 0 auto; display: block; overflow: hidden;">select a coffee</span>
+											<h6 id="coffee_name_display"></h6>
+										</div>
+										<div class="col-sm-6 col-xs-12">
+											<div class="coffee-capsule-box-p">
+												<img class="img-responsive step2_item_img" src="" alt="">
+												<div class="coffee-capsule-box-inner">
+													<span class="crop_display2 cd2-1"></span>
+													<span class="crop_display2 cd2-2"></span>
+													<span class="crop_display2 cd2-3"></span>
+													<span class="crop_display2 cd2-4"></span>
+													<span class="crop_display2 cd2-5"></span>
+													<span class="coffee-face-text-package1"></span>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-xs-12">
+											<div class="coffee-package-box-p">
+												<img class="img-responsive step6_item_img" src="" alt="">
+												<span class="crop_display1"></span>
+												<span class="coffee-face-text-package2"></span>
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<p class="text-center">
+												<button type="submit" id="formSubmit" class="mycaps-ac-btn">add to cart</button>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3 d-flex align-content-center flex-wrap etape_div">
+									<div class="d-flex align-items-center single_etape" id="step1"  onclick="stepItem(1);">
+										<label>
+											<p><span class="single_etape_name1 single_etape_acive">CAFÉ</span></p>
+										</label>
+										<span class="mycap-round" style="background-color: #ff0040;"></span>
+									</div>
+									<div class="d-flex align-items-center single_etape" id="step2"  onclick="stepItem(2);">
+										<label>
+											<p><span class="single_etape_name2">COULEUR OPERCULE</span></p>
+										</label>
+										<span class="mycap-round"></span>
+									</div>
+									<div class="d-flex align-items-center single_etape" id="step3"  onclick="stepItem(3);">
+										<label>
+											<p><span class="single_etape_name3">TEXTE OPERCULE</span></p>
+										</label>
+										<span class="mycap-round"></span>
+									</div>
+									<div class="d-flex align-items-center single_etape" id="step4"  onclick="stepItem(4);">
+										<label>
+											<p><span class="single_etape_name4">IMAGE SACHET</span></p>
+										</label>
+										<span class="mycap-round"></span>
+									</div>
+									<div class="d-flex align-items-center single_etape" id="step5"  onclick="stepItem(5);">
+										<label>
+											<p><span class="single_etape_name5">TEXTE SACHET</span></p>
+										</label>
+										<span class="mycap-round"></span>
+									</div>
+									<div class="d-flex align-items-center single_etape" id="step6"  onclick="stepItem(6);">
+										<label>
+											<p><span class="single_etape_name6">IMAGE 2</span></p>
+										</label>
+										<span class="mycap-round"></span>
+									</div>
+									<div class="d-flex align-items-center single_etape" id="step7"  onclick="stepItem(7);">
+										<label>
+											<p><span class="single_etape_name7">PACKAGIN</span></p>
+										</label>
+										<span class="mycap-round"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section-bottom-nav d-none d-sm-block">
+			<div class="row no-gutters">
+				<div class="col-1">
+					<div class="link-back">
+						<button class="btn">&#x2190;</button>
+					</div>
+				</div>
+				<div class="col-9">
+					<div class="link-btn">
+						<button class="btn">VALIDER LA COMMANDE</button>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="link-cart">
+						<button class="btn">SAUVEGARDE</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script type="text/javascript">
+
+var image_save = "image saved";
+var image_not_save_yet = "save image";
+// image crop function start here
+var $image1 = $('#image1');
+// image 1 crop function start here
+var $image = $('#image2');
+
+var myCapsProductId = "{{ mycaps_product_instance.id }}";
+var myCapsProductName = "{{ mycaps_product_instance.name }}";
+
+
+console.log("{{ mycaps_product_instance.id }}");
+console.log("{{ mycaps_product_instance.name }}");
+console.log("{{ mycaps_product_instance.category }}");
+console.log("{{ mycaps_product_instance.id }}");
+console.log("{{ mycaps_product_instance.id }}");
+
+
+// form submission for mycaps
+$('#formSubmit').click(function(e){
+	e.preventDefault();
+	var url = "{% url 'mycaps:mycaps' %}";
+	var imageCheck = $('#id_image').val();
+	// console.log(imageCheck);
+	if(imageCheck!=''){
+		var cropData = $image.cropper("getData");
+		// console.log(cropData);
+		// round canvas display
+		var croppedCanvas;
+		var roundedCanvas;
+		if (!croppable) {
+			return;
+		}
+		// Crop
+		croppedCanvas = $image.cropper('getCroppedCanvas');
+		// Show
+		$("#crop_display").html('<img src="' + croppedCanvas.toDataURL() + '">');
+		$("#id_x").val(cropData["x"]);
+		$("#id_y").val(cropData["y"]);
+		$("#id_height").val(cropData["height"]);
+		$("#id_width").val(cropData["width"]);
+	}
+
+	// console.log("serialize");
+	var data = $('#id_package').serialize();
+	console.log("data == " + data);
+
+	// Validation check
+	var error = false;
+	var coffee = $("input[name='coffee']:checked", '#id_package').val();
+	var color = $("input[name='color']:checked", '#id_package').val();
+	if(coffee==undefined){
+		error = true;
+	}
+	if(color==undefined){
+		error = true;
+	}
+	// console.log(coffee, color, image, 'Error=', error);
+	if(error==false) {
+		fromSubmit(url, data);
+		formClearFunction();
+	}
+});
+
+function formClearFunction() {
+
+	$('.mycaps-ac-btn').html('My-caps Save !');
+	$('#id_package')[0].reset();
+	$('#coffee_img_display').html('<span id="coffee_img_display" style="height: auto; width: 200px; margin: 0 auto; display: block; overflow: hidden;">select a coffee</span>');
+	$('#color_img_display').html('<span id="color_img_display" style="height: 100px; width: auto; margin: 0 auto; display: block; overflow: hidden;">select a color</span>');
+	$('#clip_img_display').html('<span id="clip_img_display" style="height: 100px; width: auto; margin: 0 auto; display: block; overflow: hidden;">select a clip</span>');
+	$('#coffee_name_display, #color_name_display, #clip_name_display, #crop_display, .crop_display1, .crop_display2, .coffee-face-text-package1, .coffee-face-text-package2').html("");
+	$('.coffee-face-text1, .coffee-face-text2').html("no text added");
+	$('.product-color-col label, .product-coffee-col label, .product-clip-col label').removeClass('selected');
+	$(".coffee-package-box, .coffee-package-box-p, .coffee-capsule-box, .coffee-capsule-box-p").hide();
+	$(".step2_item_img, .step6_item_img").attr("src", "");
+	$image.cropper("destroy");
+	$image1.cropper("destroy");
+	$("#image2").attr("src", "{% static 'mycaps/img/icons/crop-def.png' %}");
+	$("#image1").attr("src", "{% static 'mycaps/img/icons/crop-def.png' %}");
+	setTimeout(function () {
+		$('.mycaps-ac-btn').html('add to cart');
+		$("#step1").trigger('click');
+	}, 3000);
+}
+
+// form submit function
+var fromSubmit= function(url, data){
+	var formData = new FormData($('#id_package')[0]);
+	// console.info(formData);
+	$.ajax({
+		type : "POST",
+		url : url,
+		dataType : "json",
+		data : formData,
+		success : function(data) {
+			$('.mycaps-ac-btn').html(data.msg);
+			formClearFunction();
+			console.log(data);
+			// console.info(data.msg)
+			if(data.dataSave) {
+				addToCart({{ mycaps_product_instance.id }}, '{{ mycaps_product_instance.name }}', '{{ mycaps_product_instance.description }}', '{{ product.variation_set.first.price_pro }}', 1, '{{ mycaps_product_instance.name }}');
+			}
+		},
+		cache: false,
+		contentType: false,
+		processData: false,
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+		}
+	}, "json");
+};
+
+// add to cart when mycap save
+// var addToCart = function(data){
+// 	$.ajax({
+// 		type: "GET", // "POST"
+// 		url: "{% url 'eshop:cart' %}",
+// 		data: data,
+// 		success: function(data) {
+// 			// showFlashMessage(data.flash_message);
+// 			// console.log("add to cart");
+// 			// console.log(data);
+// 			updateCartItemCount();
+// 		},
+// 		error: function(response, error) {
+// 			$("#add-form").submit();
+// 		}
+// 	});
+//
+// 	$("#pop_title").html(data.title);
+// 	$("#pop_qty").html('1');
+// };
+
+// coffee face text display 1
+$("#coffee-face-input1").keyup(function() {
+	var value = $(this).val();
+	$(".coffee-face-text1").text( value );
+	$(".coffee-face-text-package1").text( value );
+}).keyup();
+
+// coffee face text clear 1
+$(".coffee-face-input1-clear").click(function() {
+	$("#coffee-face-input1").val('');
+	$(".coffee-face-text1").text('');
+	$(".coffee-face-text-package1").text('');
+});
+
+// coffee face text display 2
+$("#coffee-face-input2").keyup(function() {
+	var value = $(this).val();
+	$(".coffee-face-text2").text( value );
+	$(".coffee-face-text-package2").text( value );
+}).keyup();
+
+// coffee face text clear 2
+$(".coffee-face-input2-clear").click(function() {
+	$("#coffee-face-input2").val('');
+	$(".coffee-face-text2").text('');
+	$(".coffee-face-text-package2").text('');
+});
+
+
+
+
+$('#id_package').on('change', function() {
+	$('#coffee_img_display').empty();
+	var coffee_value = $('input[name="coffee"]:checked', '#id_package').val();
+	var coffee_id = "coffee_label_" + coffee_value;
+	var coffee_name = $('#coffeename_'+coffee_value).val();
+	var coffee_img = $('#coffeeimg_'+coffee_value).val();
+
+	var color_value = $('input[name="color"]:checked', '#id_package').val();
+	var color_id = "color_label_" + color_value;
+	var color_name = $('#colorname_'+color_value).val();
+	var color_img = $('#colorimg_'+color_value).val();
+	var color_display_img = $('#color_img_'+color_value).val();
+	var package_display_img = $('#package_img_'+color_value).val();
+	var background_display_img = $('#background_img_'+color_value).val();
+
+	if($("form input[type='radio']").is(':checked')) {
+		//[START]----changing the image depand on color selection-----------//
+		$(".step2_item_img").attr('src',color_display_img);
+		$(".step6_item_img").attr('src',package_display_img);
+		//[END]----changing the image depand on color selection-----------//
+
+		$('.product-color-col label').removeClass('selected');
+		$('.product-coffee-col label').removeClass('selected');
+		$('.product-clip-col label').removeClass('selected');
+		$('#'+coffee_id).addClass('selected');
+		$('#'+color_id).addClass('selected');
+		$('#coffee_img_display').html("<img class='img-fluid' style='width: 140px; height: 60px; object-fit: contain;' src=" +  coffee_img +">");
+		$('#color_img_display').html("<img class='img-fluid' style='width:60px;' src=" +  color_img +">");
+		var background_display_img_var = 'url('+ background_display_img +')';
+		if(background_display_img !== undefined){
+			$('.main_caps').css('background-image', background_display_img_var);
+		}
+		$('#coffee_name_display').html(coffee_name);
+		$('#color_name_display').html(color_name);
+
+	}
+});
+
+function single_etape_remove() {
+	$(".single_etape_der1, .single_etape_der2, .single_etape_der3, .single_etape_der4, .single_etape_der5, .single_etape_der6, .single_etape_der7").removeClass('single_etape_acive');
+	$(".single_etape_name1, .single_etape_name2, .single_etape_name3, .single_etape_name4, .single_etape_name5, .single_etape_name6, .single_etape_name7").removeClass('single_etape_acive');
+	$(".mycap-round").css("background-color", "#edece8");
+}
+
+function step_item_hide() {
+	$("#step1_item, #step2_item, #step3_item, #step4_item, #step5_item, #step6_item, #step7_item").hide();
+	$("#step3_item_img, #step4_item_img, #step1_item_img, #step5_item_img, #step7_item_img").hide();
+}
+
+function mob_step_selected_remove() {
+	$("#step1_item, #step2_item, #step3_item, #step4_item, #step5_item, #step6_item, #step7_item").hide();
+}
+
+function stepItem(e) {
+	$('.mycaps_item_div').hide();
+	$('#step' + e + '_item').show();
+	if (e == 2 || e == 3 || e == 4) {
+		$(".coffee-package-box").hide();
+		$(".coffee-capsule-box").show();
+	} else if (e == 5 || e == 6) {
+		$(".coffee-package-box").show();
+		$(".coffee-capsule-box").hide();
+	} else {
+		$(".coffee-package-box").hide();
+		$(".coffee-capsule-box").hide();
+	}
+	// active navbar
+	single_etape_remove();
+	$(".single_etape_der" + e).addClass('single_etape_acive');
+	$(".single_etape_name" + e).addClass('single_etape_acive');
+	$('#step' + e + ' .mycap-round').css("background-color", "#ff0040");
+}
+
+// mobile mycaps items functionality
+var mycap_nav_open = "{% static 'mycaps/img/icons/mycap-nav.png' %}";
+var mycap_nav_close = "{% static 'mycaps/img/icons/close-nav.png' %}";
+
+function mobMycapsItem(e) {
+	$(".mob-mycaps-item").hide();
+	$('.mycaps_item_div').hide();
+	$('#step' + e + '_item').show();
+	$('#nav-step-list-img').attr('src', mycap_nav_close);
+	$('#nav-step-number').html(e);
+	var nav_step_name = $('#mob-mycaps-item-' + e + ' .nav-step-name').text();
+	$('#nav-step-number-name').html(nav_step_name);
+	var nav_next = e + 1;
+	var nav_prev = e - 1;
+	if (e == '1') {
+		$('.nav-step-prev').hide();
+		$('.nav-step-next').attr('onclick', 'mobMycapsItem(' + nav_next + ')').show();
+	} else if (e == '7') {
+		$('.nav-step-next').hide();
+		$('.nav-step-prev').attr('onclick', 'mobMycapsItem(' + nav_prev + ')').show();
+	} else {
+		$('.nav-step-next').attr('onclick', 'mobMycapsItem(' + nav_next + ')').show();
+		$('.nav-step-prev').attr('onclick', 'mobMycapsItem(' + nav_prev + ')').show();
+	}
+}
+
+function mobMyCapsNav() {
+	$('.mycaps_item_div').hide();
+	$(".mob-mycaps-item").show();
+	$('#nav-step-list-img').attr('src', mycap_nav_open);
+	$('#nav-step-number').html('');
+	$('#nav-step-number-name').html('');
+	$('.nav-step-prev, .nav-step-next').hide();
+}
+
+</script>
+
+{% endblock %}
